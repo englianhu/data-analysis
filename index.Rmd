@@ -33,7 +33,7 @@ biblio-style: apalike
 
   有关如何辑写`bookdown::gitbook`网络书籍，请参阅[bookdown: Authoring Books and Technical Documents with R Markdown](https://bookdown.org/yihui/bookdown/)。
 
-**Powered by - Copyright® Intellectual Property Rights of <img src='https://raw.githubusercontent.com/englianhu/data-analysis/master/www/oda-army2.jpg?raw=true' width='24'> [<span style='color:blue'>Scibrokes®</span>](http://www.scibrokes.com)個人の経営企業**
+**Powered by - Copyright® Intellectual Property Rights of <img src='https://raw.githubusercontent.com/englianhu/data-analysis/master/figure/oda-army2.jpg?raw=true' width='24'> [Scibrokes®](http://www.scibrokes.com)個人の経営企業**
 
 ```{r include = FALSE}
 # automatically create a bib database for R packages
@@ -64,79 +64,79 @@ knitr::kable(
 
 You can write citations, too. For example, we are using the **bookdown** package [@R-bookdown] in this sample book, which was built on top of R Markdown and **knitr** [@xie2015].
 
-**Powered by - Copyright® Intellectual Property Rights of <img src='https://raw.githubusercontent.com/englianhu/data-analysis/master/www/oda-army2.jpg?raw=true' width='24'> [<span style='color:blue'>Scibrokes®</span>](http://www.scibrokes.com)個人の経営企業**
+**Powered by - Copyright® Intellectual Property Rights of <img src='https://raw.githubusercontent.com/englianhu/data-analysis/master/figure/oda-army2.jpg?raw=true' width='24'> [Scibrokes®](http://www.scibrokes.com)個人の経営企業**
 
 # 第2章：数据分析 {#analytics}
 
 ## 第2.1章：采集数据
 
-**Powered by - Copyright® Intellectual Property Rights of <img src='https://raw.githubusercontent.com/englianhu/data-analysis/master/www/oda-army2.jpg?raw=true' width='24'> [<span style='color:blue'>Scibrokes®</span>](http://www.scibrokes.com)個人の経営企業**
+**Powered by - Copyright® Intellectual Property Rights of <img src='https://raw.githubusercontent.com/englianhu/data-analysis/master/figure/oda-army2.jpg?raw=true' width='24'> [Scibrokes®](http://www.scibrokes.com)個人の経営企業**
 
 ## 第2.2章：数据处理
 
-**Powered by - Copyright® Intellectual Property Rights of <img src='https://raw.githubusercontent.com/englianhu/data-analysis/master/www/oda-army2.jpg?raw=true' width='24'> [<span style='color:blue'>Scibrokes®</span>](http://www.scibrokes.com)個人の経営企業**
+**Powered by - Copyright® Intellectual Property Rights of <img src='https://raw.githubusercontent.com/englianhu/data-analysis/master/figure/oda-army2.jpg?raw=true' width='24'> [Scibrokes®](http://www.scibrokes.com)個人の経営企業**
 
 ## 第2.3章：数据分析程序包
 
-**Powered by - Copyright® Intellectual Property Rights of <img src='https://raw.githubusercontent.com/englianhu/data-analysis/master/www/oda-army2.jpg?raw=true' width='24'> [<span style='color:blue'>Scibrokes®</span>](http://www.scibrokes.com)個人の経営企業**
+**Powered by - Copyright® Intellectual Property Rights of <img src='https://raw.githubusercontent.com/englianhu/data-analysis/master/figure/oda-army2.jpg?raw=true' width='24'> [Scibrokes®](http://www.scibrokes.com)個人の経営企業**
 
 # 第3章：统计模式 {#stats}
 
 ## 第3.1章：线性模型
 
-**Powered by - Copyright® Intellectual Property Rights of <img src='https://raw.githubusercontent.com/englianhu/data-analysis/master/www/oda-army2.jpg?raw=true' width='24'> [<span style='color:blue'>Scibrokes®</span>](http://www.scibrokes.com)個人の経営企業**
+**Powered by - Copyright® Intellectual Property Rights of <img src='https://raw.githubusercontent.com/englianhu/data-analysis/master/figure/oda-army2.jpg?raw=true' width='24'> [Scibrokes®](http://www.scibrokes.com)個人の経営企業**
 
 ## 第3.2章：广义型线性模型
 
-**Powered by - Copyright® Intellectual Property Rights of <img src='https://raw.githubusercontent.com/englianhu/data-analysis/master/www/oda-army2.jpg?raw=true' width='24'> [<span style='color:blue'>Scibrokes®</span>](http://www.scibrokes.com)個人の経営企業**
+**Powered by - Copyright® Intellectual Property Rights of <img src='https://raw.githubusercontent.com/englianhu/data-analysis/master/figure/oda-army2.jpg?raw=true' width='24'> [Scibrokes®](http://www.scibrokes.com)個人の経営企業**
 
 ## 第3.3章：最优模型选择
 
-**Powered by - Copyright® Intellectual Property Rights of <img src='https://raw.githubusercontent.com/englianhu/data-analysis/master/www/oda-army2.jpg?raw=true' width='24'> [<span style='color:blue'>Scibrokes®</span>](http://www.scibrokes.com)個人の経営企業**
+**Powered by - Copyright® Intellectual Property Rights of <img src='https://raw.githubusercontent.com/englianhu/data-analysis/master/figure/oda-army2.jpg?raw=true' width='24'> [Scibrokes®](http://www.scibrokes.com)個人の経営企業**
 
 # 第4章：金融交易 {#finance}
 
 ## 第4.1章：金融数据
 
-**Powered by - Copyright® Intellectual Property Rights of <img src='https://raw.githubusercontent.com/englianhu/data-analysis/master/www/oda-army2.jpg?raw=true' width='24'> [<span style='color:blue'>Scibrokes®</span>](http://www.scibrokes.com)個人の経営企業**
+**Powered by - Copyright® Intellectual Property Rights of <img src='https://raw.githubusercontent.com/englianhu/data-analysis/master/figure/oda-army2.jpg?raw=true' width='24'> [Scibrokes®](http://www.scibrokes.com)個人の経営企業**
 
 ## 第4.2章：Arima模型
 
-**Powered by - Copyright® Intellectual Property Rights of <img src='https://raw.githubusercontent.com/englianhu/data-analysis/master/www/oda-army2.jpg?raw=true' width='24'> [<span style='color:blue'>Scibrokes®</span>](http://www.scibrokes.com)個人の経営企業**
+**Powered by - Copyright® Intellectual Property Rights of <img src='https://raw.githubusercontent.com/englianhu/data-analysis/master/figure/oda-army2.jpg?raw=true' width='24'> [Scibrokes®](http://www.scibrokes.com)個人の経営企業**
 
 ## 第4.3章：指数平滑法
 
-**Powered by - Copyright® Intellectual Property Rights of <img src='https://raw.githubusercontent.com/englianhu/data-analysis/master/www/oda-army2.jpg?raw=true' width='24'> [<span style='color:blue'>Scibrokes®</span>](http://www.scibrokes.com)個人の経営企業**
+**Powered by - Copyright® Intellectual Property Rights of <img src='https://raw.githubusercontent.com/englianhu/data-analysis/master/figure/oda-army2.jpg?raw=true' width='24'> [Scibrokes®](http://www.scibrokes.com)個人の経営企業**
 
 ## 第4.4章：GARCH模型
 
-**Powered by - Copyright® Intellectual Property Rights of <img src='https://raw.githubusercontent.com/englianhu/data-analysis/master/www/oda-army2.jpg?raw=true' width='24'> [<span style='color:blue'>Scibrokes®</span>](http://www.scibrokes.com)個人の経営企業**
+**Powered by - Copyright® Intellectual Property Rights of <img src='https://raw.githubusercontent.com/englianhu/data-analysis/master/figure/oda-army2.jpg?raw=true' width='24'> [Scibrokes®](http://www.scibrokes.com)個人の経営企業**
 
 ## 第4.5章：金融交易程序包
 
-**Powered by - Copyright® Intellectual Property Rights of <img src='https://raw.githubusercontent.com/englianhu/data-analysis/master/www/oda-army2.jpg?raw=true' width='24'> [<span style='color:blue'>Scibrokes®</span>](http://www.scibrokes.com)個人の経営企業**
+**Powered by - Copyright® Intellectual Property Rights of <img src='https://raw.githubusercontent.com/englianhu/data-analysis/master/figure/oda-army2.jpg?raw=true' width='24'> [Scibrokes®](http://www.scibrokes.com)個人の経営企業**
 
 # 第5章：体彩交易 {#sportsbook}
 
 ## 第5.1章：体彩数据
 
-**Powered by - Copyright® Intellectual Property Rights of <img src='https://raw.githubusercontent.com/englianhu/data-analysis/master/www/oda-army2.jpg?raw=true' width='24'> [<span style='color:blue'>Scibrokes®</span>](http://www.scibrokes.com)個人の経営企業**
+**Powered by - Copyright® Intellectual Property Rights of <img src='https://raw.githubusercontent.com/englianhu/data-analysis/master/figure/oda-army2.jpg?raw=true' width='24'> [Scibrokes®](http://www.scibrokes.com)個人の経営企業**
 
 ## 第5.2章：足球比分建模
 
-**Powered by - Copyright® Intellectual Property Rights of <img src='https://raw.githubusercontent.com/englianhu/data-analysis/master/www/oda-army2.jpg?raw=true' width='24'> [<span style='color:blue'>Scibrokes®</span>](http://www.scibrokes.com)個人の経営企業**
+**Powered by - Copyright® Intellectual Property Rights of <img src='https://raw.githubusercontent.com/englianhu/data-analysis/master/figure/oda-army2.jpg?raw=true' width='24'> [Scibrokes®](http://www.scibrokes.com)個人の経営企業**
 
 ## 第5.3章：足彩投注模式
 
-**Powered by - Copyright® Intellectual Property Rights of <img src='https://raw.githubusercontent.com/englianhu/data-analysis/master/www/oda-army2.jpg?raw=true' width='24'> [<span style='color:blue'>Scibrokes®</span>](http://www.scibrokes.com)個人の経営企業**
+**Powered by - Copyright® Intellectual Property Rights of <img src='https://raw.githubusercontent.com/englianhu/data-analysis/master/figure/oda-army2.jpg?raw=true' width='24'> [Scibrokes®](http://www.scibrokes.com)個人の経営企業**
 
 ## 第5.4章：体彩交易程序包
 
-**Powered by - Copyright® Intellectual Property Rights of <img src='https://raw.githubusercontent.com/englianhu/data-analysis/master/www/oda-army2.jpg?raw=true' width='24'> [<span style='color:blue'>Scibrokes®</span>](http://www.scibrokes.com)個人の経営企業**
+**Powered by - Copyright® Intellectual Property Rights of <img src='https://raw.githubusercontent.com/englianhu/data-analysis/master/figure/oda-army2.jpg?raw=true' width='24'> [Scibrokes®](http://www.scibrokes.com)個人の経営企業**
 
 `r if (knitr:::is_html_output()) '# 第6章：参考文献 {-}'`
 
-**Powered by - Copyright® Intellectual Property Rights of <img src='https://raw.githubusercontent.com/englianhu/data-analysis/master/www/oda-army2.jpg?raw=true' width='24'> [<span style='color:blue'>Scibrokes®</span>](http://www.scibrokes.com)個人の経営企業**
+**Powered by - Copyright® Intellectual Property Rights of <img src='https://raw.githubusercontent.com/englianhu/data-analysis/master/figure/oda-army2.jpg?raw=true' width='24'> [Scibrokes®](http://www.scibrokes.com)個人の経営企業**
 
 
 

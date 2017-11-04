@@ -40,4 +40,4 @@ R语言玩转金融与体彩数据分析
     - 第5.4章：体彩交易程序包
   - 第6章：参考文献
 
-**Powered by - Copyright® Intellectual Property Rights of <img src='https://raw.githubusercontent.com/englianhu/data-analysis/master/www/oda-army2.jpg?raw=true' width='24'> [<span style='color:blue'>Scibrokes®</span>](http://www.scibrokes.com)個人の経営企業**
+**Powered by - Copyright® Intellectual Property Rights of <img src='https://raw.githubusercontent.com/englianhu/data-analysis/master/figure/oda-army2.jpg?raw=true' width='24'> [Scibrokes®](http://www.scibrokes.com)個人の経営企業**
