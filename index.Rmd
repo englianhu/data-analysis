@@ -1,34 +1,112 @@
 --- 
-title: "Data Analysis with R"
-author: "Ryo, ENG Lian Hu"
+title: "R语言玩转金融与体彩数据分析"
+subtitle: "[为数据科学家们量身定做の专业统计软件 — ®Studio服务器](https://beta.rstudioconnect.com/englianhu/Introducing-RStudio-Server-for-Data-Scientists/Introducing-RStudio-Server-for-Data-Scientists.html)"
+author: "[®γσ,黄联富](https://beta.rstudioconnect.com/content/3091/ryo-eng.html)"
 date: "`r Sys.Date()`"
-site: bookdown::bookdown_site
+description: 此书乃个人学习R语言的经验分享与建议。
+  此文件输出格式为 bookdown::gitbook。
 documentclass: book
-bibliography: [book.bib, packages.bib]
-biblio-style: apalike
 link-citations: yes
-description: "This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook."
+bibliography:
+- book.bib
+- packages.bib
+site: bookdown::bookdown_site
+biblio-style: apalike
 ---
 
-# Prerequisites
+# 第0章：前言 {#preface}
 
-This is a _sample_ book written in **Markdown**. You can use anything that Pandoc's Markdown supports, e.g., a math equation $a^2 + b^2 = c^2$.
+**为何辑写此书**
 
-The **bookdown** package can be installed from CRAN or Github:
+  本书是在下首次辑写参考书（纯属个人经验分享与心得），此前分享了**如何安装®Studio服务器与Shiny服务器**^[[安装 ®StudioとShiny服务器](https://github.com/scibrokes/setup-rstudio-server)]：
+  
+  - [为数据科学家们量身定做の专业统计软件 — ®Studio服务器](https://beta.rstudioconnect.com/englianhu/Introducing-RStudio-Server-for-Data-Scientists/Introducing-RStudio-Server-for-Data-Scientists.html)
+  - [为数据科学家们量身定做の专业统计软件 — ®Studio服务器（演示文稿）](https://beta.rstudioconnect.com/englianhu/Introducing-RStudio-Server-for-Data-Scientists-Slides/Introducing-RStudio-Server-for-Data-Scientists-slides.html)
 
-```{r eval=FALSE}
-install.packages("bookdown")
-# or the development version
-# devtools::install_github("rstudio/bookdown")
-```
+  在下来自于马来西亚^[个人简历请查阅：[®γσ, ENG LIAN HU](https://beta.rstudioconnect.com/content/3091/ryo-eng.html)]，自2005年入行体彩交易就学习Excel电子表格，而2008年加入**Scicom (MSC) Bhd**后开始接触R语言，并且活跃于[统计之都论坛](https://d.cosx.org)与[经管之家：R语言论坛](http://bbs.pinggu.org/forum-69-1.html)论坛俩与中国大陆同胞交流，并向前辈高手们学习。
 
-Remember each Rmd file contains one and only one chapter, and a chapter is defined by the first-level heading `#`.
+  前几年，偶然发现了个R语言的使用者界面**®Studio**后，就觉得非常方便，然后自学在[DigitalOcean.com](https://m.do.co/c/aabb124120d0)安装服务器方便随时随地，只要可以上网的地方就可以使用。
 
-To compile this example to PDF, you need to install XeLaTeX.
+  前阵子，在下在学习金融交易的时候，无意中发现了本非常实用的经验分享书籍[Successful Algorithmic Trading](https://raw.githubusercontent.com/englianhu/binary.com-interview-question/master/reference/Successful%20Algorithmic%20Trading.pdf)，笔者在金融交易的解说，由入门到精通包括编码分享（笔者介绍了R语言、Python、C++以及比较各优缺点），该笔者**Michael Halls**^[更多该作者详情，请参阅[Struggling To Make Profitable Algo Trading Strategies?](https://www.quantstart.com/successful-algorithmic-trading-ebook)]与在下一样以经验分享著书之见，在下阅读与学习时深深感受到金融交易的武功秘籍（实用教材）如兮，夫复何求哇！
 
-```{r include=FALSE}
+  在下才疏学浅，仅有约翰霍金斯大学数据科学专业文凭，倘若有何错误之处，涵清多多包涵并指教。此书乃个人经验之谈。希望在同感身受与共而勉之的情况之下，热衷于金融与体彩行业的学者们可以容易着手。
+
+  有关如何辑写`bookdown::gitbook`网络书籍，请参阅[bookdown: Authoring Books and Technical Documents with R Markdown](https://bookdown.org/yihui/bookdown/)。
+
+```{r include = FALSE}
 # automatically create a bib database for R packages
 knitr::write_bib(c(
   .packages(), 'bookdown', 'knitr', 'rmarkdown'
 ), 'packages.bib')
 ```
+
+# 第1章：介绍 {#intro}
+
+  You can label chapter and section titles using `{#label}` after them, e.g., we can reference Chapter \@ref(intro). If you do not manually label them, there will be automatic labels anyway, e.g., Chapter \@ref(methods).
+
+Figures and tables with captions will be placed in `figure` and `table` environments, respectively.
+
+```{r nice-fig, fig.cap='Here is a nice figure!', out.width='80%', fig.asp=.75, fig.align='center'}
+par(mar = c(4, 4, .1, .1))
+plot(pressure, type = 'b', pch = 19)
+```
+
+Reference a figure by its code chunk label with the `fig:` prefix, e.g., see Figure \@ref(fig:nice-fig). Similarly, you can reference tables generated from `knitr::kable()`, e.g., see Table \@ref(tab:nice-tab).
+
+```{r nice-tab, tidy=FALSE}
+knitr::kable(
+  head(iris, 20), caption = 'Here is a nice table!',
+  booktabs = TRUE
+)
+```
+
+You can write citations, too. For example, we are using the **bookdown** package [@R-bookdown] in this sample book, which was built on top of R Markdown and **knitr** [@xie2015].
+
+# 第2章：数据分析 {#analytics}
+
+## 第2.1章：采集数据
+
+## 第2.2章：数据处理
+
+## 第2.3章：数据分析程序包
+
+# 第3章：统计模式 {#stats}
+
+## 第3.1章：线性模型
+
+## 第3.2章：广义型线性模型
+
+## 第3.3章：最优模型选择
+
+# 第4章：金融交易 {#finance}
+
+Some _significant_ applications are demonstrated in this chapter.
+
+## 第4.1章：金融数据
+
+## 第4.2章：Arima模型
+
+## 第4.3章：指数平滑法
+
+## 第4.4章：GARCH模型
+
+## 第4.5章：金融交易程序包
+
+# 第5章：体彩交易 {#sportsbook}
+
+## 第5.1章：体彩数据
+
+## 第5.2章：足球比分建模
+
+## 第5.3章：足彩投注模式
+
+## 第5.4章：体彩交易程序包
+
+`r if (knitr:::is_html_output()) '# 第6章：参考文献 {-}'`
+
+
+
+
+
+
+

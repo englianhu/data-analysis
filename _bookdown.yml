@@ -1,4 +1,19 @@
 book_filename: "data-analysis"
 language:
+  label:
+    fig: 'Figure '
+    tab: 'Table '
+    eq: 'Equation '
+    thm: 'Theorem '
+    lem: 'Lemma '
+    def: 'Definition '
+    cor: 'Corollary '
+    prp: 'Proposition '
+    exm: 'Example '
+    exr: 'Exercise '
+    proof: 'Proof. '
+    remark: 'Remark. '
+    solution: 'Solution. '
   ui:
-    chapter_name: "Chapter "
+    edit: Edit
+    chapter_name: 'Chapter '
