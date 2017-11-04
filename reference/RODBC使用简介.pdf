@@ -1,0 +1,836 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>RODBC&#20351;&#29992;&#31616;&#20171;.pdf - Windows Live</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="icon" href="&#47;favicon.ico" type="image/x-icon" />
+
+<script type="text/javascript">
+/* Copyright (C) 2009 Microsoft Corporation */var _d=document,_dh=_d.getElementsByTagName("head")[0];function $newScript(c,d,b){var a=_d.createElement("script");a.id=d||"";a.src=c;if(!b)_dh.appendChild(a);return a}
+
+</script>
+
+    
+<script type="text/javascript">                  
+	if(null==window["$Config"])
+		window["$Config"] = {};
+	$Config.headerRenderTime = (new Date()).getTime();
+	if (typeof(SymRealWinOpen)!="undefined"){window.open = SymRealWinOpen;}
+
+	window.$Config.Themes = {
+		baseUrl:"https://secure.wlxrs.com/qktEgoFyx2UpgmMN3jbdW4oC3DZ!vCnL-W9oHZklfIrXBOxNDpXFJ6!kyW5!cwzm/",current:"OOB_58_Moonlight",version:"15.1.2055",url:"https://secure.wlxrs.com/qktEgoFyx2UpgmMN3jbdW4oC3DZ!vCnL-W9oHZklfIrXBOxNDpXFJ6!kyW5!cwzm/OOB_58_Moonlight/15.1.2055/"};</script><link rel="StyleSheet" href="https://secure.wlxrs.com/qktEgoFyx2UpgmMN3jbdW4oC3DZ!vCnL-W9oHZklfIrXBOxNDpXFJ6!kyW5!cwzm/OOB_58_Moonlight/15.1.2055/hig+contactpicker+skydrive.css" type="text/css"/>
+
+    
+  
+    
+
+<!-- BAC116 15.1.1070.827 en-US -->
+    
+    
+
+
+
+<script type="text/javascript">
+  window.commands = [];
+  window.execCommand = function(id, data) { return (!!window.commands[id]) ? window.commands[id](data) : window.delayExecCommand(id, data); }
+  window.registerCommand = function(id, delegate) { window.commands[id] = (!window.commands[id]) ? delegate : Delegate.combine(delegate, window.commands[id]); }
+  window.delayExecCommand = function(id, data) 
+  { var f = window.showProgress;
+    if (!window.commands[id]){
+      if (!!f) { f(true); }
+      setTimeout(window.delayExecCommand(id, data), 250);
+      return false;
+    } else {
+      if (!!f) { f(false); }
+      return window.execCommand(id, data);
+    }
+  }
+</script>
+
+
+<script type="text/javascript">
+window.ContactPickerCore = window['ContactPickerCore'] || { IsSearchIndexReady: false };
+
+window.selfPageData = {
+  currentItemHash: '\x23resId\x2f2F1027D9E9C7114B\x211054',
+  currentItemIndex: 17,
+  currentItem: null,  
+  parentResourceId: '',
+  ownerCid: '3391254336293507403',
+  items: [{displayName: 'Mathes', fileName: 'Mathes', url: '\x23resId\x2f2F1027D9E9C7114B\x21343', isFolder: true, resourceId: '2F1027D9E9C7114B\x21343', selfUrl: 'https\x3a\x2f\x2fcid-2f1027d9e9c7114b.skydrive.live.com\x2fself.aspx\x2f.Documents\x2fMathes', unsafe: false, favoriteUrl: '', safeFavoriteUrl: '', previewUrl: 'https\x3a\x2f\x2fcid-2f1027d9e9c7114b.skydrive.live.com\x2fbrowse.aspx\x2f.Documents\x2fMathes', downloadUrl: '', demoteUrl: null, isDirty: false, previewTooltip: 'Open', tooltip: 'Mathes', fileTypeImageUrl: 'https\x3a\x2f\x2fsecure.wlxrs.com\x2fn9M4HXlDY9c8DRYRywO4rw\x2fimages\x2ficons\x2fSmall\x2fNonEmptyDocumentFolder.png', caption: '', captionUrl: 'https\x3a\x2f\x2fcid-2f1027d9e9c7114b.skydrive.live.com\x2finlineedit.ashx\x2f.Documents\x2fMathes', previewImageUrl: 'https\x3a\x2f\x2fsecure.wlxrs.com\x2fn9M4HXlDY9c8DRYRywO4rw\x2fimages\x2ficons\x2fLarge\x2fNonEmptyDocumentFolder.png', previewImageWidth: 0, previewImageHeight: 0, thumbnailImageUrl: '', isVideo: false}, {displayName: 'Excel', fileName: 'Excel', url: '\x23resId\x2f2F1027D9E9C7114B\x21346', isFolder: true, resourceId: '2F1027D9E9C7114B\x21346', selfUrl: 'https\x3a\x2f\x2fcid-2f1027d9e9c7114b.skydrive.live.com\x2fself.aspx\x2f.Documents\x2fExcel', unsafe: false, favoriteUrl: '', safeFavoriteUrl: '', previewUrl: 'https\x3a\x2f\x2fcid-2f1027d9e9c7114b.skydrive.live.com\x2fbrowse.aspx\x2f.Documents\x2fExcel', downloadUrl: '', demoteUrl: null, isDirty: false, previewTooltip: 'Open', tooltip: 'Excel', fileTypeImageUrl: 'https\x3a\x2f\x2fsecure.wlxrs.com\x2fn9M4HXlDY9c8DRYRywO4rw\x2fimages\x2ficons\x2fSmall\x2fNonEmptyDocumentFolder.png', caption: '', captionUrl: 'https\x3a\x2f\x2fcid-2f1027d9e9c7114b.skydrive.live.com\x2finlineedit.ashx\x2f.Documents\x2fExcel', previewImageUrl: 'https\x3a\x2f\x2fsecure.wlxrs.com\x2fn9M4HXlDY9c8DRYRywO4rw\x2fimages\x2ficons\x2fLarge\x2fNonEmptyDocumentFolder.png', previewImageWidth: 0, previewImageHeight: 0, thumbnailImageUrl: '', isVideo: false}, {displayName: 'Others', fileName: 'Others', url: '\x23resId\x2f2F1027D9E9C7114B\x21347', isFolder: true, resourceId: '2F1027D9E9C7114B\x21347', selfUrl: 'https\x3a\x2f\x2fcid-2f1027d9e9c7114b.skydrive.live.com\x2fself.aspx\x2f.Documents\x2fOthers', unsafe: false, favoriteUrl: '', safeFavoriteUrl: '', previewUrl: 'https\x3a\x2f\x2fcid-2f1027d9e9c7114b.skydrive.live.com\x2fbrowse.aspx\x2f.Documents\x2fOthers', downloadUrl: '', demoteUrl: null, isDirty: false, previewTooltip: 'Open', tooltip: 'Others', fileTypeImageUrl: 'https\x3a\x2f\x2fsecure.wlxrs.com\x2fn9M4HXlDY9c8DRYRywO4rw\x2fimages\x2ficons\x2fSmall\x2fNonEmptyDocumentFolder.png', caption: '', captionUrl: 'https\x3a\x2f\x2fcid-2f1027d9e9c7114b.skydrive.live.com\x2finlineedit.ashx\x2f.Documents\x2fOthers', previewImageUrl: 'https\x3a\x2f\x2fsecure.wlxrs.com\x2fn9M4HXlDY9c8DRYRywO4rw\x2fimages\x2ficons\x2fLarge\x2fNonEmptyDocumentFolder.png', previewImageWidth: 0, previewImageHeight: 0, thumbnailImageUrl: '', isVideo: false}, {displayName: 'Modelling', fileName: 'Modelling', url: '\x23resId\x2f2F1027D9E9C7114B\x21348', isFolder: true, resourceId: '2F1027D9E9C7114B\x21348', selfUrl: 'https\x3a\x2f\x2fcid-2f1027d9e9c7114b.skydrive.live.com\x2fself.aspx\x2f.Documents\x2fModelling', unsafe: false, favoriteUrl: '', safeFavoriteUrl: '', previewUrl: 'https\x3a\x2f\x2fcid-2f1027d9e9c7114b.skydrive.live.com\x2fbrowse.aspx\x2f.Documents\x2fModelling', downloadUrl: '', demoteUrl: null, isDirty: false, previewTooltip: 'Open', tooltip: 'Modelling', fileTypeImageUrl: 'https\x3a\x2f\x2fsecure.wlxrs.com\x2fn9M4HXlDY9c8DRYRywO4rw\x2fimages\x2ficons\x2fSmall\x2fNonEmptyDocumentFolder.png', caption: '', captionUrl: 'https\x3a\x2f\x2fcid-2f1027d9e9c7114b.skydrive.live.com\x2finlineedit.ashx\x2f.Documents\x2fModelling', previewImageUrl: 'https\x3a\x2f\x2fsecure.wlxrs.com\x2fn9M4HXlDY9c8DRYRywO4rw\x2fimages\x2ficons\x2fLarge\x2fNonEmptyDocumentFolder.png', previewImageWidth: 0, previewImageHeight: 0, thumbnailImageUrl: '', isVideo: false}, {displayName: 'Duty \x26 Job Task', fileName: 'Duty \x26 Job Task', url: '\x23resId\x2f2F1027D9E9C7114B\x21355', isFolder: true, resourceId: '2F1027D9E9C7114B\x21355', selfUrl: 'https\x3a\x2f\x2fcid-2f1027d9e9c7114b.skydrive.live.com\x2fself.aspx\x2f.Documents\x2fDuty\x2520\x5e0\x2520Job\x2520Task', unsafe: false, favoriteUrl: '', safeFavoriteUrl: '', previewUrl: 'https\x3a\x2f\x2fcid-2f1027d9e9c7114b.skydrive.live.com\x2fbrowse.aspx\x2f.Documents\x2fDuty\x2520\x5e0\x2520Job\x2520Task', downloadUrl: '', demoteUrl: null, isDirty: false, previewTooltip: 'Open', tooltip: 'Duty \x26 Job Task', fileTypeImageUrl: 'https\x3a\x2f\x2fsecure.wlxrs.com\x2fn9M4HXlDY9c8DRYRywO4rw\x2fimages\x2ficons\x2fSmall\x2fNonEmptyDocumentFolder.png', caption: '', captionUrl: 'https\x3a\x2f\x2fcid-2f1027d9e9c7114b.skydrive.live.com\x2finlineedit.ashx\x2f.Documents\x2fDuty\x2520\x5e0\x2520Job\x2520Task', previewImageUrl: 'https\x3a\x2f\x2fsecure.wlxrs.com\x2fn9M4HXlDY9c8DRYRywO4rw\x2fimages\x2ficons\x2fLarge\x2fNonEmptyDocumentFolder.png', previewImageWidth: 0, previewImageHeight: 0, thumbnailImageUrl: '', isVideo: false}, {displayName: 'R', fileName: 'R', url: '\x23resId\x2f2F1027D9E9C7114B\x21378', isFolder: true, resourceId: '2F1027D9E9C7114B\x21378', selfUrl: 'https\x3a\x2f\x2fcid-2f1027d9e9c7114b.skydrive.live.com\x2fself.aspx\x2f.Documents\x2fR', unsafe: false, favoriteUrl: '', safeFavoriteUrl: '', previewUrl: 'https\x3a\x2f\x2fcid-2f1027d9e9c7114b.skydrive.live.com\x2fbrowse.aspx\x2f.Documents\x2fR', downloadUrl: '', demoteUrl: null, isDirty: false, previewTooltip: 'Open', tooltip: 'R', fileTypeImageUrl: 'https\x3a\x2f\x2fsecure.wlxrs.com\x2fn9M4HXlDY9c8DRYRywO4rw\x2fimages\x2ficons\x2fSmall\x2fNonEmptyDocumentFolder.png', caption: '', captionUrl: 'https\x3a\x2f\x2fcid-2f1027d9e9c7114b.skydrive.live.com\x2finlineedit.ashx\x2f.Documents\x2fR', previewImageUrl: 'https\x3a\x2f\x2fsecure.wlxrs.com\x2fn9M4HXlDY9c8DRYRywO4rw\x2fimages\x2ficons\x2fLarge\x2fNonEmptyDocumentFolder.png', previewImageWidth: 0, previewImageHeight: 0, thumbnailImageUrl: '', isVideo: false}, {displayName: 'Emotion', fileName: 'Emotion', url: '\x23resId\x2f2F1027D9E9C7114B\x21391', isFolder: true, resourceId: '2F1027D9E9C7114B\x21391', selfUrl: 'https\x3a\x2f\x2fcid-2f1027d9e9c7114b.skydrive.live.com\x2fself.aspx\x2f.Documents\x2fEmotion', unsafe: false, favoriteUrl: '', safeFavoriteUrl: '', previewUrl: 'https\x3a\x2f\x2fcid-2f1027d9e9c7114b.skydrive.live.com\x2fbrowse.aspx\x2f.Documents\x2fEmotion', downloadUrl: '', demoteUrl: null, isDirty: false, previewTooltip: 'Open', tooltip: 'Emotion', fileTypeImageUrl: 'https\x3a\x2f\x2fsecure.wlxrs.com\x2fn9M4HXlDY9c8DRYRywO4rw\x2fimages\x2ficons\x2fSmall\x2fNonEmptyDocumentFolder.png', caption: '', captionUrl: 'https\x3a\x2f\x2fcid-2f1027d9e9c7114b.skydrive.live.com\x2finlineedit.ashx\x2f.Documents\x2fEmotion', previewImageUrl: 'https\x3a\x2f\x2fsecure.wlxrs.com\x2fn9M4HXlDY9c8DRYRywO4rw\x2fimages\x2ficons\x2fLarge\x2fNonEmptyDocumentFolder.png', previewImageWidth: 0, previewImageHeight: 0, thumbnailImageUrl: '', isVideo: false}, {displayName: 'Errors', fileName: 'Errors', url: '\x23resId\x2f2F1027D9E9C7114B\x21520', isFolder: true, resourceId: '2F1027D9E9C7114B\x21520', selfUrl: 'https\x3a\x2f\x2fcid-2f1027d9e9c7114b.skydrive.live.com\x2fself.aspx\x2f.Documents\x2fErrors', unsafe: false, favoriteUrl: '', safeFavoriteUrl: '', previewUrl: 'https\x3a\x2f\x2fcid-2f1027d9e9c7114b.skydrive.live.com\x2fbrowse.aspx\x2f.Documents\x2fErrors', downloadUrl: '', demoteUrl: null, isDirty: false, previewTooltip: 'Open', tooltip: 'Errors', fileTypeImageUrl: 'https\x3a\x2f\x2fsecure.wlxrs.com\x2fn9M4HXlDY9c8DRYRywO4rw\x2fimages\x2ficons\x2fSmall\x2fNonEmptyDocumentFolder.png', caption: '', captionUrl: 'https\x3a\x2f\x2fcid-2f1027d9e9c7114b.skydrive.live.com\x2finlineedit.ashx\x2f.Documents\x2fErrors', previewImageUrl: 'https\x3a\x2f\x2fsecure.wlxrs.com\x2fn9M4HXlDY9c8DRYRywO4rw\x2fimages\x2ficons\x2fLarge\x2fNonEmptyDocumentFolder.png', previewImageWidth: 0, previewImageHeight: 0, thumbnailImageUrl: '', isVideo: false}, {displayName: 'Time Series', fileName: 'Time Series', url: '\x23resId\x2f2F1027D9E9C7114B\x21571', isFolder: true, resourceId: '2F1027D9E9C7114B\x21571', selfUrl: 'https\x3a\x2f\x2fcid-2f1027d9e9c7114b.skydrive.live.com\x2fself.aspx\x2f.Documents\x2fTime\x2520Series', unsafe: false, favoriteUrl: '', safeFavoriteUrl: '', previewUrl: 'https\x3a\x2f\x2fcid-2f1027d9e9c7114b.skydrive.live.com\x2fbrowse.aspx\x2f.Documents\x2fTime\x2520Series', downloadUrl: '', demoteUrl: null, isDirty: false, previewTooltip: 'Open', tooltip: 'Time Series', fileTypeImageUrl: 'https\x3a\x2f\x2fsecure.wlxrs.com\x2fn9M4HXlDY9c8DRYRywO4rw\x2fimages\x2ficons\x2fSmall\x2fNonEmptyDocumentFolder.png', caption: '', captionUrl: 'https\x3a\x2f\x2fcid-2f1027d9e9c7114b.skydrive.live.com\x2finlineedit.ashx\x2f.Documents\x2fTime\x2520Series', previewImageUrl: 'https\x3a\x2f\x2fsecure.wlxrs.com\x2fn9M4HXlDY9c8DRYRywO4rw\x2fimages\x2ficons\x2fLarge\x2fNonEmptyDocumentFolder.png', previewImageWidth: 0, previewImageHeight: 0, thumbnailImageUrl: '', isVideo: false}, {displayName: 'RExcel \x26 Rcom', fileName: 'RExcel \x26 Rcom', url: '\x23resId\x2f2F1027D9E9C7114B\x21591', isFolder: true, resourceId: '2F1027D9E9C7114B\x21591', selfUrl: 'https\x3a\x2f\x2fcid-2f1027d9e9c7114b.skydrive.live.com\x2fself.aspx\x2f.Documents\x2fRExcel\x2520\x5e0\x2520Rcom', unsafe: false, favoriteUrl: '', safeFavoriteUrl: '', previewUrl: 'https\x3a\x2f\x2fcid-2f1027d9e9c7114b.skydrive.live.com\x2fbrowse.aspx\x2f.Documents\x2fRExcel\x2520\x5e0\x2520Rcom', downloadUrl: '', demoteUrl: null, isDirty: false, previewTooltip: 'Open', tooltip: 'RExcel \x26 Rcom', fileTypeImageUrl: 'https\x3a\x2f\x2fsecure.wlxrs.com\x2fn9M4HXlDY9c8DRYRywO4rw\x2fimages\x2ficons\x2fSmall\x2fNonEmptyDocumentFolder.png', caption: '', captionUrl: 'https\x3a\x2f\x2fcid-2f1027d9e9c7114b.skydrive.live.com\x2finlineedit.ashx\x2f.Documents\x2fRExcel\x2520\x5e0\x2520Rcom', previewImageUrl: 'https\x3a\x2f\x2fsecure.wlxrs.com\x2fn9M4HXlDY9c8DRYRywO4rw\x2fimages\x2ficons\x2fLarge\x2fNonEmptyDocumentFolder.png', previewImageWidth: 0, previewImageHeight: 0, thumbnailImageUrl: '', isVideo: false}, {displayName: 'Access \x26 SQL', fileName: 'Access \x26 SQL', url: '\x23resId\x2f2F1027D9E9C7114B\x21624', isFolder: true, resourceId: '2F1027D9E9C7114B\x21624', selfUrl: 'https\x3a\x2f\x2fcid-2f1027d9e9c7114b.skydrive.live.com\x2fself.aspx\x2f.Documents\x2fAccess\x2520\x5e0\x2520SQL', unsafe: false, favoriteUrl: '', safeFavoriteUrl: '', previewUrl: 'https\x3a\x2f\x2fcid-2f1027d9e9c7114b.skydrive.live.com\x2fbrowse.aspx\x2f.Documents\x2fAccess\x2520\x5e0\x2520SQL', downloadUrl: '', demoteUrl: null, isDirty: false, previewTooltip: 'Open', tooltip: 'Access \x26 SQL', fileTypeImageUrl: 'https\x3a\x2f\x2fsecure.wlxrs.com\x2fn9M4HXlDY9c8DRYRywO4rw\x2fimages\x2ficons\x2fSmall\x2fNonEmptyDocumentFolder.png', caption: '', captionUrl: 'https\x3a\x2f\x2fcid-2f1027d9e9c7114b.skydrive.live.com\x2finlineedit.ashx\x2f.Documents\x2fAccess\x2520\x5e0\x2520SQL', previewImageUrl: 'https\x3a\x2f\x2fsecure.wlxrs.com\x2fn9M4HXlDY9c8DRYRywO4rw\x2fimages\x2ficons\x2fLarge\x2fNonEmptyDocumentFolder.png', previewImageWidth: 0, previewImageHeight: 0, thumbnailImageUrl: '', isVideo: false}, {displayName: 'Reference', fileName: 'Reference', url: '\x23resId\x2f2F1027D9E9C7114B\x21704', isFolder: true, resourceId: '2F1027D9E9C7114B\x21704', selfUrl: 'https\x3a\x2f\x2fcid-2f1027d9e9c7114b.skydrive.live.com\x2fself.aspx\x2f.Documents\x2fReference', unsafe: false, favoriteUrl: '', safeFavoriteUrl: '', previewUrl: 'https\x3a\x2f\x2fcid-2f1027d9e9c7114b.skydrive.live.com\x2fbrowse.aspx\x2f.Documents\x2fReference', downloadUrl: '', demoteUrl: null, isDirty: false, previewTooltip: 'Open', tooltip: 'Reference', fileTypeImageUrl: 'https\x3a\x2f\x2fsecure.wlxrs.com\x2fn9M4HXlDY9c8DRYRywO4rw\x2fimages\x2ficons\x2fSmall\x2fNonEmptyDocumentFolder.png', caption: '', captionUrl: 'https\x3a\x2f\x2fcid-2f1027d9e9c7114b.skydrive.live.com\x2finlineedit.ashx\x2f.Documents\x2fReference', previewImageUrl: 'https\x3a\x2f\x2fsecure.wlxrs.com\x2fn9M4HXlDY9c8DRYRywO4rw\x2fimages\x2ficons\x2fLarge\x2fNonEmptyDocumentFolder.png', previewImageWidth: 0, previewImageHeight: 0, thumbnailImageUrl: '', isVideo: false}, {displayName: 'Dessambly', fileName: 'Dessambly', url: '\x23resId\x2f2F1027D9E9C7114B\x21995', isFolder: true, resourceId: '2F1027D9E9C7114B\x21995', selfUrl: 'https\x3a\x2f\x2fcid-2f1027d9e9c7114b.skydrive.live.com\x2fself.aspx\x2f.Documents\x2fDessambly', unsafe: false, favoriteUrl: '', safeFavoriteUrl: '', previewUrl: 'https\x3a\x2f\x2fcid-2f1027d9e9c7114b.skydrive.live.com\x2fbrowse.aspx\x2f.Documents\x2fDessambly', downloadUrl: '', demoteUrl: null, isDirty: false, previewTooltip: 'Open', tooltip: 'Dessambly', fileTypeImageUrl: 'https\x3a\x2f\x2fsecure.wlxrs.com\x2fn9M4HXlDY9c8DRYRywO4rw\x2fimages\x2ficons\x2fSmall\x2fNonEmptyDocumentFolder.png', caption: '', captionUrl: 'https\x3a\x2f\x2fcid-2f1027d9e9c7114b.skydrive.live.com\x2finlineedit.ashx\x2f.Documents\x2fDessambly', previewImageUrl: 'https\x3a\x2f\x2fsecure.wlxrs.com\x2fn9M4HXlDY9c8DRYRywO4rw\x2fimages\x2ficons\x2fLarge\x2fNonEmptyDocumentFolder.png', previewImageWidth: 0, previewImageHeight: 0, thumbnailImageUrl: '', isVideo: false}, {displayName: 'DataSet', fileName: 'DataSet.rar', url: '\x23resId\x2f2F1027D9E9C7114B\x21981', isFolder: false, resourceId: '2F1027D9E9C7114B\x21981', selfUrl: 'https\x3a\x2f\x2fcid-2f1027d9e9c7114b.skydrive.live.com\x2fself.aspx\x2f.Documents\x2fDataSet.rar', unsafe: false, favoriteUrl: '', safeFavoriteUrl: '', previewUrl: 'https\x3a\x2f\x2f2qdn9w.bay.livefilestore.com\x2fy1pE1xMRjqhgnKovD59AFxfSbzjeS9n_gqALx-iEiyk73ms2M-RwfltIFSVo99QeQ_OGcuQsJ6i_xE0knadqYXaVoLJrM-EhgO1\x2fDataSet.rar\x3fdownload', downloadUrl: 'https\x3a\x2f\x2f2qdn9w.bay.livefilestore.com\x2fy1pE1xMRjqhgnKovD59AFxfSbzjeS9n_gqALx-iEiyk73ms2M-RwfltIFSVo99QeQ_OGcuQsJ6i_xE0knadqYXaVoLJrM-EhgO1\x2fDataSet.rar\x3fdownload', demoteUrl: null, isDirty: false, previewTooltip: 'Download', tooltip: 'DataSet.rar', fileTypeImageUrl: 'https\x3a\x2f\x2fsecure.wlxrs.com\x2fn9M4HXlDY9c8DRYRywO4rw\x2fimages\x2ficons\x2fSmall\x2fZip.png', caption: '', captionUrl: 'https\x3a\x2f\x2fcid-2f1027d9e9c7114b.skydrive.live.com\x2finlineedit.ashx\x2f.Documents\x2fDataSet.rar', previewImageUrl: 'https\x3a\x2f\x2fsecure.wlxrs.com\x2fn9M4HXlDY9c8DRYRywO4rw\x2fimages\x2ficons\x2fLarge\x2fZip.png', previewImageWidth: 0, previewImageHeight: 0, thumbnailImageUrl: '', isVideo: false}, {displayName: 'NSModel', fileName: 'NSModel.rar', url: '\x23resId\x2f2F1027D9E9C7114B\x21986', isFolder: false, resourceId: '2F1027D9E9C7114B\x21986', selfUrl: 'https\x3a\x2f\x2fcid-2f1027d9e9c7114b.skydrive.live.com\x2fself.aspx\x2f.Documents\x2fNSModel.rar', unsafe: false, favoriteUrl: '', safeFavoriteUrl: '', previewUrl: 'https\x3a\x2f\x2f2qdn9w.bay.livefilestore.com\x2fy1pbhVDqtCHjbTfqTpR_wbe72jFN86sivYKyk1ydLzuVAxUsFt63vZ7iY8p8S22KXjlXhgdD8yn3GRvdMGuqBFA4zyUXH7-maDW\x2fNSModel.rar\x3fdownload', downloadUrl: 'https\x3a\x2f\x2f2qdn9w.bay.livefilestore.com\x2fy1pbhVDqtCHjbTfqTpR_wbe72jFN86sivYKyk1ydLzuVAxUsFt63vZ7iY8p8S22KXjlXhgdD8yn3GRvdMGuqBFA4zyUXH7-maDW\x2fNSModel.rar\x3fdownload', demoteUrl: null, isDirty: false, previewTooltip: 'Download', tooltip: 'NSModel.rar', fileTypeImageUrl: 'https\x3a\x2f\x2fsecure.wlxrs.com\x2fn9M4HXlDY9c8DRYRywO4rw\x2fimages\x2ficons\x2fSmall\x2fZip.png', caption: '', captionUrl: 'https\x3a\x2f\x2fcid-2f1027d9e9c7114b.skydrive.live.com\x2finlineedit.ashx\x2f.Documents\x2fNSModel.rar', previewImageUrl: 'https\x3a\x2f\x2fsecure.wlxrs.com\x2fn9M4HXlDY9c8DRYRywO4rw\x2fimages\x2ficons\x2fLarge\x2fZip.png', previewImageWidth: 0, previewImageHeight: 0, thumbnailImageUrl: '', isVideo: false}, {displayName: 'NumbSp', fileName: 'NumbSp.rar', url: '\x23resId\x2f2F1027D9E9C7114B\x211042', isFolder: false, resourceId: '2F1027D9E9C7114B\x211042', selfUrl: 'https\x3a\x2f\x2fcid-2f1027d9e9c7114b.skydrive.live.com\x2fself.aspx\x2f.Documents\x2fNumbSp.rar', unsafe: false, favoriteUrl: '', safeFavoriteUrl: '', previewUrl: 'https\x3a\x2f\x2f2qdn9w.bay.livefilestore.com\x2fy1pnXMbpA6vr72wL5OuOwStemgXsWKcMOMKTI4Tka2SJ9AxB-azKhlX7gv1jH78Zno0NXjWGmwKZjfdAR3g-UBeVUgErS-XBOFO\x2fNumbSp.rar\x3fdownload', downloadUrl: 'https\x3a\x2f\x2f2qdn9w.bay.livefilestore.com\x2fy1pnXMbpA6vr72wL5OuOwStemgXsWKcMOMKTI4Tka2SJ9AxB-azKhlX7gv1jH78Zno0NXjWGmwKZjfdAR3g-UBeVUgErS-XBOFO\x2fNumbSp.rar\x3fdownload', demoteUrl: null, isDirty: false, previewTooltip: 'Download', tooltip: 'NumbSp.rar', fileTypeImageUrl: 'https\x3a\x2f\x2fsecure.wlxrs.com\x2fn9M4HXlDY9c8DRYRywO4rw\x2fimages\x2ficons\x2fSmall\x2fZip.png', caption: '', captionUrl: 'https\x3a\x2f\x2fcid-2f1027d9e9c7114b.skydrive.live.com\x2finlineedit.ashx\x2f.Documents\x2fNumbSp.rar', previewImageUrl: 'https\x3a\x2f\x2fsecure.wlxrs.com\x2fn9M4HXlDY9c8DRYRywO4rw\x2fimages\x2ficons\x2fLarge\x2fZip.png', previewImageWidth: 0, previewImageHeight: 0, thumbnailImageUrl: '', isVideo: false}, {displayName: 'How to Use SQLite with R', fileName: 'How to Use SQLite with R.pdf', url: '\x23resId\x2f2F1027D9E9C7114B\x211052', isFolder: false, resourceId: '2F1027D9E9C7114B\x211052', selfUrl: 'https\x3a\x2f\x2fcid-2f1027d9e9c7114b.skydrive.live.com\x2fself.aspx\x2f.Documents\x2fHow\x2520to\x2520Use\x2520SQLite\x2520with\x2520R.pdf', unsafe: false, favoriteUrl: '', safeFavoriteUrl: '', previewUrl: 'https\x3a\x2f\x2f2qdn9w.bay.livefilestore.com\x2fy1peBrdaPL1BF24WhnrtJpPqLpRGqwPvxrwHF1sNvpauH9ilTSs7A1TC_PR-HPMuXCeBAbQBvaoQAFvaHqOGOOY5QLM4KdeqE8R\x2fHow\x2520to\x2520Use\x2520SQLite\x2520with\x2520R.pdf\x3fdownload', downloadUrl: 'https\x3a\x2f\x2f2qdn9w.bay.livefilestore.com\x2fy1peBrdaPL1BF24WhnrtJpPqLpRGqwPvxrwHF1sNvpauH9ilTSs7A1TC_PR-HPMuXCeBAbQBvaoQAFvaHqOGOOY5QLM4KdeqE8R\x2fHow\x2520to\x2520Use\x2520SQLite\x2520with\x2520R.pdf\x3fdownload', demoteUrl: null, isDirty: false, previewTooltip: 'Download', tooltip: 'How to Use SQLite with R.pdf', fileTypeImageUrl: 'https\x3a\x2f\x2fsecure.wlxrs.com\x2fn9M4HXlDY9c8DRYRywO4rw\x2fimages\x2ficons\x2fSmall\x2fDefault.png', caption: '', captionUrl: 'https\x3a\x2f\x2fcid-2f1027d9e9c7114b.skydrive.live.com\x2finlineedit.ashx\x2f.Documents\x2fHow\x2520to\x2520Use\x2520SQLite\x2520with\x2520R.pdf', previewImageUrl: 'https\x3a\x2f\x2fsecure.wlxrs.com\x2fn9M4HXlDY9c8DRYRywO4rw\x2fimages\x2ficons\x2fLarge\x2fDefault.png', previewImageWidth: 0, previewImageHeight: 0, thumbnailImageUrl: '', isVideo: false}, {displayName: 'RODBC\u4f7f\u7528\u7b80\u4ecb', fileName: 'RODBC\u4f7f\u7528\u7b80\u4ecb.pdf', url: '\x23resId\x2f2F1027D9E9C7114B\x211054', isFolder: false, resourceId: '2F1027D9E9C7114B\x211054', selfUrl: 'https\x3a\x2f\x2fcid-2f1027d9e9c7114b.skydrive.live.com\x2fself.aspx\x2f.Documents\x2fRODBC\x25e4\x25bd\x25bf\x25e7\x2594\x25a8\x25e7\x25ae\x2580\x25e4\x25bb\x258b.pdf', unsafe: false, favoriteUrl: '', safeFavoriteUrl: '', previewUrl: 'https\x3a\x2f\x2f2qdn9w.bay.livefilestore.com\x2fy1pKucBCG6xoPM45nkO1jK-JmtNEmXv4RQvhSQT8a-QRJmA2z25v7QstKdb0Gw8EjOn3ar1ySngRvDBPB0NypzEGUCk_8pky6nE\x2fRODBC\x25E4\x25BD\x25BF\x25E7\x2594\x25A8\x25E7\x25AE\x2580\x25E4\x25BB\x258B.pdf\x3fdownload', downloadUrl: 'https\x3a\x2f\x2f2qdn9w.bay.livefilestore.com\x2fy1pKucBCG6xoPM45nkO1jK-JmtNEmXv4RQvhSQT8a-QRJmA2z25v7QstKdb0Gw8EjOn3ar1ySngRvDBPB0NypzEGUCk_8pky6nE\x2fRODBC\x25E4\x25BD\x25BF\x25E7\x2594\x25A8\x25E7\x25AE\x2580\x25E4\x25BB\x258B.pdf\x3fdownload', demoteUrl: null, isDirty: false, previewTooltip: 'Download', tooltip: 'RODBC\u4f7f\u7528\u7b80\u4ecb.pdf', fileTypeImageUrl: 'https\x3a\x2f\x2fsecure.wlxrs.com\x2fn9M4HXlDY9c8DRYRywO4rw\x2fimages\x2ficons\x2fSmall\x2fDefault.png', caption: '', captionUrl: 'https\x3a\x2f\x2fcid-2f1027d9e9c7114b.skydrive.live.com\x2finlineedit.ashx\x2f.Documents\x2fRODBC\x25e4\x25bd\x25bf\x25e7\x2594\x25a8\x25e7\x25ae\x2580\x25e4\x25bb\x258b.pdf', previewImageUrl: 'https\x3a\x2f\x2fsecure.wlxrs.com\x2fn9M4HXlDY9c8DRYRywO4rw\x2fimages\x2ficons\x2fLarge\x2fDefault.png', previewImageWidth: 0, previewImageHeight: 0, thumbnailImageUrl: '', isVideo: false}],
+  isMobile: false,
+  isRtl: false,
+  isShared: true,
+  shouldFocusIterator: true,
+  selfPageName: 'self.aspx',
+  canRenderVideo: false,
+  canEditCaptions: true,
+  needsPermissionToTag: true,
+  canary: 'vmLBP2B7D5FOZlAGyAmR9PeDZJ2cqe0ycY4OZXn2pQ8\x3d3',
+  contactListUrl: 'https\x3a\x2f\x2fcid-2f1027d9e9c7114b.skydrive.live.com\x2fcontacts.aspx\x3fcanary\x3dvmLBP2B7D5FOZlAGyAmR9PeDZJ2cqe0ycY4OZXn2pQ8\x253d3',
+  loadingImageUrl: 'https\x3a\x2f\x2fsecure.wlxrs.com\x2fn9M4HXlDY9c8DRYRywO4rw\x2fimages\x2fhig_progcircle_loading16.gif',
+  sprocketLargeImageUrl: 'https\x3a\x2f\x2fsecure.wlxrs.com\x2fn9M4HXlDY9c8DRYRywO4rw\x2fimages\x2fsprocket_large.png',
+  sprocketImageUrl: 'https\x3a\x2f\x2fsecure.wlxrs.com\x2fn9M4HXlDY9c8DRYRywO4rw\x2fimages\x2fsprocket_96.png',
+  itemPreviewXapUrl: 'https\x3a\x2f\x2fsecure.wlxrs.com\x2fn9M4HXlDY9c8DRYRywO4rw\x2fsilverlight\x2fMicrosoft.Live.SkyDrive.ItemPreview.xap',
+  fppConfig: { 
+    RequestHandler:'https\x3a\x2f\x2fcid-2f1027d9e9c7114b.skydrive.live.com\x2fskydrive.fpp',
+    FppVersion: 1,
+    CanaryToken:'canary',
+    Version: "1",
+    CanaryValue:'vmLBP2B7D5FOZlAGyAmR9PeDZJ2cqe0ycY4OZXn2pQ8\x253d3'
+  },
+  strings: {
+    asyncLoadError: 'Portions of the page could not be loaded. Please refresh the page.',
+    videoLoadError: 'Sorry, for some reason we can\u2019t play this video.',
+    fileCaptionEmpty: 'Add a description',
+    fileCaptionTimeout: 'There was an error saving your description. Please try again.',
+    fileCaptionError: 'There was an error saving your description. Please try again.',
+    photoCaptionError: 'There was an error saving your caption. Please try again.',
+    deletePromptPrivateFolder: 'You\x27re about to permanently delete \x7b0\x7d and all of its contents from Windows Live SkyDrive.',
+    deletePromptSharedFolder: 'You\x27re about to permanently delete \x7b0\x7d and all of its contents from Windows Live SkyDrive. The people you\x27re sharing with won\x27t be able to access these files anymore.',
+    deletePromptPrivateFile:  'You\x27re about to permanently delete \x7b0\x7d from Windows Live SkyDrive.',
+    deletePromptSharedFile:  'You\x27re about to permanently delete \x7b0\x7d from Windows Live SkyDrive. The people you\u2019re sharing with won\x27t be able to access it anymore.',
+    videoLoading: 'Loading...',
+    videoToolTipFormat: '\x7b0\x3a00\x7d\x3a\x7b1\x3a00\x7d',
+    iteratorIndex: '\x7b0\x7d of \x7b1\x7d',
+    dangerousFileText: 'Downloading this file type \x28\x7b0\x7d\x29 can potentially harm your computer.',
+    pageTitle: '\x7b0\x7d - Windows Live',
+    ptOk: 'OK',
+    ptCancel: 'Cancel',
+    ptGeneralFailure: 'Sorry, we couldn\x27t save your changes. Please try again.',
+    ptFindPerson: 'Type a name',
+    ptThatsMeDisabled: 'You\x27re already tagged in this photo',
+    ptThatsMeTooltip: 'Tag yourself in this photo',
+    ptErrors: [
+      'There was a problem creating the tag. Please try again later.',
+      'There was a problem removing the tag. Please try again later.',
+      'Sorry, you can\x27t tag this person in this photo.',
+      'Sorry, there was a problem creating the tag.',
+      ''
+    ]
+  }
+};
+
+window.showProgress = function (isVisible) { setDisplay($('ptProgress'), isVisible); };
+
+var currentHash = window.location.hash;
+var newUrl = null;
+
+for (var i = 0; i < selfPageData.items.length; i++)
+{
+  if (selfPageData.items[i].url == currentHash)
+  {
+    newUrl = selfPageData.items[i].selfUrl;
+    break;
+  }
+  if (selfPageData.items[i].url == selfPageData.currentItemHash)
+  {
+    selfPageData.currentItem = selfPageData.items[i];
+    selfPageData.currentItem.index = i;
+  }
+}
+
+if (newUrl != null) { window.location = newUrl; }
+</script>
+
+<script type="text/javascript" src="https://secure.wlxrs.com/n9M4HXlDY9c8DRYRywO4rw/scripts/LiveFolders.js"></script>
+<script type="text/javascript" src="https://secure.wlxrs.com/n9M4HXlDY9c8DRYRywO4rw/scripts/SelfPre.js"></script>
+<script type="text/javascript" src="https://secure.wlxrs.com/n9M4HXlDY9c8DRYRywO4rw/scripts/ag.js"></script>
+
+
+
+
+	
+  </head>
+  <body class="ltr SignedIn Firefox FF_Win Win6 FF_M3 FF_D6 Full RE_Gecko ">
+    
+    
+
+    <div id="m_wh"><script type="text/javascript">/* Copyright (C) 2009 Microsoft Corporation */function $c_TreatTile(a,e){a.style.display=e;var d=a.width,c=a.height,b=19;if(d>=c||c<b)a.height=b;if(d<c||d<b)a.width=b}</script>
+<div id="c_header" class="c_hb" style="min-width:987px;"><div class="c_hta"><div class="c_hg" style="background-image:url(https://secure.wlxrs.com/$live.controls.images/h/g.png);padding-bottom:7px;"><div class="c_h" style="width:987px;"><div class="c_hl" style="top:12px;"><a class="c_hlp c_nootl" href="http&#58;&#47;&#47;g.live.com&#47;9uxp9en-us&#47;hdr_main1&#63;&#63;su&#61;http&#58;&#47;&#47;shared.live.com&#47;"  target="_top"><span class="c_is" style="padding-left:18px;font-size:17px;line-height:17px;vertical-align:middle;margin-right:3px;"><span style="clip: rect(0px 18px 17px 0px);left:0px;top:0px;"><img src="https&#58;&#47;&#47;secure.wlxrs.com&#47;&#36;live.controls.images&#47;h&#47;s3.png" alt="Windows&#32;Live" /></span></span><span class='c_hbrnd'>Windows Live<span class="c_tm">&trade;</span></span></a></div><div class="c_hc c_ffpub"><div class="inCenter" style="margin-right:4.5em;;"><ul class="c_ht"><li><a href="http&#58;&#47;&#47;g.live.com&#47;9uxp9en-us&#47;hdr_main1&#63;&#63;su&#61;http&#58;&#47;&#47;shared.live.com&#47;Live.Folders" target="_top">Home</a></li><li><a href="http&#58;&#47;&#47;g.live.com&#47;9uxp9en-us&#47;hdr_main2&#63;&#63;su&#61;http&#58;&#47;&#47;shared.live.com&#47;Live.Folders" target="_top">Profile</a></li><li><a href="http&#58;&#47;&#47;g.live.com&#47;9uxp9en-us&#47;hdr_main3&#63;&#63;su&#61;http&#58;&#47;&#47;shared.live.com&#47;Live.Folders" target="_top">People</a></li><li><a href="http&#58;&#47;&#47;g.live.com&#47;9uxp9en-us&#47;hdr_main4&#63;&#63;su&#61;http&#58;&#47;&#47;shared.live.com&#47;Live.Folders" target="_top">Mail</a></li><li><a href="http&#58;&#47;&#47;g.live.com&#47;9uxp9en-us&#47;hdr_main5&#63;&#63;su&#61;http&#58;&#47;&#47;shared.live.com&#47;Live.Folders" target="_top">Photos</a></li><li><a href="&#35;" onclick="try&#123;&#36;menu.bind&#40;event,0,3,1&#41;&#59;&#125;catch&#40;e&#41;&#123;&#125;&#59;return&#32;false&#59;&#59;return&#32;false&#59;return&#32;false" class="&#32;uxfa_ml&#32;c_ml" target="_top"><span class="c_mlu">More</span><span class="c_chev"> &#9660;</span></a><ul class="&#32;uxfa_m&#32;c_m"><li><a href="http&#58;&#47;&#47;g.live.com&#47;9uxp9en-us&#47;hdr_main6&#63;&#63;su&#61;http&#58;&#47;&#47;shared.live.com&#47;Live.Folders" target="_top">Calendar</a></li><li><a href="http&#58;&#47;&#47;g.live.com&#47;9uxp9en-us&#47;hdr_more12&#63;&#63;su&#61;http&#58;&#47;&#47;shared.live.com&#47;Live.Folders" target="_top">Events</a><div class="c_ms"></div></li><li><a href="http&#58;&#47;&#47;g.live.com&#47;9uxp9en-us&#47;hdr_more2&#63;&#63;su&#61;http&#58;&#47;&#47;shared.live.com&#47;Live.Folders" target="_top">SkyDrive</a></li><li><a href="http&#58;&#47;&#47;g.live.com&#47;9uxp9en-us&#47;hdr_more1&#63;&#63;su&#61;http&#58;&#47;&#47;shared.live.com&#47;Live.Folders" target="_top">Groups</a></li><li><a href="http&#58;&#47;&#47;g.live.com&#47;9uxp9en-us&#47;hdr_more11&#63;&#63;su&#61;http&#58;&#47;&#47;shared.live.com&#47;Live.Folders" target="_top">Spaces</a><div class="c_ms"></div></li><li><a href="http&#58;&#47;&#47;g.live.com&#47;9uxp9en-us&#47;hdr_more4&#63;&#63;su&#61;http&#58;&#47;&#47;shared.live.com&#47;Live.Folders" target="_top">Family&#32;Safety</a></li><li><a href="http&#58;&#47;&#47;g.live.com&#47;9uxp9en-us&#47;hdr_more6&#63;&#63;su&#61;http&#58;&#47;&#47;shared.live.com&#47;Live.Folders" target="_top">Mobile</a></li><li><a href="http&#58;&#47;&#47;g.live.com&#47;9uxp9en-us&#47;hdr_more5&#63;&#63;su&#61;http&#58;&#47;&#47;shared.live.com&#47;Live.Folders" target="_top">Downloads</a><div class="c_ms"></div></li><li><a href="http&#58;&#47;&#47;g.live.com&#47;9uxp9en-us&#47;hdr_more9&#63;&#63;su&#61;http&#58;&#47;&#47;shared.live.com&#47;Live.Folders" target="_top">Office&#32;Live</a><div class="c_ms"></div></li><li><a href="http&#58;&#47;&#47;g.live.com&#47;9uxp9en-us&#47;hdr_more13&#63;&#63;su&#61;http&#58;&#47;&#47;shared.live.com&#47;Live.Folders" target="_top">All&#32;services</a></li></ul></li><li><a href="&#35;" onclick="try&#123;&#36;menu.bind&#40;event,0,3,1&#41;&#59;&#125;catch&#40;e&#41;&#123;&#125;&#59;return&#32;false&#59;&#59;return&#32;false&#59;return&#32;false" class="&#32;uxfa_ml&#32;c_ml" target="_top"><span class="c_mlu">MSN</span><span class="c_chev"> &#9660;</span></a><ul class="&#32;uxfa_m&#32;c_m"><li><a href="http&#58;&#47;&#47;g.live.com&#47;9uxp9msn&#47;mhm-en-us&#63;&#63;su&#61;http&#58;&#47;&#47;shared.live.com&#47;Live.Folders" target="_top">Home</a><div class="c_ms"></div></li><li><a href="http&#58;&#47;&#47;g.live.com&#47;9uxp9msn&#47;mau-en-us&#63;&#63;su&#61;http&#58;&#47;&#47;shared.live.com&#47;Live.Folders" target="_top">Autos</a></li><li><a href="http&#58;&#47;&#47;g.live.com&#47;9uxp9msn&#47;mga-en-us&#63;&#63;su&#61;http&#58;&#47;&#47;shared.live.com&#47;Live.Folders" target="_top">Games</a></li><li><a href="http&#58;&#47;&#47;g.live.com&#47;9uxp9msn&#47;mmo-en-us&#63;&#63;su&#61;http&#58;&#47;&#47;shared.live.com&#47;Live.Folders" target="_top">Money</a></li><li><a href="http&#58;&#47;&#47;g.live.com&#47;9uxp9msn&#47;mmv-en-us&#63;&#63;su&#61;http&#58;&#47;&#47;shared.live.com&#47;Live.Folders" target="_top">Movies</a></li><li><a href="http&#58;&#47;&#47;g.live.com&#47;9uxp9msn&#47;mmu-en-us&#63;&#63;su&#61;http&#58;&#47;&#47;shared.live.com&#47;Live.Folders" target="_top">Music</a></li><li><a href="http&#58;&#47;&#47;g.live.com&#47;9uxp9msn&#47;mnw-en-us&#63;&#63;su&#61;http&#58;&#47;&#47;shared.live.com&#47;Live.Folders" target="_top">News</a></li><li><a href="http&#58;&#47;&#47;g.live.com&#47;9uxp9msn&#47;msp-en-us&#63;&#63;su&#61;http&#58;&#47;&#47;shared.live.com&#47;Live.Folders" target="_top">Sports</a></li><li><a href="http&#58;&#47;&#47;g.live.com&#47;9uxp9msn&#47;mwe-en-us&#63;&#63;su&#61;http&#58;&#47;&#47;shared.live.com&#47;Live.Folders" target="_top">Weather</a></li></ul></li></ul><script type="text/javascript">
+        function $clrDT(){var t=document.getElementById('c_hsv');if(t.value=="Search People or web"){t.value='';}return t;}
+        function searchTheWeb(){$clrDT();document.getElementById('c_search').submit();}
+        
+        function productSearch(){var t=$clrDT();try{window.location = 'http://spaces.live.com/results.aspx?q='+t.value}catch(e){}}
+        window['$H']={u:'https\x3a\x2f\x2fhome.live.com\x2fJson\x2fWordWheel\x3fcanary\x3dRR\x252blvzJdF4iQ6hYC2N\x252fHDyfGRgk1rfHZNfH1FWYBp74\x253d0',s:''};</script><div class="c_hf" style="background-image:url(https://secure.wlxrs.com/$live.controls.images/h/sl1.png);background-position:center right;background-repeat:no-repeat;"><form id="c_search" action="http://www.bing.com/search" method="GET" onsubmit="document.getElementById('c_sbt').click(); return false" target="_top"><label for="c_hsv" style="display:none;">Search People or web</label><input id='c_hsv' class="c_ml TextItalic" value="Search People or web" autoComplete="Off" type="text" name="q"
+              onfocus="if(this.s!='t'){this.value='';this.className = 'c_ml c_fia';this.s='t';this.parentNode.parentNode.style.backgroundImage = '';}"
+              onblur="if(this.value ==''){this.value='Search People or web';this.className = 'c_ml TextItalic';this.s='';this.parentNode.parentNode.style.backgroundImage = 'url(https://secure.wlxrs.com/$live.controls.images/h/sl1.png)';}" /><input name="form" value="FOLDER" type="hidden"/><input name="mkt" value="en-us" type="hidden"/><ul class="c_m"><li><a id="c_hsp" href="&#35;" onclick="productSearch&#40;&#41;&#59;return&#32;false" class="sel">Search&#32;People</a></li><li><a id="c_hsw" href="&#35;" onclick="searchTheWeb&#40;&#41;&#59;return&#32;false">Search&#32;the&#32;web</a></li></ul><a id='c_hsbt' href="#" onclick="document.getElementById('c_sbt').click()" class="c_nootl glyph"><span><img src="https&#58;&#47;&#47;secure.wlxrs.com&#47;&#36;live.controls.images&#47;h&#47;s3.png" alt="Search" title="Search" /></span></a><input id="c_sbt" style="display:none" type="button" onclick="productSearch()"/></form></div></div></div><div id="c_me" class="c_me c_mcp"><a id="c_melink" href="#" class="TextSizeLarge c_un c_ml c_nootl" onclick="try{return $menu.bind(event,1,0,1);}catch(e){};return false;" style="vertical-align:top;zoom:1;" target="_top">
+        Kenji<span class="c_chev">&nbsp;&#9660;</span><span class="c_is" style="padding-left:31px;font-size:31px;line-height:31px;;"><span style="clip: rect(17px 31px 48px 0px);top: -17px;left:0px;"><span id="c_metile" class="c_utw"><img class="c_ut" src="https&#58;&#47;&#47;storage.msn.com&#47;MyData&#47;MyProfile&#47;GeneralProfile&#47;ProfilePhoto&#58;UserTileSmall,Thumbnail&#63;fofoff&#61;1&#38;ex&#61;24&#38;ck&#61;634015231122500960" onload="$c_TreatTile(this,'block');" style="-ms-interpolation-mode:bicubic;" alt=""/></span><img src="https&#58;&#47;&#47;secure.wlxrs.com&#47;&#36;live.controls.images&#47;h&#47;s3.png" style="position:absolute;" alt=""/></span></span>
+        </a><ul class="c_m"><li><a href="http&#58;&#47;&#47;g.live.com&#47;9uxp9en-us&#47;hdr_mectrl3&#63;ru&#61;https&#37;3a&#37;2f&#37;2fcid-2f1027d9e9c7114b.skydrive.live.com&#37;2fself.aspx&#37;2f.Documents&#37;2fRODBC&#37;25E4&#37;25BD&#37;25BF&#37;25E7&#37;2594&#37;25A8&#37;25E7&#37;25AE&#37;2580&#37;25E4&#37;25BB&#37;258B.pdf&#38;&#38;su&#61;http&#58;&#47;&#47;shared.live.com&#47;Live.Folders" target="_top">Change&#32;picture</a></li><li><a href="http&#58;&#47;&#47;g.live.com&#47;9uxp9en-us&#47;hdr_mectrl4&#63;ru&#61;https&#37;3a&#37;2f&#37;2fcid-2f1027d9e9c7114b.skydrive.live.com&#37;2fself.aspx&#37;2f.Documents&#37;2fRODBC&#37;25E4&#37;25BD&#37;25BF&#37;25E7&#37;2594&#37;25A8&#37;25E7&#37;25AE&#37;2580&#37;25E4&#37;25BB&#37;258B.pdf&#38;&#38;su&#61;http&#58;&#47;&#47;shared.live.com&#47;Live.Folders" target="_top">Change&#32;name</a><div class="c_ms"></div></li><li><a id="c_hli" href="http&#58;&#47;&#47;g.live.com&#47;9uxp9en-us&#47;hdr_mectrl1&#63;&#63;su&#61;http&#58;&#47;&#47;shared.live.com&#47;Live.Folders" target="_top">View&#32;your&#32;account</a></li><li><a href="http&#58;&#47;&#47;g.live.com&#47;9uxp9en-us&#47;hdr_mectrl2&#63;&#63;su&#61;http&#58;&#47;&#47;shared.live.com&#47;Live.Folders" target="_top">Link&#32;other&#32;accounts</a></li></ul><a id="c_signout" class="signOut TextSizeXSmall" onclick="event.cancelBubble=true" href="http&#58;&#47;&#47;login.live.com&#47;logout.srf&#63;ct&#61;1266210643&#38;rver&#61;5.5.4177.0&#38;lc&#61;1033&#38;id&#61;250206&#38;ru&#61;http&#58;&#37;2F&#37;2Fskydrive.live.com&#37;2Fwelcome.aspx" target="_top">sign out</a></div>
+<div class="c_hp">
+
+<h1 id="c_PageTitle">RODBC&#20351;&#29992;&#31616;&#20171;.pdf&nbsp;</h1><div class="c_bcb c__"><ul> <li><a href="http&#58;&#47;&#47;cid-2f1027d9e9c7114b.profile.live.com">Kenji</a><span class="c_rchev" style="margin:0 7px;" > &#9658; </span></li>  <li><a href="http&#58;&#47;&#47;cid-2f1027d9e9c7114b.skydrive.live.com&#47;home.aspx">SkyDrive</a><span class="c_rchev" style="margin:0 7px;" > &#9658; </span></li>  <li><a href="https&#58;&#47;&#47;cid-2f1027d9e9c7114b.skydrive.live.com&#47;browse.aspx&#47;.Documents">My&#32;Documents</a><span class="c_rchev" style="margin:0 7px;" > &#9658; </span></li>  <li><span class="link">RODBC&#20351;&#29992;&#31616;&#20171;.pdf</span></li> </ul></div>
+</div></div></div></div></div><img src="https://p.live.com/p.aspx?CI=8000&PN=Live.Folders&U=2f1027d9e9c7114b&MS=&X=GQEm%2bLegTN%2bJeagPf64PnMCefiA%3d" alt="" style="display:none"/>
+
+</div>
+    <div class="c_base c_fixwth">
+        <div class="c_main">
+            
+
+
+    
+    <div class="c_right_area ">
+        <div id="m_wc" class="c_cb_area "><div class="c_c c__" id="sdx_cb"><ul class="c_cc"><li><a id="download" href="javascript&#58;void&#40;0&#41;" onclick="window.execCommand&#40;&#39;download&#39;&#41;&#59;return&#32;false&#59;">Download</a></li><li><a id="delete" href="javascript&#58;void&#40;0&#41;" onclick="window.execCommand&#40;&#39;delete&#39;&#41;&#59;return&#32;false&#59;">Delete</a></li><li><a id="move" href="https&#58;&#47;&#47;cid-2f1027d9e9c7114b.skydrive.live.com&#47;movecopyhome.aspx&#47;.Documents&#47;RODBC&#37;e4&#37;bd&#37;bf&#37;e7&#37;94&#37;a8&#37;e7&#37;ae&#37;80&#37;e4&#37;bb&#37;8b.pdf&#63;move&#61;2F1027D9E9C7114B&#33;1054&#38;parid&#61;2F1027D9E9C7114B&#33;292&#38;isfolder&#61;0&#38;iscopy&#61;0">Move</a></li><li><a id="copy" href="https&#58;&#47;&#47;cid-2f1027d9e9c7114b.skydrive.live.com&#47;movecopyhome.aspx&#47;.Documents&#47;RODBC&#37;e4&#37;bd&#37;bf&#37;e7&#37;94&#37;a8&#37;e7&#37;ae&#37;80&#37;e4&#37;bb&#37;8b.pdf&#63;move&#61;2F1027D9E9C7114B&#33;1054&#38;parid&#61;2F1027D9E9C7114B&#33;292&#38;isfolder&#61;0&#38;iscopy&#61;1">Copy</a></li><li><a id="rename" href="https&#58;&#47;&#47;cid-2f1027d9e9c7114b.skydrive.live.com&#47;rename.aspx&#47;.Documents&#47;RODBC&#37;e4&#37;bd&#37;bf&#37;e7&#37;94&#37;a8&#37;e7&#37;ae&#37;80&#37;e4&#37;bb&#37;8b.pdf&#63;ref&#61;2">Rename</a></li></ul><ul class="c_co"><li>
+<!-- Options Menu Start -->
+<span class="c_omcntrl c_mcp" >
+
+<a id="_button" href="&#35;null" onclick="try&#123;&#36;menu_themes&#40;this,&#39;_menu_themes&#39;,&#39;https&#58;&#47;&#47;secure.wlxrs.com&#47;EeFbj0LIq4mBHfJL0gARDQ&#47;&#39;,0&#41;&#59;return&#32;&#36;menu.bind&#40;event,1&#41;&#59;&#125;catch&#40;e&#41;&#123;return&#32;false&#59;&#125;" class="c_ml">Options<span class="c_chev">&nbsp;&#9660;</span></a>
+    <div id="_menu" class="c_om c_m noresize" style="display:none;">
+        <div class="c_clr"></div>
+        <ul class="c_oblock" id="_menu_language">
+            <li>
+                <span class="gt">Language</span>
+            </li>
+            <li>
+                <a href="http&#58;&#47;&#47;g.live.com&#47;9uxp9en-us&#47;op_0&#63;ru&#61;https&#37;3a&#37;2f&#37;2fcid-2f1027d9e9c7114b.skydrive.live.com&#37;2fself.aspx&#37;2f.Documents&#37;2fRODBC&#37;25E4&#37;25BD&#37;25BF&#37;25E7&#37;2594&#37;25A8&#37;25E7&#37;25AE&#37;2580&#37;25E4&#37;25BB&#37;258B.pdf" rel="nofollow">English</a>
+            </li>
+        </ul>
+        
+        <div class="lp"><div class="line"></div></div>
+        <ul class="c_oblock c_ot" id="_menu_themes" serviceurl="https://ssw.live.com/lfe/Live.Gateway.Themes/themewriter.aspx?canary=XHpVuRn6QPZ90cVMPLyE8dDDm60bAD0AJqDJodbf390%3d4">
+            <li>            
+                <span class="gt">Themes</span>
+            </li>
+            <li class="c_omti"><a href='#' onclick='return false;' info='Base|thumbnail.jpg|15.1.2055' class='c_thmb' title='Windows&#32;Live'></a><a href='#' onclick='return false;' info='X_5_Desert|Desert_32x32.gif|15.1.2055' class='c_thmb' title='Desert'></a><a href='#' onclick='return false;' info='OOB_3_Cherry|thumbnail.jpg|15.1.2055' class='c_thmb' title='Cherry&#32;Blossoms'></a><a href='#' onclick='return false;' info='Remix_VictorianLight_14|Thumbnail.gif|15.1.2055' class='c_thmb' title='Victorian&#32;Gray'></a><div style="clear:both"></div></li><li class="c_omti"><a href='#' onclick='return false;' info='OOB_51_Carbon|Thumbnail.gif|15.1.2055' class='c_thmb' title='Carbon'></a><a href='#' onclick='return false;' info='Remix_DottieDark_8|Thumbnail.gif|15.1.2055' class='c_thmb' title='Dottie&#32;Orange'></a><a href='#' onclick='return false;' info='OOB_56_Wildflowers|Thumbnail.gif|15.1.2055' class='c_thmb' title='Wildflowers'></a><a href='#' onclick='return false;' info='X_3_Robot|thumbnail.gif|15.1.2055' class='c_thmb' title='Robots'></a><div style="clear:both"></div></li>
+            <li>            
+                <a href="http&#58;&#47;&#47;g.live.com&#47;9uxp9en-us&#47;op_1&#63;ru&#61;https&#37;3a&#37;2f&#37;2fcid-2f1027d9e9c7114b.skydrive.live.com&#37;2fself.aspx&#37;2f.Documents&#37;2fRODBC&#37;25E4&#37;25BD&#37;25BF&#37;25E7&#37;2594&#37;25A8&#37;25E7&#37;25AE&#37;2580&#37;25E4&#37;25BB&#37;258B.pdf" rel="nofollow">More&#32;themes</a>
+            </li>
+            
+        </ul>
+        <div class="c_clr"></div>
+        
+        <div class="lp"><div class="line"></div></div>
+        <div class="c_oblock" id="_menu_groups"><div class="c_ogrp"><span class="gt&#32;c_gl&#32;link">Files&#32;and&#32;Photos</span><ul><li><a href="https&#58;&#47;&#47;cid-2f1027d9e9c7114b.skydrive.live.com&#47;commentoptions.aspx">Comments</a></li><li><a href="https&#58;&#47;&#47;cid-2f1027d9e9c7114b.skydrive.live.com&#47;peopleoptions.aspx">People&#32;tagging</a></li><li><a href="http&#58;&#47;&#47;cid-2f1027d9e9c7114b.profile.live.com&#47;emailpublish&#63;ru&#61;https&#58;&#47;&#47;cid-2f1027d9e9c7114b.skydrive.live.com&#47;self.aspx&#47;.Documents&#47;RODBC&#37;E4&#37;BD&#37;BF&#37;E7&#37;94&#37;A8&#37;E7&#37;AE&#37;80&#37;E4&#37;BB&#37;8B.pdf">E-mail&#32;publishing</a></li></ul>
+                  </div></div><div class="lp"><div class="line"></div></div>
+        <ul class="c_oblock" id="_menu_more">
+            <li>
+                <a href="http&#58;&#47;&#47;g.live.com&#47;9uxp9en-us&#47;op_2" rel="nofollow">More&#32;options</a>
+            </li>
+        </ul>
+        
+    </div>
+    <div class="c_shad" style="position:absolute;display:none;"></div>
+</span>
+<!-- Options Menu End -->
+
+</li><li><a href="http&#58;&#47;&#47;g.live.com&#47;9uxp9en-us&#47;cmb_help&#63;&#63;su&#61;http&#58;&#47;&#47;shared.live.com&#47;" onclick="return&#32;&#33;&#33;&#40;window.LaunchHelp&#32;&#38;&#38;&#32;LaunchHelp&#40;&#39;https&#92;x3a&#92;x2f&#92;x2fhelp.live.com&#39;,&#39;live_folders&#39;,&#39;en-US&#39;,&#39;&#39;,&#39;keyword&#39;,&#39;qaf&#39;,&#39;true&#39;,&#39;b1&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;&#41;&#32;&#38;&#38;&#32;false&#41;">Help</a></li></ul></div></div>
+        
+        <div class="c_inmiddle_area_only">
+            <div >
+                
+  
+
+                <div id="m_wd"></div>
+
+  
+  <form name="aspnetForm" method="post" action="" id="aspnetForm" style="margin:0" onsubmit="return prepareSubmitOnce(this);">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTc5NTAzMzUzN2Rk" />
+</div>
+
+    <div id="content">
+      
+<input type="hidden" name="canary" value="vmLBP2B7D5FOZlAGyAmR9PeDZJ2cqe0ycY4OZXn2pQ8=3" />
+  
+      
+<div id="spContent">
+    
+
+    
+
+
+<input type="hidden" id="postVerb" name="postVerb" value="" />
+<input type="hidden" id="postVerbData" name="postVerbData" value="" />   
+
+    
+    <div id="spUnsafeType" class="displayInvisible">
+      <table cellpadding="0" cellspacing="0" width="100%">
+        <tr>
+          <td width="16"><img src="https://secure.wlxrs.com/n9M4HXlDY9c8DRYRywO4rw/images/icon_shield_16.gif" alt="" id="spUnsafeTypeImage" /></td>
+          <td width="*" id="spUnsafeMessage">Downloading this file type (.pdf) can potentially harm your computer.</td>
+        </tr>
+      </table>
+    </div>
+    
+    
+    <div id="spPreviewWrapper">
+    
+        
+         <div id="sdx_ib_parent" style="display: none">
+          <div  class="UI_NotificationBar ErrorLow" style=" ">
+            <span id="sdx_ib"></span>
+          </div>
+        </div>
+        
+        
+        <div id="ptProgress" style="display: none">
+            <img src="https://secure.wlxrs.com/n9M4HXlDY9c8DRYRywO4rw/images/hig_progcircle_loading16.gif" alt="" width="16" height="16" />
+            <span>Updating tag...</span>
+        </div>
+
+        
+        <div id="spItemPreview">
+
+<div id="spPreviewContainer">
+
+
+  <a id="spPreviewLink" href="https&#58;&#47;&#47;2qdn9w.bay.livefilestore.com&#47;y1pKucBCG6xoPM45nkO1jK-JmtNEmXv4RQvhSQT8a-QRJmA2z25v7QstKdb0Gw8EjOn3ar1ySngRvDBPB0NypzEGUCk_8pky6nE&#47;RODBC&#37;E4&#37;BD&#37;BF&#37;E7&#37;94&#37;A8&#37;E7&#37;AE&#37;80&#37;E4&#37;BB&#37;8B.pdf&#63;download" rel="nofollow"  target="" title="Download">
+<img id="spPreviewImage" src="https&#58;&#47;&#47;secure.wlxrs.com&#47;n9M4HXlDY9c8DRYRywO4rw&#47;images&#47;icons&#47;Large&#47;Default.png" alt="Download" />
+    
+</a>
+
+</div>
+</div>
+    </div>
+       
+       
+    
+    <div id="spFavoriteDiv" class="spFavoriteUrl displayInvisible">
+      <a id="spFavoriteLink" class="spFavoriteLink displayInvisible" href=""  rel="nofollow" target="_blank" title="Go to website"></a>
+      <div id="spFavoriteText" class=""></div>
+    </div>
+       
+    
+
+<div id="captionEdit" class="captionContainer">
+
+    <a id="captionLink" class="captionLink" href="javascript:void(0);"></a><div class="captionEditor">
+        <div class="captionError">
+            <img alt="" src="https://secure.wlxrs.com/n9M4HXlDY9c8DRYRywO4rw/images/error.png" />
+            <span class="captionErrorText"></span>
+        </div>
+        <textarea class="captionTextArea" rows="2"></textarea>
+        
+        <div class="captionButtons"><input id="captionSubmit" name="Save" type="button"   style="" value="Save" /><input id="captionCancel" name="Cancel" type="button"   style="" value="Cancel" />
+        </div>
+    </div>
+    
+    <div class="captionSaving"><img src="https://secure.wlxrs.com/n9M4HXlDY9c8DRYRywO4rw/images/hig_progcircle_loading16.gif" alt="" width="16" height="16" />Saving...</div>
+
+ 
+</div>
+
+
+    <div id="spPeopleTagView">
+      
+
+<style type="text/css">
+img.ppSprite_13_0_13_13 { position: absolute; left:-13px; top:0px; }
+img.ppSprite_0_0_13_13 { position: absolute; left:-0px; top:0px; } 
+</style><script type="text/javascript">
+  var $Ptv = new function()
+  {
+    var _removeHover = 'ppSprite_13_0_13_13';
+    var _remove = 'ppSprite_0_0_13_13';
+    this.Hover = function(anchor) { addCssClass(anchor.getElementsByTagName('img')[0], _removeHover); removeCssClass(anchor.getElementsByTagName('img')[0], _remove); }
+    this.Unhover = function(anchor) { addCssClass(anchor.getElementsByTagName('img')[0], _remove); removeCssClass(anchor.getElementsByTagName('img')[0], _removeHover); }
+  } ();
+</script><div id="ptViewControl" style='display:none' >
+    <h3 name="ptView" class="sectionHeader"><span id="ptvhText">People in this photo</span><span id="ptvTagCount" class="count">&nbsp;(0)</span></h3>
+    <ul id="ptvList" >
+        
+    </ul><input type="hidden" name="ptvRemoveTagKey" id="ptvRemoveTagKey" value="" /><script type="text/javascript">
+    window.peopleTagViewData = 
+    {
+        showAddTags: true,
+        canTagPeople: false,
+        tagCount: 0,
+        tags:
+        {
+            
+        },
+        pickerEntries: [],
+        isSelfTagged: false
+    };
+
+    window.peopleTagViewTemplates =
+    {
+        InviteFriendHtml: '',
+        Template: '\x3cli\x3e\x3ca \x7b0\x7d\x3e\x7b1\x7d\x3c\x2fa\x3e\x7b2\x7d\x7b3\x7d\x3c\x2fli\x3e', 
+        InnerTemplate: '\x3ca \x7b0\x7d\x3e\x7b1\x7d\x3c\x2fa\x3e\x7b2\x7d',
+        RemoveTemplate: '\x3ca onmouseover\x3d\x22\x24Ptv.Hover\x28this\x29\x22 onmouseout\x3d\x22\x24Ptv.Unhover\x28this\x29\x22 onclick\x3d\x22window.execCommand\x28\x27removeTag\x27, \x7b id\x3a\x7b0\x7d, index\x3a\x7b1\x7d \x7d\x29\x22 href\x3d\x22javascript\x3avoid\x280\x29\x22 class\x3d\x22icon13x13\x22 id\x3d\x22remove\x7b1\x7d\x22 title\x3d\x22Remove this tag\x22\x3e\x3cimg src\x3d\x22https\x3a\x2f\x2fsecure.wlxrs.com\x2fn9M4HXlDY9c8DRYRywO4rw\x2fimages\x2fpeoplepicker_sprites.png\x22 alt\x3d\x22Remove this tag\x22 class\x3d\x22ppSprite_0_0_13_13\x22 \x2f\x3e\x3c\x2fa\x3e',
+        CidTemplate: "href='{0}' title='View&#32;profile'", 
+        TextTemplate: "class='textOnly'",
+        SectionHeader: '\x3cspan\x3ePeople in this photo\x3c\x2fspan\x3e\x3cspan id\x3d\x22ptvTagCount\x22 class\x3d\x22count\x22\x3e\x26nbsp\x3b\x28\x7b0\x7d\x29\x3c\x2fspan\x3e',
+        ProfileTemplate: 'http\x3a\x2f\x2fcid-\x7bcid\x7d.profile.live.com',
+        PeopletagSearchTooltipTemplate: 'View photos of \x7b0\x7d',
+        PeopletagSearchTemplate: " (<a href='{0}' title='{1}' >Photos</a>)"
+    };
+
+    if (!!window.peopleTag)
+    {
+      window.peopleTag.initialize(window.peopleTagViewData, window.peopleTagViewTemplates);
+    }
+    </script></div>
+    </div>
+    
+    
+    <div id="sn_ccCommentCtrl_commentControl" class="commentsControl">
+      <script type="text/javascript">
+        function ic_onTileErr(a) { try { a.onerror = null; a.onload = null; a.className = "cxp_ic_tile"; a.src = a.getAttribute("errsrc"); a.style.visibility = "" } catch (b) { } }
+        function ic_onTileLoad(a) { try { var c = a.width, b = a.height; a.className = "cxp_ic_tile"; var k = a.width, j = a.height, g, d, l = 0, m = 0; if (c == 0 && b == 0) { var i = new Image; i.src = a.src; c = i.width; b = i.height } var h = a.currentStyle; if (c == 1 && b == 1 || h && h.width == "1px" && h.height == "1px") { ic_onTileErr(a); return } var f = Math.round; if (c && b && c != b) if (c > b) { d = j; g = f(j * (c / b)); l = -f((g - k) / 2) } else { g = k; d = f(k * (b / c)); m = -f((d - j) / 2) } var e = a.style; if (d && d) { e.width = g + "px"; e.height = d + "px"; e.left = l + "px"; e.top = m + "px" } a.style.visibility = "" } catch (n) { } }
+      </script>
+      
+
+<a style="display:none" href="#" name="sn_ccCommentCtrl_anch"></a>
+
+<div class="CommentCtrl sn_ccNormal" id="sn_ccCommentCtrl_commentControl" >
+
+<script type="text/ecmascript">
+
+function _commentControl_Add()
+{
+    var postFunction = null; 
+    if(typeof(Live_CommentControl) != 'undefined') { Live_CommentControl.AddComment("_commentControl", postFunction) };
+}function _commentControl_Delete(index) 
+{
+    var postFunction = null; 
+    var promptStr = 'Click OK to delete the comment.';
+    if(typeof(Live_CommentControl) != 'undefined'){ Live_CommentControl.DeleteComment(index, "_commentControl", postFunction, promptStr) };
+}
+</script>
+
+
+        <h3 class="ccHeader">
+        Comments
+          
+            
+        </h3>
+    <div id="sn_ccWait_commentControl" class="UI_NotificationBar ErrorLow" style="display:none ">
+    Please wait...
+</div>
+<div id="sn_ccErrLong_commentControl" class="UI_NotificationBar ErrorHigh" style="display:none ">
+    Sorry, the comment you entered is too long.  Please shorten it.
+</div>
+<div id="sn_ccErrEmpty_commentControl" class="UI_NotificationBar ErrorHigh" style="display:none ">
+    You didn&#39;t enter anything. Please try again.
+</div>
+<div id="sn_ccAddErrGeneral_commentControl" class="UI_NotificationBar ErrorHigh" style="display:none ">
+    Sorry, we can&#39;t add your comment right now.  Please try again later.
+</div>
+<div id="sn_ccAddErrManagedAsk_commentControl" class="UI_NotificationBar ErrorHigh" style="display:none ">
+    To add a comment, you need permission from your parent. <a href="https&#58;&#47;&#47;fss.live.com&#47;krl&#47;AddContact.aspx&#63;Rurl&#61;https&#37;3a&#37;2f&#37;2fcid-2f1027d9e9c7114b.skydrive.live.com&#37;2fself.aspx&#37;2f.Documents&#37;2fRODBC&#37;25e4&#37;25bd&#37;25bf&#37;25e7&#37;2594&#37;25a8&#37;25e7&#37;25ae&#37;2580&#37;25e4&#37;25bb&#37;258b.pdf">Ask for permission</a>
+</div>
+<div id="sn_ccAddErrManaged_commentControl" class="UI_NotificationBar ErrorHigh" style="display:none ">
+    Your parent has turned off comments.
+</div>
+<div id="DeleteErr_commentControl">
+    <div id="sn_ccDeleteErr_commentControl" class="UI_NotificationBar ErrorHigh" style="display:none ">
+        Sorry, we can&#39;t delete your comment right now.  Please try again later.
+    </div>
+</div>
+<div id="sn_ccAbuseNo_commentControl" class="UI_NotificationBar ErrorHigh" style="display:none ">
+    You&#39;ve exceeded the maximum number of comments that can be left in one day. Please try again in 24 hours.
+</div>
+<div id="sn_ccAbuseBan_commentControl" class="UI_NotificationBar ErrorHigh" style="display:none ">
+    Your account has had the ability to leave comments disabled because our systems indicate that you may be spamming other users. If you believe that your account has been disabled in error please contact <a href="http&#58;&#47;&#47;support.live.com&#47;eform.aspx&#63;productKey&#61;wlspaces&#38;ct&#61;eformts">Windows Live support</a>.
+</div>
+<div id="sn_ccAbuseHip_commentControl" class="UI_NotificationBar ErrorHigh" style="display:none ">
+    Complete the security check below to finish leaving your comment.<br />
+    The characters you type in the security check must match the characters in the picture or audio.
+</div>
+
+   
+
+   <input type="hidden" id="sn_ccPostUrl_commentControl" value="https&#58;&#47;&#47;cid-2f1027d9e9c7114b.skydrive.live.com&#47;commenthandler.aspx&#47;.Documents&#47;RODBC&#37;e4&#37;bd&#37;bf&#37;e7&#37;94&#37;a8&#37;e7&#37;ae&#37;80&#37;e4&#37;bb&#37;8b.pdf" />
+   <input type="hidden" id="sn_ccCan_commentControl" value="vmLBP2B7D5FOZlAGyAmR9PeDZJ2cqe0ycY4OZXn2pQ8&#61;3" />
+   <input type="hidden" id="sn_ccPRet_commentControl" value="https&#58;&#47;&#47;cid-2f1027d9e9c7114b.skydrive.live.com&#47;self.aspx&#47;.Documents&#47;RODBC&#37;e4&#37;bd&#37;bf&#37;e7&#37;94&#37;a8&#37;e7&#37;ae&#37;80&#37;e4&#37;bb&#37;8b.pdf" />
+   
+   
+   
+   <input type="hidden" id="sn_ccHType_commentControl" value="1" />
+   <input type="hidden" id="sn_ccParentId_commentControl" value="" />
+   
+    <div id="sn_ccAdd_commentControl" class="sn_ccAdd ccAddBox">
+        <div>
+
+                <div class="ccName" >
+                    
+                        <label for="sn_ccText_commentControl">Be the first to add a comment&#58;</label>
+                      
+          
+                </div>
+                
+                
+                    <textarea maxlength="10000" class="ccText" style="width:594px" rows="3" id="sn_ccText_commentControl"></textarea>
+                
+        </div>
+        <div id="sn_ccHip_commentControl" style="display:none" class="sn_ccHipBox"></div>
+        <div class="ccBtnBar">
+            <button onclick="_commentControl_Add(); return false" class="ccButton" id="sn_ccaddbtn_commentControl">Add</button>
+        </div>
+    </div>
+
+
+    
+
+
+   <div class="sn_ccComments" style="display:none" id="sn_ccComments_commentControl" >
+   </div>
+
+
+</div>
+
+    </div>
+</div>
+  
+    </div>
+  </form>
+
+
+            </div>
+        </div>
+
+        <div class="c_inright_area">
+            
+  
+
+
+
+<div id="iterator" class="iteratorPanel"></div>
+
+
+<div id="iteratorButtons" class="iteratorControlContainer">
+    <table>
+        <tr>
+            <td class="iteratorControlCell" align="center">
+                
+
+<div id="iteratorPageLeft" class="iteratorButton" unselectable="on">
+    <img src="https://secure.wlxrs.com/n9M4HXlDY9c8DRYRywO4rw/images/iteratorButtons.png" alt="" style="left: 0px" />
+    <a href="#" onClick="return false;" title="Scroll back"></a>
+</div>
+
+            </td>
+            <td class="iteratorControlCell" align="center"><span id="iteratorItemCount">18 of 18</span></td>
+            <td class="iteratorControlCell" align="center">
+                
+
+<div id="iteratorPageRight" class="iteratorButton" unselectable="on">
+    <img src="https://secure.wlxrs.com/n9M4HXlDY9c8DRYRywO4rw/images/iteratorButtons.png" alt="" style="left: -36px" />
+    <a href="#" onClick="return false;" title="Scroll forward"></a>
+</div>
+
+            </td>
+        </tr>
+    </table>    
+ </div>
+
+
+    
+    
+
+            
+            <div id="m_wa"></div>
+            
+            <div id="m_wmsn"></div>
+            
+            
+  
+
+
+<div id="spPropertySet">
+    <h3>Information</h3>
+
+    <div id="spProperties">
+    
+    
+      <table class="fillWidth fixedTable" cellpadding="0" cellspacing="0">
+      
+          <tr>
+	<td class="spLabel"><div class="spLabelDiv">Added by&#58;</div></td>
+	<td class="spValue">
+                  <div>
+		
+  <span id="creatorProperty"><a href="http://cid-2f1027d9e9c7114b.profile.live.com" title="View profile">Kenji Ryusuke</a></span>
+
+	</div>
+
+
+
+
+
+              </td>
+</tr>
+
+          
+          <tr>
+	<td class="spLabel"><div class="spLabelDiv">Shared with&#58;</div></td>
+	<td class="spValue">
+                  <div>
+		
+  <span id="permissionProperty" sharingLevel="Private"><a href="https://cid-2f1027d9e9c7114b.skydrive.live.com/viewpermissions.aspx/.Documents/RODBC%e4%bd%bf%e7%94%a8%e7%ae%80%e4%bb%8b.pdf" title="">Just me</a></span>
+
+	</div>
+
+
+
+
+
+              </td>
+</tr>
+
+          
+          <tr>
+	<td class="spLabel"><div class="spLabelDiv">Type&#58;</div></td>
+	<td class="spValue">
+                  
+
+
+
+<div>
+		
+  <span id="typeProperty">PDF File</span>
+
+	</div>
+
+              </td>
+</tr>
+
+          
+          <tr>
+	<td class="spLabel"><div class="spLabelDiv">Size&#58;</div></td>
+	<td class="spValue">
+                  
+
+
+
+<div>
+		
+  <span id="sizeProperty">147.8 KB</span>
+
+	</div>
+
+              </td>
+</tr>
+
+          
+          <tr>
+	<td class="spLabel"><div class="spLabelDiv">Date added&#58;</div></td>
+	<td class="spValue">
+                  
+
+
+
+<div>
+		
+  <span id="addedProperty">2&#47;15&#47;2010 12&#58;19 AM</span>
+
+	</div>
+
+              </td>
+</tr>
+
+          
+          <tr>
+	<td class="spLabel"><div class="spLabelDiv">Web address&#58;</div></td>
+	<td class="spValue">
+                  
+
+<div>
+		
+  <input id="urlProperty" readonly="readonly" class="spPropertiesInputBox" value="https://cid-2f1027d9e9c7114b.skydrive.live.com/self.aspx/.Documents/RODBC%e4%bd%bf%e7%94%a8%e7%ae%80%e4%bb%8b.pdf" onclick="this.select();" onkeypress="callHandlerOnEnterKey(event, function(){return false;})" />
+
+	</div>
+
+
+
+              </td>
+</tr>
+
+          
+      </table>
+  
+    </div>
+</div>
+
+
+
+<div id="spPropertySetNoPreview"></div>
+
+
+            
+        </div>
+                
+        <div class="c_clr"></div>
+    </div>
+    
+    <div class="c_clr"></div>
+
+
+            <div id="m_wf">
+<table id="uxp_ftr_control" cellpadding="0" cellspacing="0">
+<tr>
+	<td id="uxp_ftr_left">
+		<ul>
+		
+			<li><a id="uxp_ftr_link_trademark" target="_top" href="http&#58;&#47;&#47;g.live.com&#47;9uxp9en-us&#47;ftr1">&copy; 2010 Microsoft</a></li>
+
+			<li><a id="uxp_ftr_link_privacy" target="_top" href="http&#58;&#47;&#47;go.microsoft.com&#47;fwlink&#47;&#63;LinkId&#61;74170">Privacy</a></li>
+			<li class="uxp_ftr_item_last"><a  id="uxp_ftr_link_legal" target="_top" href="http&#58;&#47;&#47;g.msn.com&#47;0TO_&#47;enus">Terms of use</a></li>
+
+		</ul>
+	</td>
+	<td id="uxp_ftr_right">
+		<table id="uxp_ftr_right_nest" cellpadding="0" cellspacing="0">
+		<tr>
+			<td>		
+				<ul>
+
+					<li><a id="uxp_ftr_link_custom1" target="_top" href="http&#58;&#47;&#47;go.microsoft.com&#47;fwlink&#47;&#63;LinkID&#61;85433">Report Abuse</a></li>
+
+					<li><a id="uxp_ftr_link_custom2" target="_top" href="http&#58;&#47;&#47;go.microsoft.com&#47;fwlink&#47;&#63;LinkID&#61;85432">Code of Conduct</a></li>
+
+					<li><a id="uxp_ftr_link_account" target="_top" href="http&#58;&#47;&#47;g.live.com&#47;9uxp9en-us&#47;ftr3">Account</a></li>
+					<li class="uxp_ftr_item_last"><a id="uxp_ftr_link_feedback" target="_top" href="http&#58;&#47;&#47;g.live.com&#47;9uxp9en-us&#47;ftr4&#63;productkey&#61;wlfolders">Feedback</a></li>
+				</ul>
+			</td>
+		</tr>
+		</table>
+	</td>
+</tr>
+</table>
+</div>
+        </div>        
+    </div>
+    <script type="text/javascript">if(!window["$Config"]) $Config={}; $Config.TraceData={PLTRate:"0",target:"https://watson.live.com/err.gif?rt=634018074425399228&mkt=en-US&pv=15.1.1079.1026&pn=Live.Folders&pd=&sc=0",skipInitPLT:"1",traceLevel:"3",disable:"",renderPLT:"0"};</script>
+    <script type="text/javascript" src="https://secure.wlxrs.com/!JYwjWjwnwY-BtI1rZYWaw/liteframeworkex.js" ></script>
+    <script type="text/javascript">if(typeof($Version)=="undefined"){document.write('\<script type="text/javascript" src="https://secure.wlxrs.com/!JYwjWjwnwY-BtI1rZYWaw/liteframeworkex.js"\>\</scr'+'ipt\>')}</script>
+    <script type="text/javascript">if(typeof($Version)=="undefined"){try{var ti=new Image();ti.src=$Config.TraceData.target+"&ec=54";}catch(e){}}
+    $Config.baseUrl='https://secure.wlxrs.com/!JYwjWjwnwY-BtI1rZYWaw/';
+    </script>
+
+<!--EFP ver 15.1.2055 -->
+    
+    
+<script type="text/javascript">new function(){var a=['https\x3a\x2f\x2fsecure.wlxrs.com\x2fEeFbj0LIq4mBHfJL0gARDQ\x2fshared.js', 'https\x3a\x2f\x2fsecure.wlxrs.com\x2fQDUzYPIf3a49XSGr1UATrQ\x2fjs\x2fic.js', 'https\x3a\x2f\x2fsecure.wlxrs.com\x2fS5TPhMpbimRE1hYFI5bN2g\x2fPopover.js', 'https\x3a\x2f\x2fsecure.shared.live.com\x2fHhco-CKZ57kMXzSzWgwvfQ\x2fjs\x2fInvitePopover.js', 'https\x3a\x2f\x2fsecure.wlxrs.com\x2fMTOzmzuI0ThaPYiwyy-nqA\x2fNotificationBar.js', 'https\x3a\x2f\x2fsecure.wlxrs.com\x2fn9M4HXlDY9c8DRYRywO4rw\x2fscripts\x2fSelfPost.js', 'https\x3a\x2f\x2fhelp.live.com\x2fresources\x2fneutral\x2flaunchhelp.js', 'https\x3a\x2f\x2fsecure.wlxrs.com\x2fzbkY10cx0gICd7KdaoOLIw\x2fcommentControl.js'],i,b=a.length;
+for(i=0;i<b;i++){$newScript(a[i]);}}</script><script type="text/javascript">/* Copyright (C) 2009 Microsoft Corporation */function SM_Check(b){var a=0,e=b.length;for(;a<e;a++){var d=b[a];if(typeof window[d]=="undefined"&&$Config)try{var c=new Image;c.src=$Config.TraceData.target+"&ec=54&msg="+d;document.body.appendChild(c)}catch(f){}}}SM_Check(['\x24css']);</script>
+    
+    
+  
+  <div id="cxp_ic_usertiles" style="display:none"></div>
+<script type="text/javascript" defer="defer">
+window.cxp_ic_common_data = {
+imgbaseurl:'https\x3a\x2f\x2fsecure.wlxrs.com\x2f\x24live.controls.images\x2fic\x2f',
+showpresence:'1',
+webpresence:'0',
+socialcontext:'0',
+vcid:'2f1027d9e9c7114b',
+p_av:'\x28Available\x29',
+p_b:'\x28Busy\x29',
+p_aw:'\x28Away\x29',
+p_off:'\x28Offline\x29',
+max_name:'20',
+tp_no_name:'View photos of this person',
+ru:location.href};
+window.cxp_ic_menu_data = {
+ut:['','','https\x3a\x2f\x2fg.live.com\x2f_9uxp9en-us\x2fic_ut\x3f\x3fsu\x3dhttp\x3a\x2f\x2fshared.live.com\x2fLive.Folders'],
+dn:['','','https\x3a\x2f\x2fg.live.com\x2f_9uxp9en-us\x2fic_dn\x3f\x3fsu\x3dhttp\x3a\x2f\x2fshared.live.com\x2fLive.Folders'],
+ps:['','','https\x3a\x2f\x2fg.live.com\x2f_9uxp9en-us\x2fic_ps\x3f\x3fsu\x3dhttp\x3a\x2f\x2fshared.live.com\x2fLive.Folders'],
+ev:['View event','http\x3a\x2f\x2fcid-\x7bcid\x7d.events.live.com\x2f','https\x3a\x2f\x2fg.live.com\x2f_9uxp9en-us\x2fic_ev\x3f\x3fsu\x3dhttp\x3a\x2f\x2fshared.live.com\x2fLive.Folders'],
+gr:['View group','http\x3a\x2f\x2fcid-\x7bcid\x7d.groups.live.com\x2f','https\x3a\x2f\x2fg.live.com\x2f_9uxp9en-us\x2fic_gr\x3f\x3fsu\x3dhttp\x3a\x2f\x2fshared.live.com\x2fLive.Folders'],
+pr:['View profile','http\x3a\x2f\x2fcid-\x7bcid\x7d.profile.live.com\x2f','https\x3a\x2f\x2fg.live.com\x2f_9uxp9en-us\x2fic_pr\x3f\x3fsu\x3dhttp\x3a\x2f\x2fshared.live.com\x2fLive.Folders'],
+se:['Send e-mail','http\x3a\x2f\x2fmail.live.com\x2f\x3frru\x3dcompose\x253faction\x253dcompose\x2526to\x253d\x7baddress\x7d\x26ru\x3d\x7bru\x7d','https\x3a\x2f\x2fg.live.com\x2f_9uxp9en-us\x2fic_se\x3f\x3fsu\x3dhttp\x3a\x2f\x2fshared.live.com\x2fLive.Folders'],
+sm:['Send a private message','http\x3a\x2f\x2fspaces.live.com\x2fapi.aspx\x3fwx_action\x3dsendMessage\x26wxp_toCid\x3d\x7baddress\x7d\x26wx_ru\x3d\x7bru\x7d\x26mkt\x3den-us','https\x3a\x2f\x2fg.live.com\x2f_9uxp9en-us\x2fic_sm\x3f\x3fsu\x3dhttp\x3a\x2f\x2fshared.live.com\x2fLive.Folders'],
+si:['Send an instant message','','https\x3a\x2f\x2fg.live.com\x2f_9uxp9en-us\x2fic_si\x3f\x3fsu\x3dhttp\x3a\x2f\x2fshared.live.com\x2fLive.Folders'],
+mc:['','','https\x3a\x2f\x2fg.live.com\x2f_9uxp9en-us\x2fic_mc\x3f\x3fsu\x3dhttp\x3a\x2f\x2fshared.live.com\x2fLive.Folders'],
+c1:['Add to your network','http\x3a\x2f\x2fcid-\x7bvcid\x7d.profile.live.com\x2fconnect\x2fsend.aspx\x3fname\x3d\x7bname\x7d\x26scontext\x3d\x7bscxt\x7d\x26ru\x3d\x7bru\x7d\x26mkt\x3den-us','https\x3a\x2f\x2fg.live.com\x2f_9uxp9en-us\x2fic_c1\x3f\x3fsu\x3dhttp\x3a\x2f\x2fshared.live.com\x2fLive.Folders'],
+c4:['Resend invitation','http\x3a\x2f\x2fcid-\x7bvcid\x7d.profile.live.com\x2fconnect\x2fsend.aspx\x3fname\x3d\x7bname\x7d\x26scontext\x3d\x7bscxt\x7d\x26ru\x3d\x7bru\x7d\x26mkt\x3den-us','https\x3a\x2f\x2fg.live.com\x2f_9uxp9en-us\x2fic_c4\x3f\x3fsu\x3dhttp\x3a\x2f\x2fshared.live.com\x2fLive.Folders'],
+c2:['Add to Messenger','http\x3a\x2f\x2fcid-\x7bvcid\x7d.profile.live.com\x2fconnect\x2fsend.aspx\x3fname\x3d\x7bname\x7d\x26scontext\x3d\x7bscxt\x7d\x26ru\x3d\x7bru\x7d\x26mkt\x3den-us','https\x3a\x2f\x2fg.live.com\x2f_9uxp9en-us\x2fic_c2\x3f\x3fsu\x3dhttp\x3a\x2f\x2fshared.live.com\x2fLive.Folders'],
+c3:['Add to your profile','http\x3a\x2f\x2fcid-\x7bvcid\x7d.profile.live.com\x2fconnect\x2fsend.aspx\x3fname\x3d\x7bname\x7d\x26scontext\x3d\x7bscxt\x7d\x26ru\x3d\x7bru\x7d\x26mkt\x3den-us','https\x3a\x2f\x2fg.live.com\x2f_9uxp9en-us\x2fic_c3\x3f\x3fsu\x3dhttp\x3a\x2f\x2fshared.live.com\x2fLive.Folders'],
+ph:['View photos','http\x3a\x2f\x2fcid-\x7bcid\x7d.skydrive.live.com\x2falbums.aspx','https\x3a\x2f\x2fg.live.com\x2f_9uxp9en-us\x2fic_ph\x3f\x3fsu\x3dhttp\x3a\x2f\x2fshared.live.com\x2fLive.Folders'],
+tp:['View photos of \x7bname\x7d','http\x3a\x2f\x2fcid-\x7bcid\x7d.skydrive.live.com\x2fpeopletags.aspx','https\x3a\x2f\x2fg.live.com\x2f_9uxp9en-us\x2fic_tp\x3f\x3fsu\x3dhttp\x3a\x2f\x2fshared.live.com\x2fLive.Folders'],
+ct:['View contact info','http\x3a\x2f\x2fmail.live.com\x2f\x3frru\x3dcontacts\x253fcontact\x253d\x7bcontactid\x7d','https\x3a\x2f\x2fg.live.com\x2f_9uxp9en-us\x2fic_ct\x3f\x3fsu\x3dhttp\x3a\x2f\x2fshared.live.com\x2fLive.Folders']};
+window.cxp_ic_control_data = {
+ICc0:['2f1027d9e9c7114b','1',['pr','ph','tp','se','sm'],'Kenji Ryusuke','','3391254336293507403','ryusukekenji\x40hotmail.com','ryusukekenji\x40hotmail.com'],
+ICc1:['2f1027d9e9c7114b','1',['pr','ph','tp','se','sm'],'Kenji Ryusuke','','3391254336293507403','ryusukekenji\x40hotmail.com','ryusukekenji\x40hotmail.com'],
+ICc2:['2f1027d9e9c7114b','',[],'Kenji Ryusuke','','3391254336293507403','ryusukekenji\x40hotmail.com','ryusukekenji\x40hotmail.com']};
+if(typeof($cxp_ic)!='undefined'&&typeof($cxp_ic.ic)!='undefined'){$cxp_ic.ic.init();}
+</script>
+
+  
+
+<script type="text/javascript">
+window.$safeInvoke=function(o,n,p){try{return window[o][n].apply(this,p);}catch(e){} return false;}
+var sn_invite_common_data = {
+isSocialContext:'0',
+okStr:'Close',
+errorStr:'Something happened and we can\x26\x2339\x3bt add this person right now. Please try again later.',
+loadingStr:'\x3cimg src\x3d\x22https\x26\x2358\x3b\x26\x2347\x3b\x26\x2347\x3bsecure.shared.live.com\x26\x2347\x3bHhco-CKZ57kMXzSzWgwvfQ\x26\x2347\x3bimages\x26\x2347\x3bprogress_loading.gif\x22 \x2f\x3e\x26nbsp\x3bLoading...',
+dc:'QXgTyqDgOu81mMiXmn7\x2b6fmp\x2bHJculDZQ\x2bg5zL8sz2s\x3d4',
+handlerUrl:'https\x3a\x2f\x2fcid-2f1027d9e9c7114b.skydrive.live.com\x2finvitehandler.ashx'};
+</script>
+
+
+
+<style type="text/css">
+#pgProtocolHandler
+{
+    display: none;
+}
+</style>
+
+
+<iframe id="pgProtocolHandler" 
+        src="https://secure.wlxrs.com/!JYwjWjwnwY-BtI1rZYWaw/empty.htm"></iframe>
+
+
+
+
+<script type="text/javascript">
+
+var isDownloadToWlpgActive = true;
+
+ 
+var wlpgWave3Installed = !!(navigator.mimeTypes['application/x-wlpg3-detect']);
+var wlpgWave2Installed = !!(navigator.mimeTypes['application/x-wlpg-detect']);
+</script>
+
+<!--[if gte WLPG 3]>
+<script type="text/javascript">
+  wlpgWave3Installed = true;
+</script>
+<![endif]-->
+<!--[if gte WLPG 1]>
+<script type="text/javascript">
+  wlpgWave2Installed = true;
+</script>
+<![endif]-->
+
+
+
+    
+
+<script type="text/javascript">
+    function doOrderPrints()
+    {
+        function f() { if (w) { clearInterval(t); t = null; w.focus(); } }
+        var u = 'https://cid-2f1027d9e9c7114b.skydrive.live.com/OrderPrints.aspx/.Documents/RODBC%e4%bd%bf%e7%94%a8%e7%ae%80%e4%bb%8b.pdf'; var n = 'windows_live_order_prints';
+        var a = 'width=510,height=230,top=120,channelmode=0,dependent=0,directories=0,fullscreen=0,location=0,menubar=0,resizable=1,scrollbars=1,status=0,toolbar=0';
+        var w = window.open(u, n, a); var t = setInterval(f, 50); $menu.closeCurrent();
+    }
+</script>
+
+
+
+<script type="text/javascript">
+var AccessibilityNotifier = {
+    PageSource: 'https\x3a\x2f\x2fsecure.wlxrs.com\x2f\x21JYwjWjwnwY-BtI1rZYWaw\x2fempty.htm',
+    Notify: function() {
+        $('accessibilityNotifier').src = this.PageSource + "#" + (new Date()).valueOf();
+    }
+}
+</script>
+
+<iframe id="accessibilityNotifier" style="display:none;" src="https://secure.wlxrs.com/!JYwjWjwnwY-BtI1rZYWaw/empty.htm"></iframe>
+
+
+    
+    <img id="uxp_sitetrack" style="display:none;" alt="" src="//c.live.com/c.gif?PS=&PI=&DI=12156&TP=http://skydrive.live.com/self.aspx&RF=&GT1=&GT2=&GT3=&GT4=&GT5="/>
+    
+    <!-- MLHN:BAYxxxxxxC116 -->
+  </body>
+  
+  
+
+</html>

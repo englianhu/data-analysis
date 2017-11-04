@@ -24,13 +24,13 @@
 \usepackage[margin=1in]{geometry}
 \usepackage{hyperref}
 \hypersetup{unicode=true,
-            pdftitle={An Impressive Book},
-            pdfauthor={Li Lei and Han Meimei},
+            pdftitle={Data Analysis with R},
+            pdfauthor={Ryo, 黄联富ENG Lian Hu},
             pdfborder={0 0 0},
             breaklinks=true}
 \urlstyle{same}  % don't use monospace font for urls
 \usepackage{natbib}
-\bibliographystyle{plainnat}
+\bibliographystyle{apalike}
 \usepackage{color}
 \usepackage{fancyvrb}
 \newcommand{\VerbBar}{|}
@@ -116,14 +116,15 @@
 }
 
 \setlength{\droptitle}{-2em}
-  \title{An Impressive Book}
+  \title{Data Analysis with R}
   \pretitle{\vspace{\droptitle}\centering\huge}
   \posttitle{\par}
-  \author{Li Lei and Han Meimei}
+  \author{Ryo, 黄联富ENG Lian Hu}
   \preauthor{\centering\large\emph}
   \postauthor{\par}
-  \date{}
-  \predate{}\postdate{}
+  \predate{\centering\large\emph}
+  \postdate{\par}
+  \date{2017-11-04}
 
 \usepackage{booktabs}
 
@@ -168,6 +169,8 @@ Remember each Rmd file contains one and only one chapter, and a chapter
 is defined by the first-level heading \texttt{\#}.
 
 To compile this example to PDF, you need to install XeLaTeX.
+
+\bibliography{packages,book}
 
 
 \end{document}

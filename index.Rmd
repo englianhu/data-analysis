@@ -1,6 +1,6 @@
 --- 
-title: "A Minimal Book Example"
-author: "Yihui Xie"
+title: "Data Analysis with R"
+author: "Ryo, ENG Lian Hu"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 documentclass: book
