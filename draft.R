@@ -1,29 +1,23 @@
-url <- 'http://read.taaze.tw/cwr/pdf_new.php?t=HoqOe3qdfWoncp_7NfDgkEphT3muwrCFPMcYLG2fWlkat7KUCPZL7Gf7NQIrT5h8xDRAl6KSVZPX20Qz49p66-FVUxyfYfqZb7O56zqR0IS6shhh1iYpE1lVqyw4v5jo6IetZXOHtaR9C46RlTqDwSV-BTg9yL_KzbdKbDVIfrGFw2Kf5sacqqiuEwJkRYcQ4klWmkmgmcCmYROFA7ZiCpWQWLo_RexFqwb1QFQA8nnavtAJL-_aHTCJpi9yd2I8'
 
-## source files of the pdf document in image format but mosaiced.
-## https://s3-ap-northeast-1.amazonaws.com/taaze/pimages/14100027802/L/141000278020001.png
-## 
+## reference
+download.file('http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.534.6027&rep=rep1&type=pdf', 
+              destfile = './A Monte Carlo Analysis of Hypothetical Multi-Line Slot Machine Play.pdf')
+download.file('https://web.stanford.edu/group/SITE/archive/SITE_2011/2011_segment_8/2011_segment_8_papers/lien.pdf',
+              destfile = './Slot Machine Stopping Decisions - Evidence for Prospect Theory Preferences.pdf')
 
-library('webshot')
-webshot::install_phantomjs()
-webshot(url, file = 'r.pdf', selector = '#content', 
-        eval = "casper.then(function() {
-        // Check the remember me box
-        this.click('#view');
 
-        // Enter username and password
-        //this.sendKeys('#login_login-main input[type=\"text\"]', 'my_username');
-        //this.sendKeys('#login_login-main input[type=\"password\"]', 'password');
-        
-        // Now click in the search box. This results in a box expanding below
-        //this.click('#search input[type=\"text\"]');
-        
-        // Wait 500ms
-        this.wait(500);
-        });")
+## game link
+lnk <- 'http://www.slotsup.com/free-slots-online/golden-tour-playtech'
+
+'https://github.com/topics/monte-carlo-simulation?o=desc&s=forks'
+'https://github.com/100/Stock-Analysis-Markov'
+'https://github.com/TodorBalabanov/SlotMachineBaseGameEvolutionaryOptimization'
+'http://100.github.io/Stock-Analysis-Markov/'
 
 
 
 
 
 
+
+              
