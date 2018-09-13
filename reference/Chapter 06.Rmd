@@ -1,0 +1,36 @@
+---
+title: "第六章"
+author: "Ryo Eng Lian Hu"
+date: "1/17/2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+第6章：彩票、轮盘、老虎机与宾果
+第6.1章：彩票分析与预测
+第6.1.1章：数据与统计建模
+第6.1.2章：投注模式与回酬
+第6.2章：轮盘分析与预测
+第6.2.1章：数据与统计建模
+第6.2.2章：投注模式与回酬
+第6.3章：老虎机分析与预测
+第6.3.1章：数据与统计建模
+第6.3.2章：投注模式与回酬
+第6.4章：宾果分析与预测
+第6.4.1章：数据与统计建模
+第6.4.2章：投注模式与回酬
+
+# 统计建模
+
+# 
+
+# 参考文献
+
+1) [Calculating the house edge of a slot machine, with R](https://www.r-bloggers.com/calculating-the-house-edge-of-a-slot-machine-with-r/)^[[DON'T DRINK AND GAMBLE:Analyzing and Simulating a Slot Machine - So You Don't Have To](http://giorasimchoni.com/2017/05/06/2017-05-06-don-t-drink-and-gamble/) and [Predicting a Slot Machine's PRNG](https://www.schneier.com/blog/archives/2017/02/predicting_a_sl.html)]
+2) [Russians Engineer a Brilliant Slot Machine Cheat-and Casinos Have No Fix](https://www.wired.com/2017/02/russians-engineer-brilliant-slot-machine-cheat-casinos-no-fix/)
+3) 
+
