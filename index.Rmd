@@ -236,6 +236,23 @@ You can write citations, too. For example, we are using the **bookdown** package
 
 ### 投注模式与回酬
 
+# 高效率编程
+
+## 高效数据处理
+
+- [The fastest way to convert numeric to character in R](https://stackoverflow.com/questions/28447014/the-fastest-way-to-convert-numeric-to-character-in-r)
+- [The `fst` package](http://www.fstpackage.org/)
+- [`splitstackshape`程序包](https://d.cosx.org/d/420148-splitstackshape)
+- [Using Sparse Matrices in R](http://www.johnmyleswhite.com/notebook/2011/10/31/using-sparse-matrices-in-r/)
+
+## 高效统计建模
+
+- [binary.com 面试试题 I - GARCH模型中的ARIMA(p,d,q)参数最优化](http://rpubs.com/englianhu/binary-Q1FiGJRGARCH)
+
+## 高效率与高级R语言参考书
+
+- [Efficient R programming](https://csgillespie.github.io/efficientR/)
+- [Advanced R](http://adv-r.had.co.nz)
 
 ---
 
