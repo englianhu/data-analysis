@@ -74,23 +74,26 @@ You can write citations, too. For example, we are using the **bookdown** package
 
 ---
 
+## R语言与RStudio
+## Shiny应用
+## 调用其它语言程序
+
 **Powered by - Copyright® Intellectual Property Rights of <img src='figure/oda-army2.jpg' width='24'> [Scibrokes®](http://www.scibrokes.com)個人の経営企業**
 
 # 数据分析 {#analytics}
 
-## 采集数据
-
----
-
-**Powered by - Copyright® Intellectual Property Rights of <img src='figure/oda-army2.jpg' width='24'> [Scibrokes®](http://www.scibrokes.com)個人の経営企業**
-
+## 读存数据
+### 本地文件
+### 外来文件
+## 采集网络数据
+### 普通采集
+### API接口
+### Web Driver
 ## 数据处理
-
----
-
-**Powered by - Copyright® Intellectual Property Rights of <img src='figure/oda-army2.jpg' width='24'> [Scibrokes®](http://www.scibrokes.com)個人の経営企業**
-
-## 数据分析程序包
+### 文字与数字
+### 数据框与矩阵
+### 列表与嵌套数据
+## 第2.3章：数据分析程序包
 
 ---
 
@@ -98,64 +101,48 @@ You can write citations, too. For example, we are using the **bookdown** package
 
 # 统计模式 {#stats}
 
-## 线性模型
+## 基本统计学
+### 线性模型
+### 广义型线性模型
+### 最优模型选择
+## 高级统计学
+### 极大似然估计
+### 蒙地卡罗
+### 马尔可夫链
+### 隐马尔可夫链
+### 贝叶斯分析
+## 统计学程序包
 
 ---
 
 **Powered by - Copyright® Intellectual Property Rights of <img src='figure/oda-army2.jpg' width='24'> [Scibrokes®](http://www.scibrokes.com)個人の経営企業**
 
-## 广义型线性模型
+# 金融交易 {#finance}
 
----
-
-**Powered by - Copyright® Intellectual Property Rights of <img src='figure/oda-army2.jpg' width='24'> [Scibrokes®](http://www.scibrokes.com)個人の経営企業**
-
-## 最优模型选择
-
----
-
-**Powered by - Copyright® Intellectual Property Rights of <img src='figure/oda-army2.jpg' width='24'> [Scibrokes®](http://www.scibrokes.com)個人の経営企業**
-
-# 外汇交易 {#finance}
-
-## 外汇交易网站
-
-### 金融交易市场
-
-### 金融投注市场
-
-## 外汇数据
-
-### API
-
----
-
-**Powered by - Copyright® Intellectual Property Rights of <img src='figure/oda-army2.jpg' width='24'> [Scibrokes®](http://www.scibrokes.com)個人の経営企業**
-
-## Arima模型
-
----
-
-**Powered by - Copyright® Intellectual Property Rights of <img src='figure/oda-army2.jpg' width='24'> [Scibrokes®](http://www.scibrokes.com)個人の経営企業**
-
-## 指数平滑法
-
----
-
-**Powered by - Copyright® Intellectual Property Rights of <img src='figure/oda-army2.jpg' width='24'> [Scibrokes®](http://www.scibrokes.com)個人の経営企業**
-
-## GARCH模型
-
----
-
-**Powered by - Copyright® Intellectual Property Rights of <img src='figure/oda-army2.jpg' width='24'> [Scibrokes®](http://www.scibrokes.com)個人の経営企業**
-
-## 高频率交易
-
----
-
-**Powered by - Copyright® Intellectual Property Rights of <img src='figure/oda-army2.jpg' width='24'> [Scibrokes®](http://www.scibrokes.com)個人の経営企業**
-
+## 金融交易
+### 金融交易介绍
+### 金融数据
+### 金融交易统计模型介绍
+## 单变量统计模型
+### LASSO、ElasticNet、RIDGE模型
+### Arima模型
+### 指数平滑法
+### GARCH模型
+## 多变量统计模型 
+### GARCH模型
+### 
+## 高频率交易模型
+### MIDAS模型
+### MIDAS-GARCH
+### GARCH模型
+## 其它统计模型
+### Levy Process
+### Wavelet Tranforms
+## 投资管理
+### 投资风险管理
+### 基金管理
+### 多元基金管理
+### 基金评估
 ## 金融交易程序包
 
 ---
@@ -164,34 +151,20 @@ You can write citations, too. For example, we are using the **bookdown** package
 
 # 体彩交易 {#sportsbook}
 
-## 体彩数据
-
----
-
-**Powered by - Copyright® Intellectual Property Rights of <img src='figure/oda-army2.jpg' width='24'> [Scibrokes®](http://www.scibrokes.com)個人の経営企業**
-
-## 足球比分建模
-
-### 泊松模式
-
-### 其它模式
-
----
-
-**Powered by - Copyright® Intellectual Property Rights of <img src='figure/oda-army2.jpg' width='24'> [Scibrokes®](http://www.scibrokes.com)個人の経営企業**
-
-## 足彩投注模式
-
-### 普通投注模式
-
-### 凯利投注模式
-
-### 其它投注模式
-
----
-
-**Powered by - Copyright® Intellectual Property Rights of <img src='figure/oda-army2.jpg' width='24'> [Scibrokes®](http://www.scibrokes.com)個人の経営企業**
-
+## 体彩交易
+### 体彩交易介绍
+### 体彩数据
+### 体彩交易统计模型介绍
+## 足球赔率建模
+### 单变量泊松模型
+### 多变量泊松模型
+### Logistic模型
+### 
+## 足彩投注模型
+### 普通投注模型
+### 凯利投注模型
+### OHLC与GARCH应用
+## 投资管理
 ## 体彩交易程序包
 
 ---
@@ -201,42 +174,23 @@ You can write citations, too. For example, we are using the **bookdown** package
 # 彩票、轮盘、老虎机与宾果 {#lottery}
 
 ## 彩票分析与预测
-
 ### 数据与统计建模
-
 ### 投注模式与回酬
-
----
-
-**Powered by - Copyright® Intellectual Property Rights of <img src='figure/oda-army2.jpg' width='24'> [Scibrokes®](http://www.scibrokes.com)個人の経営企業**
-
 ## 轮盘分析与预测
-
 ### 数据与统计建模
-
 ### 投注模式与回酬
-
----
-
-**Powered by - Copyright® Intellectual Property Rights of <img src='figure/oda-army2.jpg' width='24'> [Scibrokes®](http://www.scibrokes.com)個人の経営企業**
-
 ## 老虎机分析与预测
-
 ### 数据与统计建模
-
+### 投注模式与回酬
+## 宾果分析与预测
+### 数据与统计建模
 ### 投注模式与回酬
 
 ---
 
 **Powered by - Copyright® Intellectual Property Rights of <img src='figure/oda-army2.jpg' width='24'> [Scibrokes®](http://www.scibrokes.com)個人の経営企業**
 
-## 宾果分析与预测
-
-### 数据与统计建模
-
-### 投注模式与回酬
-
-# 高效率编程
+# 高效率编程 {#hft}
 
 ## 高效数据处理
 
@@ -244,6 +198,7 @@ You can write citations, too. For example, we are using the **bookdown** package
 - [The `fst` package](http://www.fstpackage.org/)
 - [`splitstackshape`程序包](https://d.cosx.org/d/420148-splitstackshape)
 - [Using Sparse Matrices in R](http://www.johnmyleswhite.com/notebook/2011/10/31/using-sparse-matrices-in-r/)
+- [Fast data loading from files to R](https://appsilon.com/fast-data-loading-from-files-to-r/)
 
 ## 高效统计建模
 
@@ -258,7 +213,30 @@ You can write citations, too. For example, we are using the **bookdown** package
 
 **Powered by - Copyright® Intellectual Property Rights of <img src='figure/oda-army2.jpg' width='24'> [Scibrokes®](http://www.scibrokes.com)個人の経営企業**
 
-`r if (knitr:::is_html_output()) '# 第7章：参考文献 {-}'`
+# 基金与投资者管理模型 {#fund}
+## 多元化基金管理
+### 多元化基金评估
+### 
+## 投资者管理
+### 投资者资金流动统计建模
+### 
+
+---
+
+**Powered by - Copyright® Intellectual Property Rights of <img src='figure/oda-army2.jpg' width='24'> [Scibrokes®](http://www.scibrokes.com)個人の経営企業**
+
+# 程序交易 {#algorithm}
+## 交易自动化
+### 数据连接自动化
+### 统计运算自动化
+### 基金评估自动化
+### 客户管理自动化
+## 多客户管理
+### 多投资者
+### 绩效管理
+## 
+
+`r if (knitr:::is_html_output()) '# **11** 参考文献 {-}'`
 
 01. [Calculating the house edge of a slot machine, with R](https://www.r-bloggers.com/calculating-the-house-edge-of-a-slot-machine-with-r/)^[[DON'T DRINK AND GAMBLE:Analyzing and Simulating a Slot Machine - So You Don't Have To](http://giorasimchoni.com/2017/05/06/2017-05-06-don-t-drink-and-gamble/) and [Predicting a Slot Machine's PRNG](https://www.schneier.com/blog/archives/2017/02/predicting_a_sl.html)]
 02. [Russians Engineer a Brilliant Slot Machine Cheat-and Casinos Have No Fix](https://www.wired.com/2017/02/russians-engineer-brilliant-slot-machine-cheat-casinos-no-fix/)

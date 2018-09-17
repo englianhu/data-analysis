@@ -116,16 +116,17 @@
 }
 
 \setlength{\droptitle}{-2em}
+
   \title{R语言玩转金融与体彩数据分析}
-  \pretitle{\vspace{\droptitle}\centering\huge}
+    \pretitle{\vspace{\droptitle}\centering\huge}
   \posttitle{\par}
-\subtitle{R语言量化交易}
+  \subtitle{R语言量化交易}
   \author{\href{https://beta.rstudioconnect.com/content/3091/ryo-eng.html}{®γσ,黄联富}}
-  \preauthor{\centering\large\emph}
+    \preauthor{\centering\large\emph}
   \postauthor{\par}
-  \predate{\centering\large\emph}
+      \predate{\centering\large\emph}
   \postdate{\par}
-  \date{2018-09-13}
+    \date{2018-09-17}
 
 \usepackage{booktabs}
 
@@ -273,27 +274,46 @@ was built on top of R Markdown and \textbf{knitr} \citep{xie2015}.
 
 \begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
 
+\hypertarget{rrstudio}{%
+\section{R语言与RStudio}\label{rrstudio}}
+
+\hypertarget{shiny}{%
+\section{Shiny应用}\label{shiny}}
+
+\section{调用其它语言程序}
+
 \textbf{Powered by - Copyright® Intellectual Property Rights of
 \href{http://www.scibrokes.com}{Scibrokes®}個人の経営企業}
 
 \hypertarget{analytics}{%
 \chapter{数据分析}\label{analytics}}
 
-\section{采集数据}
+\section{读存数据}
 
-\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+\subsection{本地文件}
 
-\textbf{Powered by - Copyright® Intellectual Property Rights of
-\href{http://www.scibrokes.com}{Scibrokes®}個人の経営企業}
+\subsection{外来文件}
+
+\section{采集网络数据}
+
+\subsection{普通采集}
+
+\hypertarget{api}{%
+\subsection{API接口}\label{api}}
+
+\hypertarget{web-driver}{%
+\subsection{Web Driver}\label{web-driver}}
 
 \section{数据处理}
 
-\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+\subsection{文字与数字}
 
-\textbf{Powered by - Copyright® Intellectual Property Rights of
-\href{http://www.scibrokes.com}{Scibrokes®}個人の経営企業}
+\subsection{数据框与矩阵}
 
-\section{数据分析程序包}
+\subsection{列表与嵌套数据}
+
+\hypertarget{2.3}{%
+\section{第2.3章：数据分析程序包}\label{2.3}}
 
 \begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
 
@@ -303,21 +323,27 @@ was built on top of R Markdown and \textbf{knitr} \citep{xie2015}.
 \hypertarget{stats}{%
 \chapter{统计模式}\label{stats}}
 
-\section{线性模型}
+\section{基本统计学}
 
-\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+\subsection{线性模型}
 
-\textbf{Powered by - Copyright® Intellectual Property Rights of
-\href{http://www.scibrokes.com}{Scibrokes®}個人の経営企業}
+\subsection{广义型线性模型}
 
-\section{广义型线性模型}
+\subsection{最优模型选择}
 
-\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+\section{高级统计学}
 
-\textbf{Powered by - Copyright® Intellectual Property Rights of
-\href{http://www.scibrokes.com}{Scibrokes®}個人の経営企業}
+\subsection{极大似然估计}
 
-\section{最优模型选择}
+\subsection{蒙地卡罗}
+
+\subsection{马尔可夫链}
+
+\subsection{隐马尔可夫链}
+
+\subsection{贝叶斯分析}
+
+\section{统计学程序包}
 
 \begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
 
@@ -325,53 +351,65 @@ was built on top of R Markdown and \textbf{knitr} \citep{xie2015}.
 \href{http://www.scibrokes.com}{Scibrokes®}個人の経営企業}
 
 \hypertarget{finance}{%
-\chapter{外汇交易}\label{finance}}
+\chapter{金融交易}\label{finance}}
 
-\section{外汇交易网站}
+\section{金融交易}
 
-\subsection{金融交易市场}
+\subsection{金融交易介绍}
 
-\subsection{金融投注市场}
+\subsection{金融数据}
 
-\section{外汇数据}
+\subsection{金融交易统计模型介绍}
 
-\hypertarget{api}{%
-\subsection{API}\label{api}}
+\section{单变量统计模型}
 
-\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
-
-\textbf{Powered by - Copyright® Intellectual Property Rights of
-\href{http://www.scibrokes.com}{Scibrokes®}個人の経営企業}
+\hypertarget{lassoelasticnetridge}{%
+\subsection{LASSO、ElasticNet、RIDGE模型}\label{lassoelasticnetridge}}
 
 \hypertarget{arima}{%
-\section{Arima模型}\label{arima}}
+\subsection{Arima模型}\label{arima}}
 
-\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
-
-\textbf{Powered by - Copyright® Intellectual Property Rights of
-\href{http://www.scibrokes.com}{Scibrokes®}個人の経営企業}
-
-\section{指数平滑法}
-
-\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
-
-\textbf{Powered by - Copyright® Intellectual Property Rights of
-\href{http://www.scibrokes.com}{Scibrokes®}個人の経営企業}
+\subsection{指数平滑法}
 
 \hypertarget{garch}{%
-\section{GARCH模型}\label{garch}}
+\subsection{GARCH模型}\label{garch}}
 
-\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+\section{多变量统计模型}
 
-\textbf{Powered by - Copyright® Intellectual Property Rights of
-\href{http://www.scibrokes.com}{Scibrokes®}個人の経営企業}
+\hypertarget{garch-1}{%
+\subsection{GARCH模型}\label{garch-1}}
 
-\section{高频率交易}
+\hypertarget{section}{%
+\subsection{}\label{section}}
 
-\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+\section{高频率交易模型}
 
-\textbf{Powered by - Copyright® Intellectual Property Rights of
-\href{http://www.scibrokes.com}{Scibrokes®}個人の経営企業}
+\hypertarget{midas}{%
+\subsection{MIDAS模型}\label{midas}}
+
+\hypertarget{midas-garch}{%
+\subsection{MIDAS-GARCH}\label{midas-garch}}
+
+\hypertarget{garch-2}{%
+\subsection{GARCH模型}\label{garch-2}}
+
+\section{其它统计模型}
+
+\hypertarget{levy-process}{%
+\subsection{Levy Process}\label{levy-process}}
+
+\hypertarget{wavelet-tranforms}{%
+\subsection{Wavelet Tranforms}\label{wavelet-tranforms}}
+
+\section{投资管理}
+
+\subsection{投资风险管理}
+
+\subsection{基金管理}
+
+\subsection{多元基金管理}
+
+\subsection{基金评估}
 
 \section{金融交易程序包}
 
@@ -383,36 +421,37 @@ was built on top of R Markdown and \textbf{knitr} \citep{xie2015}.
 \hypertarget{sportsbook}{%
 \chapter{体彩交易}\label{sportsbook}}
 
-\section{体彩数据}
+\section{体彩交易}
 
-\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+\subsection{体彩交易介绍}
 
-\textbf{Powered by - Copyright® Intellectual Property Rights of
-\href{http://www.scibrokes.com}{Scibrokes®}個人の経営企業}
+\subsection{体彩数据}
 
-\section{足球比分建模}
+\subsection{体彩交易统计模型介绍}
 
-\subsection{泊松模式}
+\section{足球赔率建模}
 
-\subsection{其它模式}
+\subsection{单变量泊松模型}
 
-\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+\subsection{多变量泊松模型}
 
-\textbf{Powered by - Copyright® Intellectual Property Rights of
-\href{http://www.scibrokes.com}{Scibrokes®}個人の経営企業}
+\hypertarget{logistic}{%
+\subsection{Logistic模型}\label{logistic}}
 
-\section{足彩投注模式}
+\hypertarget{section-1}{%
+\subsection{}\label{section-1}}
 
-\subsection{普通投注模式}
+\section{足彩投注模型}
 
-\subsection{凯利投注模式}
+\subsection{普通投注模型}
 
-\subsection{其它投注模式}
+\subsection{凯利投注模型}
 
-\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+\hypertarget{ohlcgarch}{%
+\subsection{OHLC与GARCH应用}\label{ohlcgarch}}
 
-\textbf{Powered by - Copyright® Intellectual Property Rights of
-\href{http://www.scibrokes.com}{Scibrokes®}個人の経営企業}
+\hypertarget{-1}{%
+\section{投资管理}\label{-1}}
 
 \section{体彩交易程序包}
 
@@ -430,11 +469,6 @@ was built on top of R Markdown and \textbf{knitr} \citep{xie2015}.
 
 \subsection{投注模式与回酬}
 
-\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
-
-\textbf{Powered by - Copyright® Intellectual Property Rights of
-\href{http://www.scibrokes.com}{Scibrokes®}個人の経営企業}
-
 \section{轮盘分析与预测}
 
 \hypertarget{-1}{%
@@ -443,11 +477,6 @@ was built on top of R Markdown and \textbf{knitr} \citep{xie2015}.
 \hypertarget{-1}{%
 \subsection{投注模式与回酬}\label{-1}}
 
-\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
-
-\textbf{Powered by - Copyright® Intellectual Property Rights of
-\href{http://www.scibrokes.com}{Scibrokes®}個人の経営企業}
-
 \section{老虎机分析与预测}
 
 \hypertarget{-2}{%
@@ -455,11 +484,6 @@ was built on top of R Markdown and \textbf{knitr} \citep{xie2015}.
 
 \hypertarget{-2}{%
 \subsection{投注模式与回酬}\label{-2}}
-
-\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
-
-\textbf{Powered by - Copyright® Intellectual Property Rights of
-\href{http://www.scibrokes.com}{Scibrokes®}個人の経営企業}
 
 \section{宾果分析与预测}
 
@@ -473,6 +497,98 @@ was built on top of R Markdown and \textbf{knitr} \citep{xie2015}.
 
 \textbf{Powered by - Copyright® Intellectual Property Rights of
 \href{http://www.scibrokes.com}{Scibrokes®}個人の経営企業}
+
+\hypertarget{hft}{%
+\chapter{高效率编程}\label{hft}}
+
+\section{高效数据处理}
+
+\begin{itemize}
+\tightlist
+\item
+  \href{https://stackoverflow.com/questions/28447014/the-fastest-way-to-convert-numeric-to-character-in-r}{The
+  fastest way to convert numeric to character in R}
+\item
+  \href{http://www.fstpackage.org/}{The \texttt{fst} package}
+\item
+  \href{https://d.cosx.org/d/420148-splitstackshape}{\texttt{splitstackshape}程序包}
+\item
+  \href{http://www.johnmyleswhite.com/notebook/2011/10/31/using-sparse-matrices-in-r/}{Using
+  Sparse Matrices in R}
+\item
+  \href{https://appsilon.com/fast-data-loading-from-files-to-r/}{Fast
+  data loading from files to R}
+\end{itemize}
+
+\section{高效统计建模}
+
+\begin{itemize}
+\tightlist
+\item
+  \href{http://rpubs.com/englianhu/binary-Q1FiGJRGARCH}{binary.com
+  面试试题 I - GARCH模型中的ARIMA(p,d,q)参数最优化}
+\end{itemize}
+
+\hypertarget{r}{%
+\section{高效率与高级R语言参考书}\label{r}}
+
+\begin{itemize}
+\tightlist
+\item
+  \href{https://csgillespie.github.io/efficientR/}{Efficient R
+  programming}
+\item
+  \href{http://adv-r.had.co.nz}{Advanced R}
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\textbf{Powered by - Copyright® Intellectual Property Rights of
+\href{http://www.scibrokes.com}{Scibrokes®}個人の経営企業}
+
+\hypertarget{fund}{%
+\chapter{基金与投资者管理模型}\label{fund}}
+
+\section{多元化基金管理}
+
+\subsection{多元化基金评估}
+
+\hypertarget{section-2}{%
+\subsection{}\label{section-2}}
+
+\section{投资者管理}
+
+\subsection{投资者资金流动统计建模}
+
+\hypertarget{section-3}{%
+\subsection{}\label{section-3}}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\textbf{Powered by - Copyright® Intellectual Property Rights of
+\href{http://www.scibrokes.com}{Scibrokes®}個人の経営企業}
+
+\hypertarget{algorithm}{%
+\chapter{程序交易}\label{algorithm}}
+
+\section{交易自动化}
+
+\subsection{数据连接自动化}
+
+\subsection{统计运算自动化}
+
+\subsection{基金评估自动化}
+
+\subsection{客户管理自动化}
+
+\section{多客户管理}
+
+\subsection{多投资者}
+
+\subsection{绩效管理}
+
+\hypertarget{section-4}{%
+\section{}\label{section-4}}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
