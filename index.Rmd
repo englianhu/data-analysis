@@ -76,6 +76,10 @@ You can write citations, too. For example, we are using the **bookdown** package
 
 ## R语言与RStudio
 ## Shiny应用
+
+- [How to sample from multidimensional distributions using Gibbs sampling?](https://appsilon.com/how-to-sample-from-multidimensional-distributions-using-gibbs-sampling/)
+- []()
+
 ## 调用其它语言程序
 
 **Powered by - Copyright® Intellectual Property Rights of <img src='figure/oda-army2.jpg' width='24'> [Scibrokes®](http://www.scibrokes.com)個人の経営企業**
@@ -91,6 +95,10 @@ You can write citations, too. For example, we are using the **bookdown** package
 ### Web Driver
 ## 数据处理
 ### 文字与数字
+
+- [An example of how to use the new R `promises` package](https://appsilon.com/an-example-of-how-to-use-the-new-r-promises-package/)
+- [A Future for R: A Comprehensive Overview](https://cran.r-project.org/web/packages/future/vignettes/future-1-overview.html)
+
 ### 数据框与矩阵
 ### 列表与嵌套数据
 ## 第2.3章：数据分析程序包
@@ -180,6 +188,9 @@ You can write citations, too. For example, we are using the **bookdown** package
 ### 数据与统计建模
 ### 投注模式与回酬
 ## 老虎机分析与预测
+
+- [An introduction to Monte Carlo Tree Search](https://appsilon.com/an-introduction-to-monte-carlo-tree-search/)
+
 ### 数据与统计建模
 ### 投注模式与回酬
 ## 宾果分析与预测
@@ -200,6 +211,9 @@ You can write citations, too. For example, we are using the **bookdown** package
 - [Using Sparse Matrices in R](http://www.johnmyleswhite.com/notebook/2011/10/31/using-sparse-matrices-in-r/)
 - [Fast data loading from files to R](https://appsilon.com/fast-data-loading-from-files-to-r/)
 
+- [A guide to GPU-accelerated ship recognition in satellite imagery using Keras and R (part I)](https://appsilon.com/a-guide-to-gpu-accelerated-ship-recognition-in-satellite-imagery-using-keras-and-r-part-i/)
+- [A guide to GPU-accelerated ships recognition in satellite imagery using Keras and R (part II)](https://appsilon.com/a-guide-to-gpu-accelerated-ships-recognition-in-satellite-imagery-using-keras-and-r-part-ii/)
+
 ## 高效统计建模
 
 - [binary.com 面试试题 I - GARCH模型中的ARIMA(p,d,q)参数最优化](http://rpubs.com/englianhu/binary-Q1FiGJRGARCH)
@@ -216,9 +230,31 @@ You can write citations, too. For example, we are using the **bookdown** package
 # 基金与投资者管理模型 {#fund}
 ## 多元化基金管理
 ### 多元化基金评估
+
+> **Real world application example**
+MAB algorithms have multiple practical implementations in the real world, for example, price engine optimization or finding the best online campaign. Let’s focus on the first one and see how we can implement this in R. Imagine you are selling your products online and want to introduce a new one, but are not sure how to price it. You came up with 4 price candidates based on our expert knowledge and experience: 99$, 100$, 115$ and 120$. Now you want to test how those prices will perform and which to choose eventually.
+During first day of your experiment 4000 people visited your shop when the first price (99$) was tested and 368 bought the product,
+for the rest of the prices we have the following outcome:
+- 100$ 4060 visits and 355 purchases,
+- 115$ 4011 visits and 373 purchases,
+- 120$ 4007 visits and 230 purchases.
+
+*Source : [An introduction to Monte Carlo Tree Search](https://appsilon.com/an-introduction-to-monte-carlo-tree-search/)*
+
 ### 
 ## 投资者管理
 ### 投资者资金流动统计建模
+
+> **Real world application example**
+MAB algorithms have multiple practical implementations in the real world, for example, price engine optimization or finding the best online campaign. Let’s focus on the first one and see how we can implement this in R. Imagine you are selling your products online and want to introduce a new one, but are not sure how to price it. You came up with 4 price candidates based on our expert knowledge and experience: 99$, 100$, 115$ and 120$. Now you want to test how those prices will perform and which to choose eventually.
+During first day of your experiment 4000 people visited your shop when the first price (99$) was tested and 368 bought the product,
+for the rest of the prices we have the following outcome:
+- 100$ 4060 visits and 355 purchases,
+- 115$ 4011 visits and 373 purchases,
+- 120$ 4007 visits and 230 purchases.
+
+*Source : [An introduction to Monte Carlo Tree Search](https://appsilon.com/an-introduction-to-monte-carlo-tree-search/)*
+
 ### 
 
 ---
@@ -231,6 +267,9 @@ You can write citations, too. For example, we are using the **bookdown** package
 ### 统计运算自动化
 ### 基金评估自动化
 ### 客户管理自动化
+
+- [How we built a Shiny App for 700 users?](https://appsilon.com/how-we-built-a-shiny-app-for-700-users/)
+
 ## 多客户管理
 ### 多投资者
 ### 绩效管理
