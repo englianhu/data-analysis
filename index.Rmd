@@ -134,6 +134,12 @@ You can write citations, too. For example, we are using the **bookdown** package
 ## 单变量统计模型
 ### LASSO、ElasticNet、RIDGE模型
 ### Arima模型
+
+- [Time Series Analysis and Its Applications: With R Examples
+*Second Edition*](https://www.stat.pitt.edu/stoffer/tsa2/Rissues.htm)
+- [Introduction to Forecasting with ARIMA in R](https://www.datascience.com/blog/introduction-to-forecasting-with-arima-in-r-learn-data-science-tutorials)
+- [ARIMA model for forecasting– Example in R](https://rstudio-pubs-static.s3.amazonaws.com/345790_3c1459661736433382863ed19c30ea55.html)
+
 ### 指数平滑法
 ### GARCH模型
 ## 多变量统计模型 
@@ -143,6 +149,9 @@ You can write citations, too. For example, we are using the **bookdown** package
 ### MIDAS模型
 ### MIDAS-GARCH
 ### GARCH模型
+
+- [Copula-DCC-GARCH : rmgarch::cgarchsim() and rmgarch::varxforecast()](https://stackoverflow.com/questions/52391296/copula-dcc-garch-rmgarchcgarchsim-and-rmgarchvarxforecast)
+
 ## 其它统计模型
 ### Levy Process
 ### Wavelet Tranforms
