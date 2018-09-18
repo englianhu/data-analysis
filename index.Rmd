@@ -52,7 +52,7 @@ knitr::write_bib(c(
 
 # 介绍 {#intro}
 
-  You can label chapter and section titles using `{#label}` after them, e.g., we can reference Chapter \@ref(intro). If you do not manually label them, there will be automatic labels anyway, e.g., Chapter \@ref(methods).
+  You can label chapter and section titles using `{#label}` after them, e.g., we can reference Chapter \@ref(intro). If you do not manually label them, there will be automatic labels anyway, e.g., Chapter \@ref(analytics).
 
 Figures and tables with captions will be placed in `figure` and `table` environments, respectively.
 
@@ -101,7 +101,7 @@ You can write citations, too. For example, we are using the **bookdown** package
 
 ### 数据框与矩阵
 ### 列表与嵌套数据
-## 第2.3章：数据分析程序包
+## 数据分析程序包
 
 ---
 
@@ -275,7 +275,7 @@ for the rest of the prices we have the following outcome:
 ### 绩效管理
 ## 
 
-`r if (knitr:::is_html_output()) '# **11** 参考文献 {-}'`
+`r if (knitr:::is_html_output()) '# 参考文献 {#reference}'`
 
 01. [Calculating the house edge of a slot machine, with R](https://www.r-bloggers.com/calculating-the-house-edge-of-a-slot-machine-with-r/)^[[DON'T DRINK AND GAMBLE:Analyzing and Simulating a Slot Machine - So You Don't Have To](http://giorasimchoni.com/2017/05/06/2017-05-06-don-t-drink-and-gamble/) and [Predicting a Slot Machine's PRNG](https://www.schneier.com/blog/archives/2017/02/predicting_a_sl.html)]
 02. [Russians Engineer a Brilliant Slot Machine Cheat-and Casinos Have No Fix](https://www.wired.com/2017/02/russians-engineer-brilliant-slot-machine-cheat-casinos-no-fix/)
@@ -284,9 +284,8 @@ for the rest of the prices we have the following outcome:
 05. [Real Time FXCM](https://github.com/scibrokes/real-time-fxcm)
 06. [Rmodel](https://github.com/scibrokes/Rmodel)
 07. [Odds Modelling and Testing Inefficiency of Sports Bookmakers](https://github.com/scibrokes/odds-modelling-and-testing-inefficiency-of-sports-bookmakers)
+08. [Financial Engineering Analytics: A Practice Manual Using R](https://bookdown.org/wfoote01/faur/)
 
 ---
 
 **Powered by - Copyright® Intellectual Property Rights of <img src='figure/oda-army2.jpg' width='24'> [Scibrokes®](http://www.scibrokes.com)個人の経営企業**
-
-

@@ -1,8 +1,10 @@
-R语言玩转金融与体彩数据分析
----
-**为何辑写此书**
+# R语言玩转金融与体彩数据分析
 
-本书是在下首次辑写参考书（纯属个人经验分享与心得），此前分享了**如何安装®Studio服务器与Shiny服务器**^[[安装 ®StudioとShiny服务器](https://github.com/scibrokes/setup-rstudio-server)]：
+## 前言
+
+**为何辑写此书**
+  
+  本书是在下首次辑写参考书（纯属个人经验分享与心得），此前分享了**如何安装®Studio服务器与Shiny服务器**^[[安装 ®StudioとShiny服务器](https://github.com/scibrokes/setup-rstudio-server)]：
 
 - [为数据科学家们量身定做の专业统计软件 — ®Studio服务器](https://beta.rstudioconnect.com/englianhu/Introducing-RStudio-Server-for-Data-Scientists/Introducing-RStudio-Server-for-Data-Scientists.html)
 - [为数据科学家们量身定做の专业统计软件 — ®Studio服务器（演示文稿）](https://beta.rstudioconnect.com/englianhu/Introducing-RStudio-Server-for-Data-Scientists-Slides/Introducing-RStudio-Server-for-Data-Scientists-slides.html)
@@ -16,6 +18,8 @@ R语言玩转金融与体彩数据分析
 在下才疏学浅，仅有约翰霍金斯大学数据科学专业文凭，倘若有何错误之处，涵清多多包涵并指教。此书乃个人经验之谈。希望在同感身受与共而勉之的情况之下，热衷于金融与体彩行业的学者们可以容易着手。
 
 有关如何辑写`bookdown::gitbook`网络书籍，请参阅[bookdown: Authoring Books and Technical Documents with R Markdown](https://bookdown.org/yihui/bookdown/)。
+
+## 目录
 
 - 第0章：前言
 - 第1章：介绍
@@ -109,7 +113,7 @@ R语言玩转金融与体彩数据分析
   - 第7.4章：宾果分析与预测
     - 第7.4.1章：数据与统计建模
     - 第7.4.2章：投注模式与回酬
-- 第8章：高效率编程
+  - 第8章：高效率编程
   - 第8.1章：高效数据处理
   - 第8.2章：高效统计建模
   - 第8.3章：高效率与高级R语言参考书
@@ -133,5 +137,6 @@ R语言玩转金融与体彩数据分析
 - 第11章：参考文献
 
 ---
-
-**Powered by - Copyright® Intellectual Property Rights of <img src='figure/oda-army2.jpg?raw=true' width='24'> [Scibrokes®](http://www.scibrokes.com)個人の経営企業**
+  
+  **Powered by - Copyright® Intellectual Property Rights of <img src='figure/oda-army2.jpg?raw=true' width='24'> [Scibrokes®](http://www.scibrokes.com)個人の経営企業**
+    
