@@ -35,6 +35,8 @@ biblio-style: apalike
 
 前阵子，在下在学习金融交易的时候，无意中发现了本非常实用的经验分享书籍[Successful Algorithmic Trading](https://raw.githubusercontent.com/englianhu/binary.com-interview-question/master/reference/Successful%20Algorithmic%20Trading.pdf)，笔者在金融交易的解说，由入门到精通包括编码分享（笔者介绍了R语言、Python、C++以及比较各优缺点），该笔者**Michael Halls**^[更多该作者详情，请参阅[Struggling To Make Profitable Algo Trading Strategies?](https://www.quantstart.com/successful-algorithmic-trading-ebook)]与在下一样以经验分享著书之见，在下阅读与学习时深深感受到金融交易的武功秘籍（实用教材）如兮，夫复何求哇！
 
+[Coursera Mastering Software Development in R](https://github.com/englianhu/coursera-mastering-software-development-in-r)网络课程提供高级R语言编程教导，倘若有兴趣可以点击该链接报读。
+
 在下才疏学浅，仅有约翰霍金斯大学数据科学专业文凭，倘若有何错误之处，涵清多多包涵并指教。此书乃个人经验之谈。希望在同感身受与共而勉之的情况之下，热衷于金融与体彩行业的学者们可以容易着手。
 
 有关如何辑写`bookdown::gitbook`网络书籍，请参阅[bookdown: Authoring Books and Technical Documents with R Markdown](https://bookdown.org/yihui/bookdown/)。
@@ -78,9 +80,10 @@ You can write citations, too. For example, we are using the **bookdown** package
 ## Shiny应用
 
 - [How to sample from multidimensional distributions using Gibbs sampling?](https://appsilon.com/how-to-sample-from-multidimensional-distributions-using-gibbs-sampling/)
-- []()
 
 ## 调用其它语言程序
+
+---
 
 **Powered by - Copyright® Intellectual Property Rights of <img src='figure/oda-army2.jpg' width='24'> [Scibrokes®](http://www.scibrokes.com)個人の経営企業**
 
@@ -89,6 +92,18 @@ You can write citations, too. For example, we are using the **bookdown** package
 ## 读存数据
 ### 本地文件
 ### 外来文件
+
+| readr function | Use                                           |
+|:--------------:|:---------------------------------------------:|
+|read_csv	       | Reads comma-separated file                    |
+|read_csv2	     | Reads semicolon-separated file                |
+|read_tsv	       | Reads tab-separated file                      |
+|read_delim	     | General function for reading delimited files  |
+|read_fwf	       | Reads fixed width files                       |
+|read_log	       | Reads log files                               |
+
+[在R中读取数据](https://jeevanyue.github.io/post/2018-01-08-read_data_in_r/)
+
 ## 采集网络数据
 ### 普通采集
 ### API接口
@@ -99,8 +114,319 @@ You can write citations, too. For example, we are using the **bookdown** package
 - [An example of how to use the new R `promises` package](https://appsilon.com/an-example-of-how-to-use-the-new-r-promises-package/)
 - [A Future for R: A Comprehensive Overview](https://cran.r-project.org/web/packages/future/vignettes/future-1-overview.html)
 
+```{r, eval=FALSE}
+str_extract_all("Mississippi", "(i.{2}){3}")[[1]]
+#[1] "ississipp"
+
+str_extract_all("Mississippi", "(i.{2})")[[1]]
+#[1] "iss" "iss" "ipp"
+
+str_extract_all("abcdefghijklmnopqrstuvwxyz0123456789", "\\w")[[1]]
+# [1] "a" "b" "c" "d" "e" "f" "g" "h" "i" "j" "k" "l" "m" "n" "o" "p" "q" "r"
+#[19] "s" "t" "u" "v" "w" "x" "y" "z" "0" "1" "2" "3" "4" "5" "6" "7" "8" "9"
+
+str_extract_all('0123456789', '\\d')[[1]]
+# [1] "0" "1" "2" "3" "4" "5" "6" "7" "8" "9"
+
+str_extract_all("\n\t   ", "\\s")[[1]]
+#[1] "\n" "\t" " "  " "  " "
+
+str_extract_all("\n\t   ", "\\d")[[1]]
+#character(0)
+
+str_extract_all("\n\t   ", "\\w")[[1]]
+#character(0)
+
+str_extract_all("abcdefghijklmnopqrstuvwxyz0123456789", "\\d")[[1]]
+# [1] "0" "1" "2" "3" "4" "5" "6" "7" "8" "9"
+
+str_extract_all("abcdefghijklmnopqrstuvwxyz0123456789", "\\D")[[1]]
+# [1] "a" "b" "c" "d" "e" "f" "g" "h" "i" "j" "k" "l" "m" "n" "o" "p" "q" "r"
+#[19] "s" "t" "u" "v" "w" "x" "y" "z"
+
+str_extract_all("rhythms", "[aeiou]")[[1]]
+#character(0)
+
+str_extract_all("rhythms", "[^aeiou]")[[1]]
+#[1] "r" "h" "y" "t" "h" "m" "s"
+
+grepl("[aeiou]", "rhythms")[[1]]
+#[1] FALSE
+
+grepl("[^aeiou]", "rhythms")[[1]]
+#[1] TRUE
+
+grepl("a|b", c("abc", "bcd", "cde"))
+#[1]  TRUE  TRUE FALSE
+
+grepl("^[ab]+$", c("bab", "aab", "abc"))
+#[1]  TRUE  TRUE FALSE
+
+str_extract_all(c("bab", "aab", "abc"), "^[ab]+$")
+#[[1]]
+#[1] "bab"
+#
+#[[2]]
+#[1] "aab"
+#
+#[[3]]
+#character(0)
+
+str_extract_all(c("bab", "aab", "abc"), "a|b")
+#[[1]]
+#[1] "b" "a" "b"
+#
+#[[2]]
+#[1] "a" "a" "b"
+#
+#[[3]]
+#[1] "a" "b"
+
+grepl("North|South", c("South Dakota", "North Carolina", "West Virginia"))
+#[1]  TRUE  TRUE FALSE
+
+start_end_vowel <- "^[AEIOU]{1}.+[aeiou]{1}$"
+vowel_state_lgl <- grepl(start_end_vowel, state.name)
+head(vowel_state_lgl)
+#[1]  TRUE  TRUE  TRUE FALSE FALSE FALSE
+
+state.name[vowel_state_lgl]
+#[1] "Alabama"  "Alaska"   "Arizona"  "Idaho"    "Indiana"  "Iowa"    
+#[7] "Ohio"     "Oklahoma"
+
+grepl("[Ii]", c("Hawaii", "Illinois", "Kentucky"))
+#[1]  TRUE  TRUE FALSE
+
+str_extract_all(c("Hawaii", "Illinois", "Kentucky"), "[Ii]")
+#[[1]]
+#[1] "i" "i"
+#
+#[[2]]
+#[1] "I" "i" "i"
+#
+#[[3]]
+#character(0)
+
+str_detect(c("Hawaii", "Illinois", "Kentucky"), "[Ii]")
+#[1]  TRUE  TRUE FALSE
+
+## The sub() function takes as arguments a regex, a “replacement,” and a vector of strings. This function will replace the first instance of that regex found in each string.
+sub("[Ii]", "1", c("Hawaii", "Illinois", "Kentucky"))
+#[1] "Hawa1i"   "1llinois" "Kentucky"
+
+## The gsub() function is nearly the same as sub() except it will replace every instance of the regex that is matched in each string.
+gsub("[Ii]", "1", c("Hawaii", "Illinois", "Kentucky"))
+#[1] "Hawa11"   "1ll1no1s" "Kentucky"
+
+str_replace_all(c("Hawaii", "Illinois", "Kentucky"), "[Ii]", "1")
+#[1] "Hawa11"   "1ll1no1s" "Kentucky"
+
+#The strsplit() function will split up strings according to the provided regex. If strsplit() is provided with a vector of strings it will return a list of string vectors.
+two_s <- state.name[grep("ss", state.name)]
+two_s
+#[1] "Massachusetts" "Mississippi"   "Missouri"      "Tennessee"    
+
+strsplit(two_s, "ss")
+#[[1]]
+#[1] "Ma"        "achusetts"
+#
+#[[2]]
+#[1] "Mi"   "i"    "ippi"
+#
+#[[3]]
+#[1] "Mi"   "ouri"
+#
+#[[4]]
+#[1] "Tenne" "ee"
+
+library(stringr)
+
+state_tbl <- paste(state.name, state.area, state.abb)
+head(state_tbl)
+#[1] "Alabama 51609 AL"     "Alaska 589757 AK"     "Arizona 113909 AZ"   
+#[4] "Arkansas 53104 AR"    "California 158693 CA" "Colorado 104247 CO"  
+
+str_extract(state_tbl, "[0-9]+")
+# [1] "51609"  "589757" "113909" "53104"  "158693" "104247" "5009"  
+# [8] "2057"   "58560"  "58876"  "6450"   "83557"  "56400"  "36291" 
+#[15] "56290"  "82264"  "40395"  "48523"  "33215"  "10577"  "8257"  
+#[22] "58216"  "84068"  "47716"  "69686"  "147138" "77227"  "110540"
+#[29] "9304"   "7836"   "121666" "49576"  "52586"  "70665"  "41222" 
+#[36] "69919"  "96981"  "45333"  "1214"   "31055"  "77047"  "42244" 
+#[43] "267339" "84916"  "9609"   "40815"  "68192"  "24181"  "56154" 
+#[50] "97914"
+
+## The str_order() function returns a numeric vector that corresponds to the alphabetical order of the strings in the provided vector.
+head(state.abb)
+#[1] "AL" "AK" "AZ" "AR" "CA" "CO"
+
+str_order(state.name)
+# [1]  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24
+#[25] 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48
+#[49] 49 50
+
+head(state.name)
+#[1] "Alabama"    "Alaska"     "Arizona"    "Arkansas"   "California"
+#[6] "Colorado"
+str_order(state.abb)
+# [1]  2  1  4  3  5  6  7  8  9 10 11 15 12 13 14 16 17 18 21 20 19 22 23 25
+#[25] 24 26 33 34 27 29 30 31 28 32 35 36 37 38 39 40 41 42 43 44 46 45 47 49
+#[49] 48 50
+
+## The str_pad() function pads strings with other characters which is often useful when the string is going to be eventually printed for a person to read.
+str_pad("Thai", width = 8, side = "left", pad = "-")
+#[1] "----Thai"
+
+str_pad("Thai", width = 8, side = "right", pad = "-")
+#[1] "Thai----"
+
+str_pad("Thai", width = 8, side = "both", pad = "-")
+#[1] "--Thai--"
+
+## The str_to_title() function acts just like tolower() andtoupper() except it puts strings into Title Case.
+cases <- c("CAPS", "low", "Title")
+str_to_title(cases)
+#[1] "Caps"  "Low"   "Title"
+
+## The str_trim() function deletes whitespace from both sides of a string.
+to_trim <- c("   space", "the    ", "    final frontier  ")
+str_trim(to_trim)
+#[1] "space"          "the"            "final frontier"
+
+## The str_wrap() function inserts newlines in strings so that when the string is printed each line’s length is limited.
+pasted_states <- paste(state.name[1:20], collapse = " ")
+cat(str_wrap(pasted_states, width = 80))
+#Alabama Alaska Arizona Arkansas California Colorado Connecticut Delaware Florida
+#Georgia Hawaii Idaho Illinois Indiana Iowa Kansas Kentucky Louisiana Maine
+#Maryland
+
+cat(str_wrap(pasted_states, width = 30))
+#Alabama Alaska Arizona
+#Arkansas California Colorado
+#Connecticut Delaware Florida
+#Georgia Hawaii Idaho Illinois
+#Indiana Iowa Kansas Kentucky
+#Louisiana Maine Maryland
+
+## The word() function allows you to index each word in a string as if it were a vector.
+a_tale <- "It was the best of times it was the worst of times it was the age of wisdom it was the age of foolishness"
+word(a_tale, 2)
+#[1] "was"
+
+word(a_tale, end = 3)
+#[1] "It was the"
+
+word(a_tale, start = 11, end = 15)
+#[1] "of times it was the"
+
+```
+
+| Metacharacter	 | Meaning                              |
+|:--------------:|:------------------------------------:|
+| .	             | Any Character                        |
+| \w             | A Word                               |
+| \W             | Not a Word                           |
+| \d             | A Digit                              |
+| \D             | Not a Digit                          |
+| \s             | Whitespace                           |
+| \S             | Not Whitespace                       |
+| [xyz]          | A Set of Characters                  |
+| [^xyz]         | Negation of Set                      |
+| [a-z]	         | A Range of Characters                |
+| ^	             | Beginning of String                  |
+| $	             | End of String                        |
+| \n	           | Newline                              |
+| +	             | One or More of Previous              |
+| *	             | Zero or More of Previous             |
+| ?	             | Zero or One of Previous              |
+| |	             | Either the Previous or the Following |
+| {5}	           | Exactly 5 of Previous                |
+| {2, 5}         | Between 2 and 5 or Previous          |
+| {2, }	         | More than 2 of Previous              |
+
+| Operator	| Meaning	                   | Example                                |
+|:---------:|:--------------------------:|:--------------------------------------:|
+| ==	      | Equals	                   | storm_name == KATRINA                  |
+| !=	      | Does not equal	           | min_pressure != 0                      |
+| >	        | Greater than	             | latitude > 25                          |
+| >=	      | Greater than or equal to	 | max_wind >= 160                        |
+| <	        | Less than	                 | min_pressure < 900                     |
+| <=	      | Less than or equal to	     | distance_to_land <= 0                  |
+| %in%	    | Included in	               | storm_name %in% c("KATRINA", "ANDREW") |
+| is.na()	  | Is a missing value         | is.na(radius_34_ne)                    |
+
+> String manipulation in R is useful for data cleaning, plus it can be fun! For prototyping your first regular expressions I highly recommend checking out <http://regexr.com/>. If you’re interested in what some people call a more “humane” way of constructing regular expressions you should check out the [rex](https://github.com/kevinushey/rex) package by [Kevin Ushey](https://github.com/kevinushey) and [Jim Hester](http://www.jimhester.com/). If you’d like to find out more about text analysis I highly recommend reading [Tidy Text Mining in R](http://tidytextmining.com/) by [Julia Silge](http://juliasilge.com/) and [David Robinson](http://varianceexplained.org/).
+
 ### 数据框与矩阵
 ### 列表与嵌套数据
+
+```{r, eval=FALSE}
+dir.create(file.path('testdir2', 'testdir3'), recursive = TRUE)
+```
+
+以上代码可新建一个文件夹和子文件夹。
+
+### 内存
+
+```{r, eval=FALSE}
+library(pryr)
+mem_used()
+#108 MB
+
+sapply(ls(), function(x) object_size(get(x))) %>% sort
+
+mem_change(rm(list = ls()))
+#-1.22 kB
+
+## The .Machine object in R (found in the base package) can give you specific details about how your computer/operation system stores different types of data.
+str(.Machine) #or tibble::glimpse(.Machince)
+#List of 18
+# $ double.eps           : num 2.22e-16
+# $ double.neg.eps       : num 1.11e-16
+# $ double.xmin          : num 2.23e-308
+# $ double.xmax          : num 1.8e+308
+# $ double.base          : int 2
+# $ double.digits        : int 53
+# $ double.rounding      : int 5
+# $ double.guard         : int 0
+# $ double.ulp.digits    : int -52
+# $ double.neg.ulp.digits: int -53
+# $ double.exponent      : int 11
+# $ double.min.exp       : int -1022
+# $ double.max.exp       : int 1024
+# $ integer.max          : int 2147483647
+# $ sizeof.long          : int 8
+# $ sizeof.longlong      : int 8
+# $ sizeof.longdouble    : int 16
+# $ sizeof.pointer       : int 8
+
+## The gc() function in the base package can be used to explicitly trigger a garbage collection in R. Calling gc() explicitly is never actually needed, but it does produce some output that is worth understanding.
+gc()
+#          used  (Mb) gc trigger  (Mb) max used  (Mb)
+#Ncells 3124234 166.9    5938641 317.2  4136665 221.0
+#Vcells 6906107  52.7   12255594  93.6 10145775  77.5
+```
+
+### 数据库
+
+![](figure/database_management.jpg)
+
+| Database Management System	| R packages   |
+|:---------------------------:|:------------:|
+| Oracle	                    | ROracle      |
+| MySQL	                      | RMySQL       |
+| Microsoft SQL Server	      | RSQLServer   |
+| PostgreSQL	                | RPostgres    |
+| SQLite	                    | RSQLite      |
+
+> For more on the DBI package, including its history, see [the package’s GitHub README page](https://github.com/rstats-db/DBI).
+
+```{r}
+
+```
+
+
+
 ## 数据分析程序包
 
 ---
@@ -130,6 +456,9 @@ You can write citations, too. For example, we are using the **bookdown** package
 ## 金融交易
 ### 金融交易介绍
 ### 金融数据
+
+[Chapter 7 Importing Financial Data from the Internet](https://msperlin.github.io/pafdR/importingInternet.html)
+
 ### 金融交易统计模型介绍
 ## 单变量统计模型
 ### LASSO、ElasticNet、RIDGE模型
@@ -146,6 +475,11 @@ You can write citations, too. For example, we are using the **bookdown** package
 ### GARCH模型
 ### 
 ## 高频率交易模型
+
+### Seasonal ARIMA
+
+*Forecasting: Principles and Practice*中的*8.9 Seasonal ARIMA models*章讲述季节性ARIMA模型。
+
 ### MIDAS模型
 ### MIDAS-GARCH
 ### GARCH模型
@@ -214,6 +548,7 @@ You can write citations, too. For example, we are using the **bookdown** package
 
 ## 高效数据处理
 
+- [Convert a list of data frames into one data frame](https://stackoverflow.com/questions/2851327/convert-a-list-of-data-frames-into-one-data-frame?rq=1)
 - [The fastest way to convert numeric to character in R](https://stackoverflow.com/questions/28447014/the-fastest-way-to-convert-numeric-to-character-in-r)
 - [The `fst` package](http://www.fstpackage.org/)
 - [`splitstackshape`程序包](https://d.cosx.org/d/420148-splitstackshape)
@@ -222,6 +557,20 @@ You can write citations, too. For example, we are using the **bookdown** package
 
 - [A guide to GPU-accelerated ship recognition in satellite imagery using Keras and R (part I)](https://appsilon.com/a-guide-to-gpu-accelerated-ship-recognition-in-satellite-imagery-using-keras-and-r-part-i/)
 - [A guide to GPU-accelerated ships recognition in satellite imagery using Keras and R (part II)](https://appsilon.com/a-guide-to-gpu-accelerated-ships-recognition-in-satellite-imagery-using-keras-and-r-part-ii/)
+
+```{r, eval=FALSE}
+microbenchmark(numeric(1000))
+#Unit: microseconds
+#          expr   min   lq    mean median    uq   max neval
+# numeric(1000) 1.026 1.54 1.95541   1.54 2.053 7.698   100
+
+microbenchmark(rep(0, 1000))
+#Unit: microseconds
+#         expr   min   lq    mean median    uq    max neval
+# rep(0, 1000) 1.026 1.54 2.12477  2.053 2.053 10.777   100
+
+```
+
 
 ## 高效统计建模
 
@@ -294,6 +643,8 @@ for the rest of the prices we have the following outcome:
 06. [Rmodel](https://github.com/scibrokes/Rmodel)
 07. [Odds Modelling and Testing Inefficiency of Sports Bookmakers](https://github.com/scibrokes/odds-modelling-and-testing-inefficiency-of-sports-bookmakers)
 08. [Financial Engineering Analytics: A Practice Manual Using R](https://bookdown.org/wfoote01/faur/)
+09. [Forecasting: Principles and Practice](https://otexts.org/fpp2/)
+10. [Mastering Software Development in R (web-base)](https://bookdown.org/rdpeng/RProgDA/). (or [Mastering Software Development in R.pdf](https://github.com/englianhu/Coursera-Mastering-Software-Development-in-R/blob/master/reference/Mastering%20Software%20Development%20in%20R.pdf))
 
 ---
 
