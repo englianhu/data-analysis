@@ -358,6 +358,16 @@ word(a_tale, start = 11, end = 15)
 > String manipulation in R is useful for data cleaning, plus it can be fun! For prototyping your first regular expressions I highly recommend checking out <http://regexr.com/>. If you’re interested in what some people call a more “humane” way of constructing regular expressions you should check out the [rex](https://github.com/kevinushey/rex) package by [Kevin Ushey](https://github.com/kevinushey) and [Jim Hester](http://www.jimhester.com/). If you’d like to find out more about text analysis I highly recommend reading [Tidy Text Mining in R](http://tidytextmining.com/) by [Julia Silge](http://juliasilge.com/) and [David Robinson](http://varianceexplained.org/).
 
 ### 数据框与矩阵
+
+- [`na.locf` using group by from `dplyr`](https://stackoverflow.com/questions/43212308/na-locf-using-group-by-from-dplyr)
+- [Replace Missing Values NA with Most Recent Non-NA by Group](https://stackoverflow.com/questions/23340150/replace-missing-values-na-with-most-recent-non-na-by-group)
+- [Replace NA with Previous or Next Value by Group using `dplyr`](https://stackoverflow.com/questions/40040834/replace-na-with-previous-or-next-value-by-group-using-dplyr/40041172)
+- [NA at the End of Column using `na.locf` Function](https://stackoverflow.com/questions/47242643/na-at-the-end-of-column-using-na-locf-function)
+- [`na.locf` Function is Changing `data.frame` Values from `int` to `char` in R](https://stackoverflow.com/questions/49578085/na-locf-function-is-changing-data-frame-values-from-int-to-char-in-r)
+- [How to Fill NAs with locf by Factors in `data. frame` split by Country](https://stackoverflow.com/questions/13616965/how-to-fill-nas-with-locf-by-factors-in-data-frame-split-by-country)
+- [Replace Missing Values `NA` with Most Recent non-NA by Group](https://stackoverflow.com/questions/23340150/replace-missing-values-na-with-most-recent-non-na-by-group)
+
+
 ### 列表与嵌套数据
 
 ```{r, eval=FALSE}
@@ -557,6 +567,7 @@ gc()
 
 - [A guide to GPU-accelerated ship recognition in satellite imagery using Keras and R (part I)](https://appsilon.com/a-guide-to-gpu-accelerated-ship-recognition-in-satellite-imagery-using-keras-and-r-part-i/)
 - [A guide to GPU-accelerated ships recognition in satellite imagery using Keras and R (part II)](https://appsilon.com/a-guide-to-gpu-accelerated-ships-recognition-in-satellite-imagery-using-keras-and-r-part-ii/)
+- [[问答] 对大数据如何用R高效处理](http://bbs.pinggu.org/forum.php?mod=redirect&goto=findpost&ptid=6685427&pid=53936462&fromuid=5794471)和[[问答] 对大数据如何用R高效处理](http://bbs.pinggu.org/forum.php?mod=redirect&goto=findpost&ptid=6685427&pid=53936861&fromuid=5794471)
 
 ```{r, eval=FALSE}
 microbenchmark(numeric(1000))
