@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>R语言玩转金融与体彩数据分析</title>
   <meta name="description" content="此书乃个人学习R语言的经验分享与建议。 此文件输出格式为 bookdown::gitbook。">
-  <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
+  <meta name="generator" content="bookdown  and GitBook 2.6.7">
 
   <meta property="og:title" content="R语言玩转金融与体彩数据分析" />
   <meta property="og:type" content="book" />
@@ -25,7 +25,7 @@
 <meta name="author" content="®γσ,黄联富">
 
 
-<meta name="date" content="2018-09-18">
+<meta name="date" content="2018-10-21">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -36,6 +36,7 @@
 <link rel="next" href="intro.html">
 <script src="book_assets/jquery-2.2.3/jquery.min.js"></script>
 <link href="book_assets/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="book_assets/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="book_assets/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
 <link href="book_assets/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
 <link href="book_assets/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
@@ -123,6 +124,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="3.3.1" data-path="analytics.html"><a href="analytics.html#section-3.3.1"><i class="fa fa-check"></i><b>3.3.1</b> 文字与数字</a></li>
 <li class="chapter" data-level="3.3.2" data-path="analytics.html"><a href="analytics.html#section-3.3.2"><i class="fa fa-check"></i><b>3.3.2</b> 数据框与矩阵</a></li>
 <li class="chapter" data-level="3.3.3" data-path="analytics.html"><a href="analytics.html#section-3.3.3"><i class="fa fa-check"></i><b>3.3.3</b> 列表与嵌套数据</a></li>
+<li class="chapter" data-level="3.3.4" data-path="analytics.html"><a href="analytics.html#section-3.3.4"><i class="fa fa-check"></i><b>3.3.4</b> 内存</a></li>
+<li class="chapter" data-level="3.3.5" data-path="analytics.html"><a href="analytics.html#section-3.3.5"><i class="fa fa-check"></i><b>3.3.5</b> 数据库</a></li>
 </ul></li>
 <li class="chapter" data-level="3.4" data-path="analytics.html"><a href="analytics.html#section-3.4"><i class="fa fa-check"></i><b>3.4</b> 数据分析程序包</a></li>
 </ul></li>
@@ -158,9 +161,10 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="5.3.2" data-path="finance.html"><a href="finance.html#section"><i class="fa fa-check"></i><b>5.3.2</b> </a></li>
 </ul></li>
 <li class="chapter" data-level="5.4" data-path="finance.html"><a href="finance.html#section-5.4"><i class="fa fa-check"></i><b>5.4</b> 高频率交易模型</a><ul>
-<li class="chapter" data-level="5.4.1" data-path="finance.html"><a href="finance.html#midas"><i class="fa fa-check"></i><b>5.4.1</b> MIDAS模型</a></li>
-<li class="chapter" data-level="5.4.2" data-path="finance.html"><a href="finance.html#midas-garch"><i class="fa fa-check"></i><b>5.4.2</b> MIDAS-GARCH</a></li>
-<li class="chapter" data-level="5.4.3" data-path="finance.html"><a href="finance.html#garch-2"><i class="fa fa-check"></i><b>5.4.3</b> GARCH模型</a></li>
+<li class="chapter" data-level="5.4.1" data-path="finance.html"><a href="finance.html#seasonal-arima"><i class="fa fa-check"></i><b>5.4.1</b> Seasonal ARIMA</a></li>
+<li class="chapter" data-level="5.4.2" data-path="finance.html"><a href="finance.html#midas"><i class="fa fa-check"></i><b>5.4.2</b> MIDAS模型</a></li>
+<li class="chapter" data-level="5.4.3" data-path="finance.html"><a href="finance.html#midas-garch"><i class="fa fa-check"></i><b>5.4.3</b> MIDAS-GARCH</a></li>
+<li class="chapter" data-level="5.4.4" data-path="finance.html"><a href="finance.html#garch-2"><i class="fa fa-check"></i><b>5.4.4</b> GARCH模型</a></li>
 </ul></li>
 <li class="chapter" data-level="5.5" data-path="finance.html"><a href="finance.html#section-5.5"><i class="fa fa-check"></i><b>5.5</b> 其它统计模型</a><ul>
 <li class="chapter" data-level="5.5.1" data-path="finance.html"><a href="finance.html#levy-process"><i class="fa fa-check"></i><b>5.5.1</b> Levy Process</a></li>
@@ -263,9 +267,9 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
             <section class="normal" id="section-">
 <div id="header">
 <h1 class="title">R语言玩转金融与体彩数据分析 <img src='figure/quant-trade.jpg' width='240'></h1>
-<h3 class="subtitle"><em>R语言量化交易</em></h3>
-<h4 class="author"><em><a href="https://beta.rstudioconnect.com/content/3091/ryo-eng.html">®γσ,黄联富</a></em></h4>
-<h4 class="date"><em>2018-09-18</em></h4>
+<h2 class="subtitle"><em>R语言量化交易</em></h2>
+<p class="author"><em><a href="https://beta.rstudioconnect.com/content/3091/ryo-eng.html">®γσ,黄联富</a></em></p>
+<p class="date"><em>2018-10-21</em></p>
 </div>
 <div id="preface" class="section level1">
 <h1><span class="header-section-number">Chapter 1</span> 前言</h1>
@@ -278,6 +282,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <p>在下来自于马来西亚<a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a>，自2005年入行体彩交易就学习Excel电子表格，而2008年加入<strong>Scicom (MSC) Bhd</strong>后开始接触R语言，并且活跃于<a href="https://d.cosx.org">统计之都论坛</a>与<a href="http://bbs.pinggu.org/forum-69-1.html">经管之家：R语言论坛</a>论坛俩与中国大陆同胞交流，并向前辈高手们学习。</p>
 <p>前几年，偶然发现了个R语言的使用者界面<strong>®Studio</strong>后，就觉得非常方便，然后自学在<a href="https://m.do.co/c/aabb124120d0">DigitalOcean.com</a>安装服务器方便随时随地，只要可以上网的地方就可以使用。</p>
 <p>前阵子，在下在学习金融交易的时候，无意中发现了本非常实用的经验分享书籍<a href="https://raw.githubusercontent.com/englianhu/binary.com-interview-question/master/reference/Successful%20Algorithmic%20Trading.pdf">Successful Algorithmic Trading</a>，笔者在金融交易的解说，由入门到精通包括编码分享（笔者介绍了R语言、Python、C++以及比较各优缺点），该笔者<strong>Michael Halls</strong><a href="#fn3" class="footnoteRef" id="fnref3"><sup>3</sup></a>与在下一样以经验分享著书之见，在下阅读与学习时深深感受到金融交易的武功秘籍（实用教材）如兮，夫复何求哇！</p>
+<p><a href="https://github.com/englianhu/coursera-mastering-software-development-in-r">Coursera Mastering Software Development in R</a>网络课程提供高级R语言编程教导，倘若有兴趣可以点击该链接报读。</p>
 <p>在下才疏学浅，仅有约翰霍金斯大学数据科学专业文凭，倘若有何错误之处，涵清多多包涵并指教。此书乃个人经验之谈。希望在同感身受与共而勉之的情况之下，热衷于金融与体彩行业的学者们可以容易着手。</p>
 <p>有关如何辑写<code>bookdown::gitbook</code>网络书籍，请参阅<a href="https://bookdown.org/yihui/bookdown/">bookdown: Authoring Books and Technical Documents with R Markdown</a>。</p>
 <hr />
@@ -346,7 +351,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "";
-    if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:" && /^https?:/.test(src))
       src = src.replace(/^https?:/, '');
     script.src = src;

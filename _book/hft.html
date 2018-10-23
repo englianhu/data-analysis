@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>R语言玩转金融与体彩数据分析</title>
   <meta name="description" content="此书乃个人学习R语言的经验分享与建议。 此文件输出格式为 bookdown::gitbook。">
-  <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
+  <meta name="generator" content="bookdown  and GitBook 2.6.7">
 
   <meta property="og:title" content="R语言玩转金融与体彩数据分析" />
   <meta property="og:type" content="book" />
@@ -25,7 +25,7 @@
 <meta name="author" content="®γσ,黄联富">
 
 
-<meta name="date" content="2018-09-18">
+<meta name="date" content="2018-10-21">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -36,6 +36,7 @@
 <link rel="next" href="fund.html">
 <script src="book_assets/jquery-2.2.3/jquery.min.js"></script>
 <link href="book_assets/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="book_assets/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="book_assets/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
 <link href="book_assets/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
 <link href="book_assets/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
@@ -123,6 +124,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="3.3.1" data-path="analytics.html"><a href="analytics.html#section-3.3.1"><i class="fa fa-check"></i><b>3.3.1</b> 文字与数字</a></li>
 <li class="chapter" data-level="3.3.2" data-path="analytics.html"><a href="analytics.html#section-3.3.2"><i class="fa fa-check"></i><b>3.3.2</b> 数据框与矩阵</a></li>
 <li class="chapter" data-level="3.3.3" data-path="analytics.html"><a href="analytics.html#section-3.3.3"><i class="fa fa-check"></i><b>3.3.3</b> 列表与嵌套数据</a></li>
+<li class="chapter" data-level="3.3.4" data-path="analytics.html"><a href="analytics.html#section-3.3.4"><i class="fa fa-check"></i><b>3.3.4</b> 内存</a></li>
+<li class="chapter" data-level="3.3.5" data-path="analytics.html"><a href="analytics.html#section-3.3.5"><i class="fa fa-check"></i><b>3.3.5</b> 数据库</a></li>
 </ul></li>
 <li class="chapter" data-level="3.4" data-path="analytics.html"><a href="analytics.html#section-3.4"><i class="fa fa-check"></i><b>3.4</b> 数据分析程序包</a></li>
 </ul></li>
@@ -158,9 +161,10 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="5.3.2" data-path="finance.html"><a href="finance.html#section"><i class="fa fa-check"></i><b>5.3.2</b> </a></li>
 </ul></li>
 <li class="chapter" data-level="5.4" data-path="finance.html"><a href="finance.html#section-5.4"><i class="fa fa-check"></i><b>5.4</b> 高频率交易模型</a><ul>
-<li class="chapter" data-level="5.4.1" data-path="finance.html"><a href="finance.html#midas"><i class="fa fa-check"></i><b>5.4.1</b> MIDAS模型</a></li>
-<li class="chapter" data-level="5.4.2" data-path="finance.html"><a href="finance.html#midas-garch"><i class="fa fa-check"></i><b>5.4.2</b> MIDAS-GARCH</a></li>
-<li class="chapter" data-level="5.4.3" data-path="finance.html"><a href="finance.html#garch-2"><i class="fa fa-check"></i><b>5.4.3</b> GARCH模型</a></li>
+<li class="chapter" data-level="5.4.1" data-path="finance.html"><a href="finance.html#seasonal-arima"><i class="fa fa-check"></i><b>5.4.1</b> Seasonal ARIMA</a></li>
+<li class="chapter" data-level="5.4.2" data-path="finance.html"><a href="finance.html#midas"><i class="fa fa-check"></i><b>5.4.2</b> MIDAS模型</a></li>
+<li class="chapter" data-level="5.4.3" data-path="finance.html"><a href="finance.html#midas-garch"><i class="fa fa-check"></i><b>5.4.3</b> MIDAS-GARCH</a></li>
+<li class="chapter" data-level="5.4.4" data-path="finance.html"><a href="finance.html#garch-2"><i class="fa fa-check"></i><b>5.4.4</b> GARCH模型</a></li>
 </ul></li>
 <li class="chapter" data-level="5.5" data-path="finance.html"><a href="finance.html#section-5.5"><i class="fa fa-check"></i><b>5.5</b> 其它统计模型</a><ul>
 <li class="chapter" data-level="5.5.1" data-path="finance.html"><a href="finance.html#levy-process"><i class="fa fa-check"></i><b>5.5.1</b> Levy Process</a></li>
@@ -266,14 +270,25 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <div id="section-8.1" class="section level2">
 <h2><span class="header-section-number">8.1</span> 高效数据处理</h2>
 <ul>
+<li><a href="https://stackoverflow.com/questions/2851327/convert-a-list-of-data-frames-into-one-data-frame?rq=1">Convert a list of data frames into one data frame</a></li>
 <li><a href="https://stackoverflow.com/questions/28447014/the-fastest-way-to-convert-numeric-to-character-in-r">The fastest way to convert numeric to character in R</a></li>
 <li><a href="http://www.fstpackage.org/">The <code>fst</code> package</a></li>
 <li><a href="https://d.cosx.org/d/420148-splitstackshape"><code>splitstackshape</code>程序包</a></li>
 <li><a href="http://www.johnmyleswhite.com/notebook/2011/10/31/using-sparse-matrices-in-r/">Using Sparse Matrices in R</a></li>
 <li><p><a href="https://appsilon.com/fast-data-loading-from-files-to-r/">Fast data loading from files to R</a></p></li>
 <li><a href="https://appsilon.com/a-guide-to-gpu-accelerated-ship-recognition-in-satellite-imagery-using-keras-and-r-part-i/">A guide to GPU-accelerated ship recognition in satellite imagery using Keras and R (part I)</a></li>
-<li><p><a href="https://appsilon.com/a-guide-to-gpu-accelerated-ships-recognition-in-satellite-imagery-using-keras-and-r-part-ii/">A guide to GPU-accelerated ships recognition in satellite imagery using Keras and R (part II)</a></p></li>
+<li><a href="https://appsilon.com/a-guide-to-gpu-accelerated-ships-recognition-in-satellite-imagery-using-keras-and-r-part-ii/">A guide to GPU-accelerated ships recognition in satellite imagery using Keras and R (part II)</a></li>
+<li><p><a href="http://bbs.pinggu.org/forum.php?mod=redirect&amp;goto=findpost&amp;ptid=6685427&amp;pid=53936462&amp;fromuid=5794471">[问答] 对大数据如何用R高效处理</a>和<a href="http://bbs.pinggu.org/forum.php?mod=redirect&amp;goto=findpost&amp;ptid=6685427&amp;pid=53936861&amp;fromuid=5794471">[问答] 对大数据如何用R高效处理</a></p></li>
 </ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">microbenchmark</span>(<span class="kw">numeric</span>(<span class="dv">1000</span>))
+<span class="co">#Unit: microseconds</span>
+<span class="co">#          expr   min   lq    mean median    uq   max neval</span>
+<span class="co"># numeric(1000) 1.026 1.54 1.95541   1.54 2.053 7.698   100</span>
+
+<span class="kw">microbenchmark</span>(<span class="kw">rep</span>(<span class="dv">0</span>, <span class="dv">1000</span>))
+<span class="co">#Unit: microseconds</span>
+<span class="co">#         expr   min   lq    mean median    uq    max neval</span>
+<span class="co"># rep(0, 1000) 1.026 1.54 2.12477  2.053 2.053 10.777   100</span></code></pre></div>
 </div>
 <div id="section-8.2" class="section level2">
 <h2><span class="header-section-number">8.2</span> 高效统计建模</h2>
@@ -346,7 +361,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "";
-    if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:" && /^https?:/.test(src))
       src = src.replace(/^https?:/, '');
     script.src = src;

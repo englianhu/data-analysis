@@ -1,0 +1,1137 @@
+\documentclass[]{book}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\hypersetup{unicode=true,
+            pdftitle={R语言玩转金融与体彩数据分析},
+            pdfauthor={®γσ,黄联富},
+            pdfborder={0 0 0},
+            breaklinks=true}
+\urlstyle{same}  % don't use monospace font for urls
+\usepackage{natbib}
+\bibliographystyle{apalike}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\usepackage{longtable,booktabs}
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\IfFileExists{parskip.sty}{%
+\usepackage{parskip}
+}{% else
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{5}
+% Redefines (sub)paragraphs to behave more like sections
+\ifx\paragraph\undefined\else
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+\let\oldsubparagraph\subparagraph
+\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+%%% Use protect on footnotes to avoid problems with footnotes in titles
+\let\rmarkdownfootnote\footnote%
+\def\footnote{\protect\rmarkdownfootnote}
+
+%%% Change title format to be more compact
+\usepackage{titling}
+
+% Create subtitle command for use in maketitle
+\newcommand{\subtitle}[1]{
+  \posttitle{
+    \begin{center}\large#1\end{center}
+    }
+}
+
+\setlength{\droptitle}{-2em}
+
+  \title{R语言玩转金融与体彩数据分析}
+    \pretitle{\vspace{\droptitle}\centering\huge}
+  \posttitle{\par}
+  \subtitle{R语言量化交易}
+  \author{\href{https://beta.rstudioconnect.com/content/3091/ryo-eng.html}{®γσ,黄联富}}
+    \preauthor{\centering\large\emph}
+  \postauthor{\par}
+      \predate{\centering\large\emph}
+  \postdate{\par}
+    \date{2018-10-21}
+
+\usepackage{booktabs}
+
+\begin{document}
+\maketitle
+
+{
+\setcounter{tocdepth}{1}
+\tableofcontents
+}
+\chapter{前言}\label{preface}
+
+\textbf{为何辑写此书}
+
+本书是在下首次辑写参考书（纯属个人经验分享与心得），此前分享了\textbf{如何安装®Studio服务器与Shiny服务器}\footnote{\href{https://github.com/scibrokes/setup-rstudio-server}{安装
+  ®StudioとShiny服务器}}：
+
+\begin{itemize}
+\tightlist
+\item
+  \href{https://beta.rstudioconnect.com/englianhu/Introducing-RStudio-Server-for-Data-Scientists/Introducing-RStudio-Server-for-Data-Scientists.html}{为数据科学家们量身定做の专业统计软件
+  --- ®Studio服务器}
+\item
+  \href{https://beta.rstudioconnect.com/englianhu/Introducing-RStudio-Server-for-Data-Scientists-Slides/Introducing-RStudio-Server-for-Data-Scientists-slides.html}{为数据科学家们量身定做の专业统计软件
+  --- ®Studio服务器（演示文稿）}
+\end{itemize}
+
+在下来自于马来西亚\footnote{个人简历请查阅：\href{https://beta.rstudioconnect.com/content/3091/ryo-eng.html}{®γσ,
+  ENG LIAN HU}}，自2005年入行体彩交易就学习Excel电子表格，而2008年加入\textbf{Scicom
+(MSC)
+Bhd}后开始接触R语言，并且活跃于\href{https://d.cosx.org}{统计之都论坛}与\href{http://bbs.pinggu.org/forum-69-1.html}{经管之家：R语言论坛}论坛俩与中国大陆同胞交流，并向前辈高手们学习。
+
+前几年，偶然发现了个R语言的使用者界面\textbf{®Studio}后，就觉得非常方便，然后自学在\href{https://m.do.co/c/aabb124120d0}{DigitalOcean.com}安装服务器方便随时随地，只要可以上网的地方就可以使用。
+
+前阵子，在下在学习金融交易的时候，无意中发现了本非常实用的经验分享书籍\href{https://raw.githubusercontent.com/englianhu/binary.com-interview-question/master/reference/Successful\%20Algorithmic\%20Trading.pdf}{Successful
+Algorithmic
+Trading}，笔者在金融交易的解说，由入门到精通包括编码分享（笔者介绍了R语言、Python、C++以及比较各优缺点），该笔者\textbf{Michael
+Halls}\footnote{更多该作者详情，请参阅\href{https://www.quantstart.com/successful-algorithmic-trading-ebook}{Struggling
+  To Make Profitable Algo Trading Strategies?}}与在下一样以经验分享著书之见，在下阅读与学习时深深感受到金融交易的武功秘籍（实用教材）如兮，夫复何求哇！
+
+\href{https://github.com/englianhu/coursera-mastering-software-development-in-r}{Coursera
+Mastering Software Development in
+R}网络课程提供高级R语言编程教导，倘若有兴趣可以点击该链接报读。
+
+在下才疏学浅，仅有约翰霍金斯大学数据科学专业文凭，倘若有何错误之处，涵清多多包涵并指教。此书乃个人经验之谈。希望在同感身受与共而勉之的情况之下，热衷于金融与体彩行业的学者们可以容易着手。
+
+有关如何辑写\texttt{bookdown::gitbook}网络书籍，请参阅\href{https://bookdown.org/yihui/bookdown/}{bookdown:
+Authoring Books and Technical Documents with R Markdown}。
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\textbf{Powered by - Copyright® Intellectual Property Rights of
+\href{http://www.scibrokes.com}{Scibrokes®}個人の経営企業}
+
+\chapter{介绍}\label{intro}
+
+You can label chapter and section titles using \texttt{\{\#label\}}
+after them, e.g., we can reference Chapter \ref{intro}. If you do not
+manually label them, there will be automatic labels anyway, e.g.,
+Chapter \ref{analytics}.
+
+Figures and tables with captions will be placed in \texttt{figure} and
+\texttt{table} environments, respectively.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{par}\NormalTok{(}\DataTypeTok{mar =} \KeywordTok{c}\NormalTok{(}\DecValTok{4}\NormalTok{, }\DecValTok{4}\NormalTok{, .}\DecValTok{1}\NormalTok{, .}\DecValTok{1}\NormalTok{))}
+\KeywordTok{plot}\NormalTok{(pressure, }\DataTypeTok{type =} \StringTok{'b'}\NormalTok{, }\DataTypeTok{pch =} \DecValTok{19}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{data-analysis_files/figure-latex/nice-fig-1} 
+
+}
+
+\caption{Here is a nice figure!}\label{fig:nice-fig}
+\end{figure}
+
+Reference a figure by its code chunk label with the \texttt{fig:}
+prefix, e.g., see Figure \ref{fig:nice-fig}. Similarly, you can
+reference tables generated from \texttt{knitr::kable()}, e.g., see Table
+\ref{tab:nice-tab}.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{knitr}\OperatorTok{::}\KeywordTok{kable}\NormalTok{(}
+  \KeywordTok{head}\NormalTok{(iris, }\DecValTok{20}\NormalTok{), }\DataTypeTok{caption =} \StringTok{'Here is a nice table!'}\NormalTok{,}
+  \DataTypeTok{booktabs =} \OtherTok{TRUE}
+\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{table}
+
+\caption{\label{tab:nice-tab}Here is a nice table!}
+\centering
+\begin{tabular}[t]{rrrrl}
+\toprule
+Sepal.Length & Sepal.Width & Petal.Length & Petal.Width & Species\\
+\midrule
+5.1 & 3.5 & 1.4 & 0.2 & setosa\\
+4.9 & 3.0 & 1.4 & 0.2 & setosa\\
+4.7 & 3.2 & 1.3 & 0.2 & setosa\\
+4.6 & 3.1 & 1.5 & 0.2 & setosa\\
+5.0 & 3.6 & 1.4 & 0.2 & setosa\\
+\addlinespace
+5.4 & 3.9 & 1.7 & 0.4 & setosa\\
+4.6 & 3.4 & 1.4 & 0.3 & setosa\\
+5.0 & 3.4 & 1.5 & 0.2 & setosa\\
+4.4 & 2.9 & 1.4 & 0.2 & setosa\\
+4.9 & 3.1 & 1.5 & 0.1 & setosa\\
+\addlinespace
+5.4 & 3.7 & 1.5 & 0.2 & setosa\\
+4.8 & 3.4 & 1.6 & 0.2 & setosa\\
+4.8 & 3.0 & 1.4 & 0.1 & setosa\\
+4.3 & 3.0 & 1.1 & 0.1 & setosa\\
+5.8 & 4.0 & 1.2 & 0.2 & setosa\\
+\addlinespace
+5.7 & 4.4 & 1.5 & 0.4 & setosa\\
+5.4 & 3.9 & 1.3 & 0.4 & setosa\\
+5.1 & 3.5 & 1.4 & 0.3 & setosa\\
+5.7 & 3.8 & 1.7 & 0.3 & setosa\\
+5.1 & 3.8 & 1.5 & 0.3 & setosa\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+You can write citations, too. For example, we are using the
+\textbf{bookdown} package \citep{R-bookdown} in this sample book, which
+was built on top of R Markdown and \textbf{knitr} \citep{xie2015}.
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\section{R语言与RStudio}\label{rrstudio}
+
+\section{Shiny应用}\label{shiny}
+
+\begin{itemize}
+\tightlist
+\item
+  \href{https://appsilon.com/how-to-sample-from-multidimensional-distributions-using-gibbs-sampling/}{How
+  to sample from multidimensional distributions using Gibbs sampling?}
+\end{itemize}
+
+\section{调用其它语言程序}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\textbf{Powered by - Copyright® Intellectual Property Rights of
+\href{http://www.scibrokes.com}{Scibrokes®}個人の経営企業}
+
+\chapter{数据分析}\label{analytics}
+
+\section{读存数据}
+
+\subsection{本地文件}
+
+\subsection{外来文件}
+
+\begin{longtable}[]{@{}cc@{}}
+\toprule
+readr function & Use\tabularnewline
+\midrule
+\endhead
+read\_csv & Reads comma-separated file\tabularnewline
+read\_csv2 & Reads semicolon-separated file\tabularnewline
+read\_tsv & Reads tab-separated file\tabularnewline
+read\_delim & General function for reading delimited
+files\tabularnewline
+read\_fwf & Reads fixed width files\tabularnewline
+read\_log & Reads log files\tabularnewline
+\bottomrule
+\end{longtable}
+
+\href{https://jeevanyue.github.io/post/2018-01-08-read_data_in_r/}{在R中读取数据}
+
+\section{采集网络数据}
+
+\subsection{普通采集}
+
+\subsection{API接口}\label{api}
+
+\subsection{Web Driver}\label{web-driver}
+
+\section{数据处理}
+
+\subsection{文字与数字}
+
+\begin{itemize}
+\tightlist
+\item
+  \href{https://appsilon.com/an-example-of-how-to-use-the-new-r-promises-package/}{An
+  example of how to use the new R \texttt{promises} package}
+\item
+  \href{https://cran.r-project.org/web/packages/future/vignettes/future-1-overview.html}{A
+  Future for R: A Comprehensive Overview}
+\end{itemize}
+
+\begin{longtable}[]{@{}cc@{}}
+\toprule
+Metacharacter & Meaning\tabularnewline
+\midrule
+\endhead
+. & Any Character\tabularnewline
+\w & A Word\tabularnewline
+\W & Not a Word\tabularnewline
+\d & A Digit\tabularnewline
+\D & Not a Digit\tabularnewline
+\s & Whitespace\tabularnewline
+\S & Not Whitespace\tabularnewline
+{[}xyz{]} & A Set of Characters\tabularnewline
+{[}\^{}xyz{]} & Negation of Set\tabularnewline
+{[}a-z{]} & A Range of Characters\tabularnewline
+\^{} & Beginning of String\tabularnewline
+\$ & End of String\tabularnewline
+\n & Newline\tabularnewline
++ & One or More of Previous\tabularnewline
+* & Zero or More of Previous\tabularnewline
+? & Zero or One of Previous\tabularnewline
+&\tabularnewline
+\{5\} & Exactly 5 of Previous\tabularnewline
+\{2, 5\} & Between 2 and 5 or Previous\tabularnewline
+\{2, \} & More than 2 of Previous\tabularnewline
+\bottomrule
+\end{longtable}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{str_extract_all}\NormalTok{(}\StringTok{"Mississippi"}\NormalTok{, }\StringTok{"(i.\{2\})\{3\}"}\NormalTok{)[[}\DecValTok{1}\NormalTok{]]}
+\CommentTok{#[1] "ississipp"}
+
+\KeywordTok{str_extract_all}\NormalTok{(}\StringTok{"Mississippi"}\NormalTok{, }\StringTok{"(i.\{2\})"}\NormalTok{)[[}\DecValTok{1}\NormalTok{]]}
+\CommentTok{#[1] "iss" "iss" "ipp"}
+
+\KeywordTok{str_extract_all}\NormalTok{(}\StringTok{"abcdefghijklmnopqrstuvwxyz0123456789"}\NormalTok{, }\StringTok{"}\CharTok{\textbackslash{}\textbackslash{}}\StringTok{w"}\NormalTok{)[[}\DecValTok{1}\NormalTok{]]}
+\CommentTok{# [1] "a" "b" "c" "d" "e" "f" "g" "h" "i" "j" "k" "l" "m" "n" "o" "p" "q" "r"}
+\CommentTok{#[19] "s" "t" "u" "v" "w" "x" "y" "z" "0" "1" "2" "3" "4" "5" "6" "7" "8" "9"}
+
+\KeywordTok{str_extract_all}\NormalTok{(}\StringTok{'0123456789'}\NormalTok{, }\StringTok{'}\CharTok{\textbackslash{}\textbackslash{}}\StringTok{d'}\NormalTok{)[[}\DecValTok{1}\NormalTok{]]}
+\CommentTok{# [1] "0" "1" "2" "3" "4" "5" "6" "7" "8" "9"}
+
+\KeywordTok{str_extract_all}\NormalTok{(}\StringTok{"}\CharTok{\textbackslash{}n\textbackslash{}t}\StringTok{   "}\NormalTok{, }\StringTok{"}\CharTok{\textbackslash{}\textbackslash{}}\StringTok{s"}\NormalTok{)[[}\DecValTok{1}\NormalTok{]]}
+\CommentTok{#[1] "\textbackslash{}n" "\textbackslash{}t" " "  " "  " "}
+
+\KeywordTok{str_extract_all}\NormalTok{(}\StringTok{"}\CharTok{\textbackslash{}n\textbackslash{}t}\StringTok{   "}\NormalTok{, }\StringTok{"}\CharTok{\textbackslash{}\textbackslash{}}\StringTok{d"}\NormalTok{)[[}\DecValTok{1}\NormalTok{]]}
+\CommentTok{#character(0)}
+
+\KeywordTok{str_extract_all}\NormalTok{(}\StringTok{"}\CharTok{\textbackslash{}n\textbackslash{}t}\StringTok{   "}\NormalTok{, }\StringTok{"}\CharTok{\textbackslash{}\textbackslash{}}\StringTok{w"}\NormalTok{)[[}\DecValTok{1}\NormalTok{]]}
+\CommentTok{#character(0)}
+
+\KeywordTok{str_extract_all}\NormalTok{(}\StringTok{"abcdefghijklmnopqrstuvwxyz0123456789"}\NormalTok{, }\StringTok{"}\CharTok{\textbackslash{}\textbackslash{}}\StringTok{d"}\NormalTok{)[[}\DecValTok{1}\NormalTok{]]}
+\CommentTok{# [1] "0" "1" "2" "3" "4" "5" "6" "7" "8" "9"}
+
+\KeywordTok{str_extract_all}\NormalTok{(}\StringTok{"abcdefghijklmnopqrstuvwxyz0123456789"}\NormalTok{, }\StringTok{"}\CharTok{\textbackslash{}\textbackslash{}}\StringTok{D"}\NormalTok{)[[}\DecValTok{1}\NormalTok{]]}
+\CommentTok{# [1] "a" "b" "c" "d" "e" "f" "g" "h" "i" "j" "k" "l" "m" "n" "o" "p" "q" "r"}
+\CommentTok{#[19] "s" "t" "u" "v" "w" "x" "y" "z"}
+
+\KeywordTok{str_extract_all}\NormalTok{(}\StringTok{"rhythms"}\NormalTok{, }\StringTok{"[aeiou]"}\NormalTok{)[[}\DecValTok{1}\NormalTok{]]}
+\CommentTok{#character(0)}
+
+\KeywordTok{str_extract_all}\NormalTok{(}\StringTok{"rhythms"}\NormalTok{, }\StringTok{"[^aeiou]"}\NormalTok{)[[}\DecValTok{1}\NormalTok{]]}
+\CommentTok{#[1] "r" "h" "y" "t" "h" "m" "s"}
+
+\KeywordTok{grepl}\NormalTok{(}\StringTok{"[aeiou]"}\NormalTok{, }\StringTok{"rhythms"}\NormalTok{)[[}\DecValTok{1}\NormalTok{]]}
+\CommentTok{#[1] FALSE}
+
+\KeywordTok{grepl}\NormalTok{(}\StringTok{"[^aeiou]"}\NormalTok{, }\StringTok{"rhythms"}\NormalTok{)[[}\DecValTok{1}\NormalTok{]]}
+\CommentTok{#[1] TRUE}
+
+\KeywordTok{grepl}\NormalTok{(}\StringTok{"a|b"}\NormalTok{, }\KeywordTok{c}\NormalTok{(}\StringTok{"abc"}\NormalTok{, }\StringTok{"bcd"}\NormalTok{, }\StringTok{"cde"}\NormalTok{))}
+\CommentTok{#[1]  TRUE  TRUE FALSE}
+
+\KeywordTok{grepl}\NormalTok{(}\StringTok{"^[ab]+$"}\NormalTok{, }\KeywordTok{c}\NormalTok{(}\StringTok{"bab"}\NormalTok{, }\StringTok{"aab"}\NormalTok{, }\StringTok{"abc"}\NormalTok{))}
+\CommentTok{#[1]  TRUE  TRUE FALSE}
+
+\KeywordTok{str_extract_all}\NormalTok{(}\KeywordTok{c}\NormalTok{(}\StringTok{"bab"}\NormalTok{, }\StringTok{"aab"}\NormalTok{, }\StringTok{"abc"}\NormalTok{), }\StringTok{"^[ab]+$"}\NormalTok{)}
+\CommentTok{#[[1]]}
+\CommentTok{#[1] "bab"}
+\CommentTok{#}
+\CommentTok{#[[2]]}
+\CommentTok{#[1] "aab"}
+\CommentTok{#}
+\CommentTok{#[[3]]}
+\CommentTok{#character(0)}
+
+\KeywordTok{str_extract_all}\NormalTok{(}\KeywordTok{c}\NormalTok{(}\StringTok{"bab"}\NormalTok{, }\StringTok{"aab"}\NormalTok{, }\StringTok{"abc"}\NormalTok{), }\StringTok{"a|b"}\NormalTok{)}
+\CommentTok{#[[1]]}
+\CommentTok{#[1] "b" "a" "b"}
+\CommentTok{#}
+\CommentTok{#[[2]]}
+\CommentTok{#[1] "a" "a" "b"}
+\CommentTok{#}
+\CommentTok{#[[3]]}
+\CommentTok{#[1] "a" "b"}
+
+\KeywordTok{grepl}\NormalTok{(}\StringTok{"North|South"}\NormalTok{, }\KeywordTok{c}\NormalTok{(}\StringTok{"South Dakota"}\NormalTok{, }\StringTok{"North Carolina"}\NormalTok{, }\StringTok{"West Virginia"}\NormalTok{))}
+\CommentTok{#[1]  TRUE  TRUE FALSE}
+
+\NormalTok{start_end_vowel <-}\StringTok{ "^[AEIOU]\{1\}.+[aeiou]\{1\}$"}
+\NormalTok{vowel_state_lgl <-}\StringTok{ }\KeywordTok{grepl}\NormalTok{(start_end_vowel, state.name)}
+\KeywordTok{head}\NormalTok{(vowel_state_lgl)}
+\CommentTok{#[1]  TRUE  TRUE  TRUE FALSE FALSE FALSE}
+
+\NormalTok{state.name[vowel_state_lgl]}
+\CommentTok{#[1] "Alabama"  "Alaska"   "Arizona"  "Idaho"    "Indiana"  "Iowa"    }
+\CommentTok{#[7] "Ohio"     "Oklahoma"}
+
+\KeywordTok{grepl}\NormalTok{(}\StringTok{"[Ii]"}\NormalTok{, }\KeywordTok{c}\NormalTok{(}\StringTok{"Hawaii"}\NormalTok{, }\StringTok{"Illinois"}\NormalTok{, }\StringTok{"Kentucky"}\NormalTok{))}
+\CommentTok{#[1]  TRUE  TRUE FALSE}
+
+\KeywordTok{str_extract_all}\NormalTok{(}\KeywordTok{c}\NormalTok{(}\StringTok{"Hawaii"}\NormalTok{, }\StringTok{"Illinois"}\NormalTok{, }\StringTok{"Kentucky"}\NormalTok{), }\StringTok{"[Ii]"}\NormalTok{)}
+\CommentTok{#[[1]]}
+\CommentTok{#[1] "i" "i"}
+\CommentTok{#}
+\CommentTok{#[[2]]}
+\CommentTok{#[1] "I" "i" "i"}
+\CommentTok{#}
+\CommentTok{#[[3]]}
+\CommentTok{#character(0)}
+
+\KeywordTok{str_detect}\NormalTok{(}\KeywordTok{c}\NormalTok{(}\StringTok{"Hawaii"}\NormalTok{, }\StringTok{"Illinois"}\NormalTok{, }\StringTok{"Kentucky"}\NormalTok{), }\StringTok{"[Ii]"}\NormalTok{)}
+\CommentTok{#[1]  TRUE  TRUE FALSE}
+
+\NormalTok{## The sub() function takes as arguments a regex, a “replacement,” and a vector of strings. This function will replace the first instance of that regex found in each string.}
+\KeywordTok{sub}\NormalTok{(}\StringTok{"[Ii]"}\NormalTok{, }\StringTok{"1"}\NormalTok{, }\KeywordTok{c}\NormalTok{(}\StringTok{"Hawaii"}\NormalTok{, }\StringTok{"Illinois"}\NormalTok{, }\StringTok{"Kentucky"}\NormalTok{))}
+\CommentTok{#[1] "Hawa1i"   "1llinois" "Kentucky"}
+
+\NormalTok{## The gsub() function is nearly the same as sub() except it will replace every instance of the regex that is matched in each string.}
+\KeywordTok{gsub}\NormalTok{(}\StringTok{"[Ii]"}\NormalTok{, }\StringTok{"1"}\NormalTok{, }\KeywordTok{c}\NormalTok{(}\StringTok{"Hawaii"}\NormalTok{, }\StringTok{"Illinois"}\NormalTok{, }\StringTok{"Kentucky"}\NormalTok{))}
+\CommentTok{#[1] "Hawa11"   "1ll1no1s" "Kentucky"}
+
+\KeywordTok{str_replace_all}\NormalTok{(}\KeywordTok{c}\NormalTok{(}\StringTok{"Hawaii"}\NormalTok{, }\StringTok{"Illinois"}\NormalTok{, }\StringTok{"Kentucky"}\NormalTok{), }\StringTok{"[Ii]"}\NormalTok{, }\StringTok{"1"}\NormalTok{)}
+\CommentTok{#[1] "Hawa11"   "1ll1no1s" "Kentucky"}
+
+\CommentTok{#The strsplit() function will split up strings according to the provided regex. If strsplit() is provided with a vector of strings it will return a list of string vectors.}
+\NormalTok{two_s <-}\StringTok{ }\NormalTok{state.name[}\KeywordTok{grep}\NormalTok{(}\StringTok{"ss"}\NormalTok{, state.name)]}
+\NormalTok{two_s}
+\CommentTok{#[1] "Massachusetts" "Mississippi"   "Missouri"      "Tennessee"    }
+
+\KeywordTok{strsplit}\NormalTok{(two_s, }\StringTok{"ss"}\NormalTok{)}
+\CommentTok{#[[1]]}
+\CommentTok{#[1] "Ma"        "achusetts"}
+\CommentTok{#}
+\CommentTok{#[[2]]}
+\CommentTok{#[1] "Mi"   "i"    "ippi"}
+\CommentTok{#}
+\CommentTok{#[[3]]}
+\CommentTok{#[1] "Mi"   "ouri"}
+\CommentTok{#}
+\CommentTok{#[[4]]}
+\CommentTok{#[1] "Tenne" "ee"}
+
+\KeywordTok{library}\NormalTok{(stringr)}
+
+\NormalTok{state_tbl <-}\StringTok{ }\KeywordTok{paste}\NormalTok{(state.name, state.area, state.abb)}
+\KeywordTok{head}\NormalTok{(state_tbl)}
+\CommentTok{#[1] "Alabama 51609 AL"     "Alaska 589757 AK"     "Arizona 113909 AZ"   }
+\CommentTok{#[4] "Arkansas 53104 AR"    "California 158693 CA" "Colorado 104247 CO"  }
+
+\KeywordTok{str_extract}\NormalTok{(state_tbl, }\StringTok{"[0-9]+"}\NormalTok{)}
+\CommentTok{# [1] "51609"  "589757" "113909" "53104"  "158693" "104247" "5009"  }
+\CommentTok{# [8] "2057"   "58560"  "58876"  "6450"   "83557"  "56400"  "36291" }
+\CommentTok{#[15] "56290"  "82264"  "40395"  "48523"  "33215"  "10577"  "8257"  }
+\CommentTok{#[22] "58216"  "84068"  "47716"  "69686"  "147138" "77227"  "110540"}
+\CommentTok{#[29] "9304"   "7836"   "121666" "49576"  "52586"  "70665"  "41222" }
+\CommentTok{#[36] "69919"  "96981"  "45333"  "1214"   "31055"  "77047"  "42244" }
+\CommentTok{#[43] "267339" "84916"  "9609"   "40815"  "68192"  "24181"  "56154" }
+\CommentTok{#[50] "97914"}
+
+\NormalTok{## The str_order() function returns a numeric vector that corresponds to the alphabetical order of the strings in the provided vector.}
+\KeywordTok{head}\NormalTok{(state.abb)}
+\CommentTok{#[1] "AL" "AK" "AZ" "AR" "CA" "CO"}
+
+\KeywordTok{str_order}\NormalTok{(state.name)}
+\CommentTok{# [1]  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24}
+\CommentTok{#[25] 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48}
+\CommentTok{#[49] 49 50}
+
+\KeywordTok{head}\NormalTok{(state.name)}
+\CommentTok{#[1] "Alabama"    "Alaska"     "Arizona"    "Arkansas"   "California"}
+\CommentTok{#[6] "Colorado"}
+\KeywordTok{str_order}\NormalTok{(state.abb)}
+\CommentTok{# [1]  2  1  4  3  5  6  7  8  9 10 11 15 12 13 14 16 17 18 21 20 19 22 23 25}
+\CommentTok{#[25] 24 26 33 34 27 29 30 31 28 32 35 36 37 38 39 40 41 42 43 44 46 45 47 49}
+\CommentTok{#[49] 48 50}
+
+\NormalTok{## The str_pad() function pads strings with other characters which is often useful when the string is going to be eventually printed for a person to read.}
+\KeywordTok{str_pad}\NormalTok{(}\StringTok{"Thai"}\NormalTok{, }\DataTypeTok{width =} \DecValTok{8}\NormalTok{, }\DataTypeTok{side =} \StringTok{"left"}\NormalTok{, }\DataTypeTok{pad =} \StringTok{"-"}\NormalTok{)}
+\CommentTok{#[1] "----Thai"}
+
+\KeywordTok{str_pad}\NormalTok{(}\StringTok{"Thai"}\NormalTok{, }\DataTypeTok{width =} \DecValTok{8}\NormalTok{, }\DataTypeTok{side =} \StringTok{"right"}\NormalTok{, }\DataTypeTok{pad =} \StringTok{"-"}\NormalTok{)}
+\CommentTok{#[1] "Thai----"}
+
+\KeywordTok{str_pad}\NormalTok{(}\StringTok{"Thai"}\NormalTok{, }\DataTypeTok{width =} \DecValTok{8}\NormalTok{, }\DataTypeTok{side =} \StringTok{"both"}\NormalTok{, }\DataTypeTok{pad =} \StringTok{"-"}\NormalTok{)}
+\CommentTok{#[1] "--Thai--"}
+
+\NormalTok{## The str_to_title() function acts just like tolower() andtoupper() except it puts strings into Title Case.}
+\NormalTok{cases <-}\StringTok{ }\KeywordTok{c}\NormalTok{(}\StringTok{"CAPS"}\NormalTok{, }\StringTok{"low"}\NormalTok{, }\StringTok{"Title"}\NormalTok{)}
+\KeywordTok{str_to_title}\NormalTok{(cases)}
+\CommentTok{#[1] "Caps"  "Low"   "Title"}
+
+\NormalTok{## The str_trim() function deletes whitespace from both sides of a string.}
+\NormalTok{to_trim <-}\StringTok{ }\KeywordTok{c}\NormalTok{(}\StringTok{"   space"}\NormalTok{, }\StringTok{"the    "}\NormalTok{, }\StringTok{"    final frontier  "}\NormalTok{)}
+\KeywordTok{str_trim}\NormalTok{(to_trim)}
+\CommentTok{#[1] "space"          "the"            "final frontier"}
+
+\NormalTok{## The str_wrap() function inserts newlines in strings so that when the string is printed each line’s length is limited.}
+\NormalTok{pasted_states <-}\StringTok{ }\KeywordTok{paste}\NormalTok{(state.name[}\DecValTok{1}\OperatorTok{:}\DecValTok{20}\NormalTok{], }\DataTypeTok{collapse =} \StringTok{" "}\NormalTok{)}
+\KeywordTok{cat}\NormalTok{(}\KeywordTok{str_wrap}\NormalTok{(pasted_states, }\DataTypeTok{width =} \DecValTok{80}\NormalTok{))}
+\CommentTok{#Alabama Alaska Arizona Arkansas California Colorado Connecticut Delaware Florida}
+\CommentTok{#Georgia Hawaii Idaho Illinois Indiana Iowa Kansas Kentucky Louisiana Maine}
+\CommentTok{#Maryland}
+
+\KeywordTok{cat}\NormalTok{(}\KeywordTok{str_wrap}\NormalTok{(pasted_states, }\DataTypeTok{width =} \DecValTok{30}\NormalTok{))}
+\CommentTok{#Alabama Alaska Arizona}
+\CommentTok{#Arkansas California Colorado}
+\CommentTok{#Connecticut Delaware Florida}
+\CommentTok{#Georgia Hawaii Idaho Illinois}
+\CommentTok{#Indiana Iowa Kansas Kentucky}
+\CommentTok{#Louisiana Maine Maryland}
+
+\NormalTok{## The word() function allows you to index each word in a string as if it were a vector.}
+\NormalTok{a_tale <-}\StringTok{ "It was the best of times it was the worst of times it was the age of wisdom it was the age of foolishness"}
+\KeywordTok{word}\NormalTok{(a_tale, }\DecValTok{2}\NormalTok{)}
+\CommentTok{#[1] "was"}
+
+\KeywordTok{word}\NormalTok{(a_tale, }\DataTypeTok{end =} \DecValTok{3}\NormalTok{)}
+\CommentTok{#[1] "It was the"}
+
+\KeywordTok{word}\NormalTok{(a_tale, }\DataTypeTok{start =} \DecValTok{11}\NormalTok{, }\DataTypeTok{end =} \DecValTok{15}\NormalTok{)}
+\CommentTok{#[1] "of times it was the"}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{longtable}[]{@{}cc@{}}
+\toprule
+Metacharacter & Meaning\tabularnewline
+\midrule
+\endhead
+. & Any Character\tabularnewline
+\w & A Word\tabularnewline
+\W & Not a Word\tabularnewline
+\d & A Digit\tabularnewline
+\D & Not a Digit\tabularnewline
+\s & Whitespace\tabularnewline
+\S & Not Whitespace\tabularnewline
+{[}xyz{]} & A Set of Characters\tabularnewline
+{[}\^{}xyz{]} & Negation of Set\tabularnewline
+{[}a-z{]} & A Range of Characters\tabularnewline
+\^{} & Beginning of String\tabularnewline
+\$ & End of String\tabularnewline
+\n & Newline\tabularnewline
++ & One or More of Previous\tabularnewline
+* & Zero or More of Previous\tabularnewline
+? & Zero or One of Previous\tabularnewline
+&\tabularnewline
+\{5\} & Exactly 5 of Previous\tabularnewline
+\{2, 5\} & Between 2 and 5 or Previous\tabularnewline
+\{2, \} & More than 2 of Previous\tabularnewline
+\bottomrule
+\end{longtable}
+
+\begin{longtable}[]{@{}ccc@{}}
+\toprule
+Operator & Meaning & Example\tabularnewline
+\midrule
+\endhead
+== & Equals & storm\_name == KATRINA\tabularnewline
+!= & Does not equal & min\_pressure != 0\tabularnewline
+\textgreater{} & Greater than & latitude \textgreater{}
+25\tabularnewline
+\textgreater{}= & Greater than or equal to & max\_wind \textgreater{}=
+160\tabularnewline
+\textless{} & Less than & min\_pressure \textless{} 900\tabularnewline
+\textless{}= & Less than or equal to & distance\_to\_land \textless{}=
+0\tabularnewline
+\%in\% & Included in & storm\_name \%in\% c(``KATRINA'',
+``ANDREW'')\tabularnewline
+is.na() & Is a missing value & is.na(radius\_34\_ne)\tabularnewline
+\bottomrule
+\end{longtable}
+
+\begin{quote}
+String manipulation in R is useful for data cleaning, plus it can be
+fun! For prototyping your first regular expressions I highly recommend
+checking out \url{http://regexr.com/}. If you're interested in what some
+people call a more ``humane'' way of constructing regular expressions
+you should check out the \href{https://github.com/kevinushey/rex}{rex}
+package by \href{https://github.com/kevinushey}{Kevin Ushey} and
+\href{http://www.jimhester.com/}{Jim Hester}. If you'd like to find out
+more about text analysis I highly recommend reading
+\href{http://tidytextmining.com/}{Tidy Text Mining in R} by
+\href{http://juliasilge.com/}{Julia Silge} and
+\href{http://varianceexplained.org/}{David Robinson}.
+\end{quote}
+
+\subsection{数据框与矩阵}
+
+\begin{itemize}
+\tightlist
+\item
+  \href{https://stackoverflow.com/questions/43212308/na-locf-using-group-by-from-dplyr}{\texttt{na.locf}
+  using group by from \texttt{dplyr}}
+\item
+  \href{https://stackoverflow.com/questions/23340150/replace-missing-values-na-with-most-recent-non-na-by-group}{Replace
+  Missing Values NA with Most Recent Non-NA by Group}
+\item
+  \href{https://stackoverflow.com/questions/40040834/replace-na-with-previous-or-next-value-by-group-using-dplyr/40041172}{Replace
+  NA with Previous or Next Value by Group using \texttt{dplyr}}
+\item
+  \href{https://stackoverflow.com/questions/47242643/na-at-the-end-of-column-using-na-locf-function}{NA
+  at the End of Column using \texttt{na.locf} Function}
+\item
+  \href{https://stackoverflow.com/questions/49578085/na-locf-function-is-changing-data-frame-values-from-int-to-char-in-r}{\texttt{na.locf}
+  Function is Changing \texttt{data.frame} Values from \texttt{int} to
+  \texttt{char} in R}
+\item
+  \href{https://stackoverflow.com/questions/13616965/how-to-fill-nas-with-locf-by-factors-in-data-frame-split-by-country}{How
+  to Fill NAs with locf by Factors in \texttt{data.\ frame} split by
+  Country}
+\item
+  \href{https://stackoverflow.com/questions/23340150/replace-missing-values-na-with-most-recent-non-na-by-group}{Replace
+  Missing Values \texttt{NA} with Most Recent non-NA by Group}
+\end{itemize}
+
+\subsection{列表与嵌套数据}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{dir.create}\NormalTok{(}\KeywordTok{file.path}\NormalTok{(}\StringTok{'testdir2'}\NormalTok{, }\StringTok{'testdir3'}\NormalTok{), }\DataTypeTok{recursive =} \OtherTok{TRUE}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+以上代码可新建一个文件夹和子文件夹。
+
+\subsection{内存}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{library}\NormalTok{(pryr)}
+\KeywordTok{mem_used}\NormalTok{()}
+\CommentTok{#108 MB}
+
+\KeywordTok{sapply}\NormalTok{(}\KeywordTok{ls}\NormalTok{(), }\ControlFlowTok{function}\NormalTok{(x) }\KeywordTok{object_size}\NormalTok{(}\KeywordTok{get}\NormalTok{(x))) }\OperatorTok{%>%}\StringTok{ }\NormalTok{sort}
+
+\KeywordTok{mem_change}\NormalTok{(}\KeywordTok{rm}\NormalTok{(}\DataTypeTok{list =} \KeywordTok{ls}\NormalTok{()))}
+\CommentTok{#-1.22 kB}
+
+\NormalTok{## The .Machine object in R (found in the base package) can give you specific details about how your computer/operation system stores different types of data.}
+\KeywordTok{str}\NormalTok{(.Machine) }\CommentTok{#or tibble::glimpse(.Machince)}
+\CommentTok{#List of 18}
+\CommentTok{# $ double.eps           : num 2.22e-16}
+\CommentTok{# $ double.neg.eps       : num 1.11e-16}
+\CommentTok{# $ double.xmin          : num 2.23e-308}
+\CommentTok{# $ double.xmax          : num 1.8e+308}
+\CommentTok{# $ double.base          : int 2}
+\CommentTok{# $ double.digits        : int 53}
+\CommentTok{# $ double.rounding      : int 5}
+\CommentTok{# $ double.guard         : int 0}
+\CommentTok{# $ double.ulp.digits    : int -52}
+\CommentTok{# $ double.neg.ulp.digits: int -53}
+\CommentTok{# $ double.exponent      : int 11}
+\CommentTok{# $ double.min.exp       : int -1022}
+\CommentTok{# $ double.max.exp       : int 1024}
+\CommentTok{# $ integer.max          : int 2147483647}
+\CommentTok{# $ sizeof.long          : int 8}
+\CommentTok{# $ sizeof.longlong      : int 8}
+\CommentTok{# $ sizeof.longdouble    : int 16}
+\CommentTok{# $ sizeof.pointer       : int 8}
+
+\NormalTok{## The gc() function in the base package can be used to explicitly trigger a garbage collection in R. Calling gc() explicitly is never actually needed, but it does produce some output that is worth understanding.}
+\KeywordTok{gc}\NormalTok{()}
+\CommentTok{#          used  (Mb) gc trigger  (Mb) max used  (Mb)}
+\CommentTok{#Ncells 3124234 166.9    5938641 317.2  4136665 221.0}
+\CommentTok{#Vcells 6906107  52.7   12255594  93.6 10145775  77.5}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{数据库}
+
+\begin{figure}
+\centering
+\includegraphics{figure/database_management.jpg}
+\caption{}
+\end{figure}
+
+\begin{longtable}[]{@{}cc@{}}
+\toprule
+Database Management System & R packages\tabularnewline
+\midrule
+\endhead
+Oracle & ROracle\tabularnewline
+MySQL & RMySQL\tabularnewline
+Microsoft SQL Server & RSQLServer\tabularnewline
+PostgreSQL & RPostgres\tabularnewline
+SQLite & RSQLite\tabularnewline
+\bottomrule
+\end{longtable}
+
+\begin{quote}
+For more on the DBI package, including its history, see
+\href{https://github.com/rstats-db/DBI}{the package's GitHub README
+page}.
+\end{quote}
+
+\section{数据分析程序包}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\textbf{Powered by - Copyright® Intellectual Property Rights of
+\href{http://www.scibrokes.com}{Scibrokes®}個人の経営企業}
+
+\chapter{统计模式}\label{stats}
+
+\section{基本统计学}
+
+\subsection{线性模型}
+
+\subsection{广义型线性模型}
+
+\subsection{最优模型选择}
+
+\section{高级统计学}
+
+\subsection{极大似然估计}
+
+\subsection{蒙地卡罗}
+
+\subsection{马尔可夫链}
+
+\subsection{隐马尔可夫链}
+
+\subsection{贝叶斯分析}
+
+\section{统计学程序包}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\textbf{Powered by - Copyright® Intellectual Property Rights of
+\href{http://www.scibrokes.com}{Scibrokes®}個人の経営企業}
+
+\chapter{金融交易}\label{finance}
+
+\section{金融交易}
+
+\subsection{金融交易介绍}
+
+\subsection{金融数据}
+
+\href{https://msperlin.github.io/pafdR/importingInternet.html}{Chapter 7
+Importing Financial Data from the Internet}
+
+\subsection{金融交易统计模型介绍}
+
+\section{单变量统计模型}
+
+\subsection{LASSO、ElasticNet、RIDGE模型}\label{lassoelasticnetridge}
+
+\subsection{Arima模型}\label{arima}
+
+\begin{itemize}
+\tightlist
+\item
+  \href{https://www.stat.pitt.edu/stoffer/tsa2/Rissues.htm}{Time Series
+  Analysis and Its Applications: With R Examples \emph{Second Edition}}
+\item
+  \href{https://www.datascience.com/blog/introduction-to-forecasting-with-arima-in-r-learn-data-science-tutorials}{Introduction
+  to Forecasting with ARIMA in R}
+\item
+  \href{https://rstudio-pubs-static.s3.amazonaws.com/345790_3c1459661736433382863ed19c30ea55.html}{ARIMA
+  model for forecasting-- Example in R}
+\end{itemize}
+
+\subsection{指数平滑法}
+
+\subsection{GARCH模型}\label{garch}
+
+\section{多变量统计模型}
+
+\subsection{GARCH模型}\label{garch-1}
+
+\subsection{}\label{section}
+
+\section{高频率交易模型}
+
+\subsection{Seasonal ARIMA}\label{seasonal-arima}
+
+\emph{Forecasting: Principles and Practice}中的\emph{8.9 Seasonal ARIMA
+models}章讲述季节性ARIMA模型。
+
+\subsection{MIDAS模型}\label{midas}
+
+\subsection{MIDAS-GARCH}\label{midas-garch}
+
+\subsection{GARCH模型}\label{garch-2}
+
+\begin{itemize}
+\tightlist
+\item
+  \href{https://stackoverflow.com/questions/52391296/copula-dcc-garch-rmgarchcgarchsim-and-rmgarchvarxforecast}{Copula-DCC-GARCH
+  : rmgarch::cgarchsim() and rmgarch::varxforecast()}
+\end{itemize}
+
+\section{其它统计模型}
+
+\subsection{Levy Process}\label{levy-process}
+
+\subsection{Wavelet Tranforms}\label{wavelet-tranforms}
+
+\section{投资管理}
+
+\subsection{投资风险管理}
+
+\subsection{基金管理}
+
+\subsection{多元基金管理}
+
+\subsection{基金评估}
+
+\section{金融交易程序包}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\textbf{Powered by - Copyright® Intellectual Property Rights of
+\href{http://www.scibrokes.com}{Scibrokes®}個人の経営企業}
+
+\chapter{体彩交易}\label{sportsbook}
+
+\section{体彩交易}
+
+\subsection{体彩交易介绍}
+
+\subsection{体彩数据}
+
+\subsection{体彩交易统计模型介绍}
+
+\section{足球赔率建模}
+
+\subsection{单变量泊松模型}
+
+\subsection{多变量泊松模型}
+
+\subsection{Logistic模型}\label{logistic}
+
+\subsection{}\label{section-1}
+
+\section{足彩投注模型}
+
+\subsection{普通投注模型}
+
+\subsection{凯利投注模型}
+
+\subsection{OHLC与GARCH应用}\label{ohlcgarch}
+
+\section{投资管理}\label{-1}
+
+\section{体彩交易程序包}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\textbf{Powered by - Copyright® Intellectual Property Rights of
+\href{http://www.scibrokes.com}{Scibrokes®}個人の経営企業}
+
+\chapter{彩票、轮盘、老虎机与宾果}\label{lottery}
+
+\section{彩票分析与预测}
+
+\subsection{数据与统计建模}
+
+\subsection{投注模式与回酬}
+
+\section{轮盘分析与预测}
+
+\subsection{数据与统计建模}\label{-1}
+
+\subsection{投注模式与回酬}\label{-1}
+
+\section{老虎机分析与预测}
+
+\begin{itemize}
+\tightlist
+\item
+  \href{https://appsilon.com/an-introduction-to-monte-carlo-tree-search/}{An
+  introduction to Monte Carlo Tree Search}
+\end{itemize}
+
+\subsection{数据与统计建模}\label{-2}
+
+\subsection{投注模式与回酬}\label{-2}
+
+\section{宾果分析与预测}
+
+\subsection{数据与统计建模}\label{-3}
+
+\subsection{投注模式与回酬}\label{-3}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\textbf{Powered by - Copyright® Intellectual Property Rights of
+\href{http://www.scibrokes.com}{Scibrokes®}個人の経営企業}
+
+\chapter{高效率编程}\label{hft}
+
+\section{高效数据处理}
+
+\begin{itemize}
+\item
+  \href{https://stackoverflow.com/questions/2851327/convert-a-list-of-data-frames-into-one-data-frame?rq=1}{Convert
+  a list of data frames into one data frame}
+\item
+  \href{https://stackoverflow.com/questions/28447014/the-fastest-way-to-convert-numeric-to-character-in-r}{The
+  fastest way to convert numeric to character in R}
+\item
+  \href{http://www.fstpackage.org/}{The \texttt{fst} package}
+\item
+  \href{https://d.cosx.org/d/420148-splitstackshape}{\texttt{splitstackshape}程序包}
+\item
+  \href{http://www.johnmyleswhite.com/notebook/2011/10/31/using-sparse-matrices-in-r/}{Using
+  Sparse Matrices in R}
+\item
+  \href{https://appsilon.com/fast-data-loading-from-files-to-r/}{Fast
+  data loading from files to R}
+\item
+  \href{https://appsilon.com/a-guide-to-gpu-accelerated-ship-recognition-in-satellite-imagery-using-keras-and-r-part-i/}{A
+  guide to GPU-accelerated ship recognition in satellite imagery using
+  Keras and R (part I)}
+\item
+  \href{https://appsilon.com/a-guide-to-gpu-accelerated-ships-recognition-in-satellite-imagery-using-keras-and-r-part-ii/}{A
+  guide to GPU-accelerated ships recognition in satellite imagery using
+  Keras and R (part II)}
+\item
+  \href{http://bbs.pinggu.org/forum.php?mod=redirect\&goto=findpost\&ptid=6685427\&pid=53936462\&fromuid=5794471}{{[}问答{]}
+  对大数据如何用R高效处理}和\href{http://bbs.pinggu.org/forum.php?mod=redirect\&goto=findpost\&ptid=6685427\&pid=53936861\&fromuid=5794471}{{[}问答{]}
+  对大数据如何用R高效处理}
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{microbenchmark}\NormalTok{(}\KeywordTok{numeric}\NormalTok{(}\DecValTok{1000}\NormalTok{))}
+\CommentTok{#Unit: microseconds}
+\CommentTok{#          expr   min   lq    mean median    uq   max neval}
+\CommentTok{# numeric(1000) 1.026 1.54 1.95541   1.54 2.053 7.698   100}
+
+\KeywordTok{microbenchmark}\NormalTok{(}\KeywordTok{rep}\NormalTok{(}\DecValTok{0}\NormalTok{, }\DecValTok{1000}\NormalTok{))}
+\CommentTok{#Unit: microseconds}
+\CommentTok{#         expr   min   lq    mean median    uq    max neval}
+\CommentTok{# rep(0, 1000) 1.026 1.54 2.12477  2.053 2.053 10.777   100}
+\end{Highlighting}
+\end{Shaded}
+
+\section{高效统计建模}
+
+\begin{itemize}
+\tightlist
+\item
+  \href{http://rpubs.com/englianhu/binary-Q1FiGJRGARCH}{binary.com
+  面试试题 I - GARCH模型中的ARIMA(p,d,q)参数最优化}
+\end{itemize}
+
+\section{高效率与高级R语言参考书}\label{r}
+
+\begin{itemize}
+\tightlist
+\item
+  \href{https://csgillespie.github.io/efficientR/}{Efficient R
+  programming}
+\item
+  \href{http://adv-r.had.co.nz}{Advanced R}
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\textbf{Powered by - Copyright® Intellectual Property Rights of
+\href{http://www.scibrokes.com}{Scibrokes®}個人の経営企業}
+
+\chapter{基金与投资者管理模型}\label{fund}
+
+\section{多元化基金管理}
+
+\subsection{多元化基金评估}
+
+\begin{quote}
+\textbf{Real world application example} MAB algorithms have multiple
+practical implementations in the real world, for example, price engine
+optimization or finding the best online campaign. Let's focus on the
+first one and see how we can implement this in R. Imagine you are
+selling your products online and want to introduce a new one, but are
+not sure how to price it. You came up with 4 price candidates based on
+our expert knowledge and experience: 99\(, 100\), 115\$ and
+120\(. Now you want to test how those prices will perform and which to choose eventually. During first day of your experiment 4000 people visited your shop when the first price (99\))
+was tested and 368 bought the product, for the rest of the prices we
+have the following outcome: - 100\$ 4060 visits and 355 purchases, -
+115\$ 4011 visits and 373 purchases, - 120\$ 4007 visits and 230
+purchases.
+\end{quote}
+
+\emph{Source :
+\href{https://appsilon.com/an-introduction-to-monte-carlo-tree-search/}{An
+introduction to Monte Carlo Tree Search}}
+
+\subsection{}\label{section-2}
+
+\section{投资者管理}
+
+\subsection{投资者资金流动统计建模}
+
+\begin{quote}
+\textbf{Real world application example} MAB algorithms have multiple
+practical implementations in the real world, for example, price engine
+optimization or finding the best online campaign. Let's focus on the
+first one and see how we can implement this in R. Imagine you are
+selling your products online and want to introduce a new one, but are
+not sure how to price it. You came up with 4 price candidates based on
+our expert knowledge and experience: 99\(, 100\), 115\$ and
+120\(. Now you want to test how those prices will perform and which to choose eventually. During first day of your experiment 4000 people visited your shop when the first price (99\))
+was tested and 368 bought the product, for the rest of the prices we
+have the following outcome: - 100\$ 4060 visits and 355 purchases, -
+115\$ 4011 visits and 373 purchases, - 120\$ 4007 visits and 230
+purchases.
+\end{quote}
+
+\emph{Source :
+\href{https://appsilon.com/an-introduction-to-monte-carlo-tree-search/}{An
+introduction to Monte Carlo Tree Search}}
+
+\subsection{}\label{section-3}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\textbf{Powered by - Copyright® Intellectual Property Rights of
+\href{http://www.scibrokes.com}{Scibrokes®}個人の経営企業}
+
+\chapter{程序交易}\label{algorithm}
+
+\section{交易自动化}
+
+\subsection{数据连接自动化}
+
+\subsection{统计运算自动化}
+
+\subsection{基金评估自动化}
+
+\subsection{客户管理自动化}
+
+\begin{itemize}
+\tightlist
+\item
+  \href{https://appsilon.com/how-we-built-a-shiny-app-for-700-users/}{How
+  we built a Shiny App for 700 users?}
+\end{itemize}
+
+\section{多客户管理}
+
+\subsection{多投资者}
+
+\subsection{绩效管理}
+
+\section{}\label{section-4}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \href{https://www.r-bloggers.com/calculating-the-house-edge-of-a-slot-machine-with-r/}{Calculating
+  the house edge of a slot machine, with R}\footnote{\href{http://giorasimchoni.com/2017/05/06/2017-05-06-don-t-drink-and-gamble/}{DON'T
+    DRINK AND GAMBLE:Analyzing and Simulating a Slot Machine - So You
+    Don't Have To} and
+    \href{https://www.schneier.com/blog/archives/2017/02/predicting_a_sl.html}{Predicting
+    a Slot Machine's PRNG}}
+\item
+  \href{https://www.wired.com/2017/02/russians-engineer-brilliant-slot-machine-cheat-casinos-no-fix/}{Russians
+  Engineer a Brilliant Slot Machine Cheat-and Casinos Have No Fix}
+\item
+  \href{https://srdas.github.io/MLBook}{Data Science: Theories, Models,
+  Algorithms, and Analytics}
+\item
+  \href{github.com/englianhu/binary.com-interview-question}{Job
+  Application - Quantitative Analyst}
+\item
+  \href{https://github.com/scibrokes/real-time-fxcm}{Real Time FXCM}
+\item
+  \href{https://github.com/scibrokes/Rmodel}{Rmodel}
+\item
+  \href{https://github.com/scibrokes/odds-modelling-and-testing-inefficiency-of-sports-bookmakers}{Odds
+  Modelling and Testing Inefficiency of Sports Bookmakers}
+\item
+  \href{https://bookdown.org/wfoote01/faur/}{Financial Engineering
+  Analytics: A Practice Manual Using R}
+\item
+  \href{https://otexts.org/fpp2/}{Forecasting: Principles and Practice}
+\item
+  \href{https://bookdown.org/rdpeng/RProgDA/}{Mastering Software
+  Development in R (web-base)}. (or
+  \href{https://github.com/englianhu/Coursera-Mastering-Software-Development-in-R/blob/master/reference/Mastering\%20Software\%20Development\%20in\%20R.pdf}{Mastering
+  Software Development in R.pdf})
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+\textbf{Powered by - Copyright® Intellectual Property Rights of
+\href{http://www.scibrokes.com}{Scibrokes®}個人の経営企業}
+
+\bibliography{book.bib,packages.bib}
+
+
+\end{document}
