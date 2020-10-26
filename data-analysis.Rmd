@@ -81,6 +81,12 @@ You can write citations, too. For example, we are using the **bookdown** package
 - [[书籍介绍] 史上最强悍R+Python书籍合集](http://bbs.pinggu.org/thread-6507435-1-1.html)
 - [`hientm36/gnidart`](https://github.com/hientm36/gnidart)
 
+以下计量经济学相关视频。
+
+- Youtube视频：[Coffee and Econometrics in the Morning](http://novicemetrics.blogspot.com/search/label/video%20tutorials)
+- Youtube视频：[IntromediateEcon:Economics, Statistics, R](https://www.youtube.com/channel/UCC-6W7waxcUujJraWPxezfQ)
+
+
 ## Shiny应用
 
 - [How to sample from multidimensional distributions using Gibbs sampling?](https://appsilon.com/how-to-sample-from-multidimensional-distributions-using-gibbs-sampling/)
@@ -583,6 +589,10 @@ gc()
 
 # 高效率编程 {#hft}
 
+## 环境
+
+[Empty R environment becomes large file when saved](https://stackoverflow.com/questions/13912867/empty-r-environment-becomes-large-file-when-saved)
+
 ## 高效数据处理
 
 - [Convert a list of data frames into one data frame](https://stackoverflow.com/questions/2851327/convert-a-list-of-data-frames-into-one-data-frame?rq=1)
@@ -595,6 +605,8 @@ gc()
 - [A guide to GPU-accelerated ship recognition in satellite imagery using Keras and R (part I)](https://appsilon.com/a-guide-to-gpu-accelerated-ship-recognition-in-satellite-imagery-using-keras-and-r-part-i/)
 - [A guide to GPU-accelerated ships recognition in satellite imagery using Keras and R (part II)](https://appsilon.com/a-guide-to-gpu-accelerated-ships-recognition-in-satellite-imagery-using-keras-and-r-part-ii/)
 - [[问答] 对大数据如何用R高效处理](http://bbs.pinggu.org/forum.php?mod=redirect&goto=findpost&ptid=6685427&pid=53936462&fromuid=5794471)和[[问答] 对大数据如何用R高效处理](http://bbs.pinggu.org/forum.php?mod=redirect&goto=findpost&ptid=6685427&pid=53936861&fromuid=5794471)
+- [A speed test comparison of plyr, data.table, and dplyr](https://www.r-statistics.com/2013/09/a-speed-test-comparison-of-plyr-data-table-and-dplyr/)
+- [Transforming subsets of data in R with by, ddply and data.table](https://magesblog.com/post/2012-06-12-transforming-subsets-of-data-in-r-with/)
 
 ```{r, eval=FALSE}
 microbenchmark(numeric(1000))
