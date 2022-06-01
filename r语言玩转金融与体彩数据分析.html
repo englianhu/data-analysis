@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 1 R语言玩转金融与体彩数据分析 | README</title>
+  <meta name="description" content="" />
+  <meta name="generator" content="bookdown 0.26.3 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 1 R语言玩转金融与体彩数据分析 | README" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 1 R语言玩转金融与体彩数据分析 | README" />
+  
+  
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+
+
+<script src="book_assets/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="book_assets/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="book_assets/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="book_assets/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="book_assets/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="book_assets/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="book_assets/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="book_assets/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="book_assets/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="book_assets/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="book_assets/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">R语言玩转金融与体彩数据分析</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path=""><a href="#r语言玩转金融与体彩数据分析"><i class="fa fa-check"></i><b>1</b> R语言玩转金融与体彩数据分析</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path=""><a href="#前言"><i class="fa fa-check"></i><b>1.1</b> 前言</a></li>
+<li class="chapter" data-level="1.2" data-path=""><a href="#目录"><i class="fa fa-check"></i><b>1.2</b> 目录</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/englianhu/data-analysis" target="blank">原始代码</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./"></a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<!--bookdown:title:end-->
+<!--bookdown:title:start-->
+<div id="r语言玩转金融与体彩数据分析" class="section level1 hasAnchor" number="1">
+<h1><span class="header-section-number">Chapter 1</span> R语言玩转金融与体彩数据分析<a href="#r语言玩转金融与体彩数据分析" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="前言" class="section level2 hasAnchor" number="1.1">
+<h2><span class="header-section-number">1.1</span> 前言<a href="#前言" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><strong>为何辑写此书</strong></p>
+<p>本书是在下首次辑写参考书（纯属个人经验分享与心得），此前分享了<strong>如何安装®Studio服务器与Shiny服务器</strong><a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>：</p>
+<ul>
+<li><a href="https://beta.rstudioconnect.com/englianhu/Introducing-RStudio-Server-for-Data-Scientists/Introducing-RStudio-Server-for-Data-Scientists.html">为数据科学家们量身定做の专业统计软件 — ®Studio服务器</a></li>
+<li><a href="https://beta.rstudioconnect.com/englianhu/Introducing-RStudio-Server-for-Data-Scientists-Slides/Introducing-RStudio-Server-for-Data-Scientists-slides.html">为数据科学家们量身定做の专业统计软件 — ®Studio服务器（演示文稿）</a></li>
+</ul>
+<p>在下来自于马来西亚<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>，自2005年入行体彩交易就学习Excel电子表格，而2008年加入<strong>Scicom (MSC) Bhd</strong>后开始接触R语言，并且活跃于<a href="https://d.cosx.org">统计之都论坛</a>与<a href="http://bbs.pinggu.org/forum-69-1.html">经管之家：R语言论坛</a>论坛俩与中国大陆同胞交流，并向前辈高手们学习。</p>
+<p>前几年，偶然发现了个R语言的使用者界面<strong>®Studio</strong>后，就觉得非常方便，然后自学在<a href="https://m.do.co/c/aabb124120d0">DigitalOcean.com</a>安装服务器方便随时随地，只要可以上网的地方就可以使用。</p>
+<p>前阵子，在下在学习金融交易的时候，无意中发现了本非常实用的经验分享书籍<a href="https://raw.githubusercontent.com/englianhu/binary.com-interview-question/master/reference/Successful%20Algorithmic%20Trading.pdf">Successful Algorithmic Trading</a>，笔者在金融交易的解说，由入门到精通包括编码分享（笔者介绍了R语言、Python、C++以及比较各优缺点），该笔者<strong>Michael Halls</strong><a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a>与在下一样以经验分享著书之见，在下阅读与学习时深深感受到金融交易的武功秘籍（实用教材）如兮，夫复何求哇！</p>
+<p>在下才疏学浅，仅有约翰霍金斯大学数据科学专业文凭，倘若有何错误之处，涵清多多包涵并指教。此书乃个人经验之谈。希望在同感身受与共而勉之的情况之下，热衷于金融与体彩行业的学者们可以容易着手。</p>
+<p>有关如何辑写<code>bookdown::gitbook</code>网络书籍，请参阅<a href="https://bookdown.org/yihui/bookdown/">bookdown: Authoring Books and Technical Documents with R Markdown</a>。</p>
+<blockquote>
+<p>知乎中的<s>以上</s>章节乃预先草拟，辑写前尚会继续修改）欲知更多详情或完整版，请参阅<s><a href="https://link.zhihu.com/?target=https%3A//github.com/englianhu/data-analysis">R语言玩转金融与体彩数据分析</a>（GitBook）</s>以下GitHub Readme目录。</p>
+</blockquote>
+<p>出处：<a href="https://zhuanlan.zhihu.com/p/30882947">知乎：[原创] R语言玩转金融与体彩数据分析</a></p>
+</div>
+<div id="目录" class="section level2 hasAnchor" number="1.2">
+<h2><span class="header-section-number">1.2</span> 目录<a href="#目录" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li>第0章：前言</li>
+<li>第1章：介绍
+<ul>
+<li>第1.1章：R语言与RStudio</li>
+<li>第1.2章：Shiny应用</li>
+<li>第1.3章：调用其它语言程序</li>
+</ul></li>
+<li>第2章：数据分析
+<ul>
+<li>第2.1章：读存数据
+<ul>
+<li>第2.1.1章：本地文件</li>
+<li>第2.1.2章：外来文件</li>
+</ul></li>
+<li>第2.2章：采集网络数据
+<ul>
+<li>第2.2.1章：普通采集</li>
+<li>第2.2.2章：API接口</li>
+<li>第2.2.3章：Web Driver</li>
+</ul></li>
+<li>第2.3章：数据处理
+<ul>
+<li>第2.3.1章：文字与数字</li>
+<li>第2.3.2章：数据框与矩阵</li>
+<li>第2.3.3章：列表与嵌套数据</li>
+<li>第2.3.4章：内存</li>
+<li>第2.3.5章：数据库</li>
+</ul></li>
+<li>第2.3章：数据分析程序包</li>
+</ul></li>
+<li>第3章：统计模型
+<ul>
+<li>第3.1章：基本统计学
+<ul>
+<li>第3.1.1章：线性模型</li>
+<li>第3.1.2章：广义型线性模型</li>
+<li>第3.1.3章：最优模型选择</li>
+</ul></li>
+<li>第3.2章：高级统计学
+<ul>
+<li>第3.2.1章：极大似然估计</li>
+<li>第3.2.2章：蒙地卡罗</li>
+<li>第3.2.3章：马尔可夫链</li>
+<li>第3.2.4章：隐马尔可夫链</li>
+<li>第3.2.5章：贝叶斯分析</li>
+</ul></li>
+<li>第3.3章：统计学程序包</li>
+</ul></li>
+<li>第4章：金融交易
+<ul>
+<li>第4.1章：金融交易
+<ul>
+<li>第4.1.1章：金融交易介绍</li>
+<li>第4.1.2章：金融数据</li>
+<li>第4.1.3章：金融交易统计模型介绍</li>
+</ul></li>
+<li>第4.2章：单变量统计模型
+<ul>
+<li>第4.2.1章：LASSO、ElasticNet、RIDGE模型</li>
+<li>第4.2.2章：Arima模型</li>
+<li>第4.2.3章：指数平滑法</li>
+<li>第4.2.4章：GARCH模型</li>
+</ul></li>
+<li>第4.3章：多变量统计模型
+<ul>
+<li>第4.3.1：GARCH模型</li>
+<li>第4.3.2：</li>
+</ul></li>
+<li>第4.4章：高频率交易模型
+<ul>
+<li>第4.4.1章：季节性ARIMA模型</li>
+<li>第4.4.2章：MIDAS模型</li>
+<li>第4.4.3章：MIDAS-GARCH</li>
+<li>第4.4.4章：GARCH模型</li>
+</ul></li>
+<li>第4.5章：其它统计模型
+<ul>
+<li>第4.5.1章：Levy Process</li>
+<li>第4.5.2章：Wavelet Tranforms</li>
+</ul></li>
+<li>第4.6章：投资管理
+<ul>
+<li>第4.6.1章：投资风险管理</li>
+<li>第4.6.2章：基金管理</li>
+<li>第4.6.3章：多元基金管理</li>
+<li>第4.6.4章：基金评估</li>
+</ul></li>
+<li>第4.7章：金融交易程序包</li>
+</ul></li>
+<li>第5章：金融投注
+<ul>
+<li>第5.1章：金融投注
+<ul>
+<li>第5.1.1章：金融投注介绍</li>
+<li>第5.1.2章：金融数据</li>
+<li>第5.1.3章：金融投注统计模型介绍</li>
+</ul></li>
+<li>第5.2章：投注模型</li>
+<li>第5.3章：投资管理</li>
+</ul></li>
+<li>第6章：体彩交易
+<ul>
+<li>第6.1章：体彩交易
+<ul>
+<li>第6.1.1章：体彩交易介绍</li>
+<li>第6.1.2章：体彩数据</li>
+<li>第6.1.3章：体彩交易统计模型介绍</li>
+</ul></li>
+<li>第6.2章：足球赔率建模
+<ul>
+<li>第6.2.1章：单变量泊松模型</li>
+<li>第6.2.2章：多变量泊松模型</li>
+<li>第6.2.3章：Logistic模型</li>
+<li>第6.2.4章：</li>
+</ul></li>
+<li>第6.3章：足彩投注模型
+<ul>
+<li>第6.3.1章：普通投注模型</li>
+<li>第6.3.2章：凯利投注模型</li>
+<li>第6.3.3章：OHLC与GARCH应用</li>
+</ul></li>
+<li>第6.4章：投资管理</li>
+<li>第6.5章：体彩交易程序包</li>
+</ul></li>
+<li>第7章：彩票、轮盘、老虎机与宾果
+<ul>
+<li>第7.1章：彩票分析与预测
+<ul>
+<li>第7.1.1章：数据与统计建模</li>
+<li>第7.1.2章：投注模式与回酬</li>
+</ul></li>
+<li>第7.2章：轮盘分析与预测
+<ul>
+<li>第7.2.1章：数据与统计建模</li>
+<li>第7.2.2章：投注模式与回酬</li>
+</ul></li>
+<li>第7.3章：老虎机分析与预测
+<ul>
+<li>第7.3.1章：数据与统计建模</li>
+<li>第7.3.2章：投注模式与回酬</li>
+</ul></li>
+<li>第7.4章：宾果分析与预测
+<ul>
+<li>第7.4.1章：数据与统计建模</li>
+<li>第7.4.2章：投注模式与回酬</li>
+</ul></li>
+<li>第8章：高效率编程
+<ul>
+<li>第8.1章：环境</li>
+<li>第8.2章：高效数据处理</li>
+<li>第8.3章：高效统计建模</li>
+<li>第8.4章：高效率与高级R语言参考书</li>
+</ul></li>
+</ul></li>
+<li>第9章：基金与投资者管理模型
+<ul>
+<li>第9.1章：多元化基金管理
+<ul>
+<li>第9.1.1章：多元化基金评估</li>
+<li>第9.1.2章：</li>
+</ul></li>
+<li>第9.2章：投资者管理
+<ul>
+<li>第9.2.1章：投资者资金流动统计建模</li>
+<li>第9.2.2章：</li>
+</ul></li>
+</ul></li>
+<li>第10章：程序交易
+<ul>
+<li>第10.1章：交易自动化
+<ul>
+<li>第10.1.1章：数据连接自动化</li>
+<li>第10.1.2章：统计运算自动化</li>
+<li>第10.1.3章：基金评估自动化</li>
+<li>第10.1.4章：客户管理自动化</li>
+</ul></li>
+<li>第10.2章：多客户管理
+<ul>
+<li>第10.2.1章：多投资者</li>
+<li>第10.2.2章：绩效管理</li>
+</ul></li>
+<li>第10.3章：</li>
+</ul></li>
+<li>第11章：参考文献</li>
+</ul>
+<hr />
+<p><a href="http://www.scibrokes.com"><img src="figure/Scibrokes.png" width="14"/> Sςιβrοκεrs Trαdιηg®</a><br>
+<span style="color:RoyalBlue"><strong><a href="http://www.scibrokes.com"><img src="figure/Scibrokes.png" width="14"/> 世博量化®</a>企业知识产权及版权所有，盗版必究。</strong></span></p>
+</div>
+</div>
+
+
+
+
+
+
+
+
+<div class="footnotes">
+<hr />
+<ol start="1">
+<li id="fn1"><p><a href="https://github.com/scibrokes/setup-rstudio-server">安装 ®StudioとShiny服务器</a><a href="#fnref1" class="footnote-back">↩︎</a></p></li>
+<li id="fn2"><p>个人简历请查阅：<a href="https://beta.rstudioconnect.com/content/3091/ryo-eng.html">®γσ, ENG LIAN HU</a><a href="#fnref2" class="footnote-back">↩︎</a></p></li>
+<li id="fn3"><p>更多该作者详情，请参阅<a href="https://www.quantstart.com/successful-algorithmic-trading-ebook">Struggling To Make Profitable Algo Trading Strategies?</a><a href="#fnref3" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+<script src="book_assets/gitbook-2.6.7/js/app.min.js"></script>
+<script src="book_assets/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="book_assets/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="book_assets/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="book_assets/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="book_assets/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="book_assets/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="book_assets/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "google", "twitter", "weibo", "instapaper"],
+"google": false,
+"instapper": false
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": null,
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": false,
+"toc": {
+"collapse": "subsection",
+"scroll_highlight": true
+},
+"toolbar": {
+"position": "fixed"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

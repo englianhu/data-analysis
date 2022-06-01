@@ -19,6 +19,10 @@
 
 有关如何辑写`bookdown::gitbook`网络书籍，请参阅[bookdown: Authoring Books and Technical Documents with R Markdown](https://bookdown.org/yihui/bookdown/)。
 
+> 知乎中的<s>以上</s>章节乃预先草拟，辑写前尚会继续修改）欲知更多详情或完整版，请参阅<s>[R语言玩转金融与体彩数据分析](https://link.zhihu.com/?target=https%3A//github.com/englianhu/data-analysis)（GitBook）</s>以下GitHub Readme目录。
+
+出处：[知乎：[原创] R语言玩转金融与体彩数据分析](https://zhuanlan.zhihu.com/p/30882947)
+
 ## 目录
 
 - 第0章：前言
@@ -141,6 +145,6 @@
 - 第11章：参考文献
 
 ---
-  
-  **Powered by - Copyright® Intellectual Property Rights of <img src='figure/oda-army2.jpg?raw=true' width='24'> [Scibrokes®](http://www.scibrokes.com)個人の経営企業**
-    
+
+[<img src="figure/Scibrokes.png" width="14"/> Sςιβrοκεrs Trαdιηg®](http://www.scibrokes.com)<br>
+<span style='color:RoyalBlue'>**[<img src="figure/Scibrokes.png" width="14"/> 世博量化®](http://www.scibrokes.com)企业知识产权及版权所有，盗版必究。**</span>
