@@ -1,7 +1,9 @@
 --- 
-title: "R语言玩转金融与体彩数据分析 <img src='figure/quant-trade.jpg' width='240'>"
+title: "<img src='figure/quant-trade.jpg' width='480'><br>R语言玩转金融与体彩数据分析"
 subtitle: "R语言量化交易"
-author: "[®γσ,黄联富](https://beta.rstudioconnect.com/content/3091/ryo-eng.html)"
+author: "[(®γσ, ξηg）雷欧，黄联富](https://englianhu.github.io) <img src='figure/ENG.png'
+  height='16' align='center' valign='middle'> <img src='figure/quantitative trader 1.jpg'
+  height='16' align='center' valign='middle'>®"
 date: "`r Sys.Date()`"
 description: 此书乃个人学习R语言的经验分享与建议。
   此文件输出格式为 bookdown::gitbook。
@@ -43,7 +45,8 @@ biblio-style: apalike
 
 ---
 
-**Powered by - Copyright® Intellectual Property Rights of <img src='figure/oda-army2.jpg' width='24'> [Scibrokes®](http://www.scibrokes.com)個人の経営企業**
+[<img src="figure/Scibrokes.png" height="14"/> Sςιβrοκεrs Trαdιηg®](http://www.scibrokes.com)<br>
+<span style='color:RoyalBlue'>**[<img src="figure/Scibrokes.png" height="14"/> 世博量化®](http://www.scibrokes.com)企业知识产权及版权所有，盗版必究。**</span>
 
 ```{r include = FALSE}
 # automatically create a bib database for R packages
@@ -95,7 +98,8 @@ You can write citations, too. For example, we are using the **bookdown** package
 
 ---
 
-**Powered by - Copyright® Intellectual Property Rights of <img src='figure/oda-army2.jpg' width='24'> [Scibrokes®](http://www.scibrokes.com)個人の経営企業**
+[<img src="figure/Scibrokes.png" height="14"/> Sςιβrοκεrs Trαdιηg®](http://www.scibrokes.com)<br>
+<span style='color:RoyalBlue'>**[<img src="figure/Scibrokes.png" height="14"/> 世博量化®](http://www.scibrokes.com)企业知识产权及版权所有，盗版必究。**</span>
 
 # 数据分析 {#analytics}
 
@@ -474,7 +478,8 @@ gc()
 
 ---
 
-**Powered by - Copyright® Intellectual Property Rights of <img src='figure/oda-army2.jpg' width='24'> [Scibrokes®](http://www.scibrokes.com)個人の経営企業**
+[<img src="figure/Scibrokes.png" height="14"/> Sςιβrοκεrs Trαdιηg®](http://www.scibrokes.com)<br>
+<span style='color:RoyalBlue'>**[<img src="figure/Scibrokes.png" height="14"/> 世博量化®](http://www.scibrokes.com)企业知识产权及版权所有，盗版必究。**</span>
 
 # 统计模式 {#stats}
 
@@ -492,7 +497,8 @@ gc()
 
 ---
 
-**Powered by - Copyright® Intellectual Property Rights of <img src='figure/oda-army2.jpg' width='24'> [Scibrokes®](http://www.scibrokes.com)個人の経営企業**
+[<img src="figure/Scibrokes.png" height="14"/> Sςιβrοκεrs Trαdιηg®](http://www.scibrokes.com)<br>
+<span style='color:RoyalBlue'>**[<img src="figure/Scibrokes.png" height="14"/> 世博量化®](http://www.scibrokes.com)企业知识产权及版权所有，盗版必究。**</span>
 
 # 金融交易 {#finance}
 
@@ -541,7 +547,8 @@ gc()
 
 ---
 
-**Powered by - Copyright® Intellectual Property Rights of <img src='figure/oda-army2.jpg' width='24'> [Scibrokes®](http://www.scibrokes.com)個人の経営企業**
+[<img src="figure/Scibrokes.png" height="14"/> Sςιβrοκεrs Trαdιηg®](http://www.scibrokes.com)<br>
+<span style='color:RoyalBlue'>**[<img src="figure/Scibrokes.png" height="14"/> 世博量化®](http://www.scibrokes.com)企业知识产权及版权所有，盗版必究。**</span>
 
 # 体彩交易 {#sportsbook}
 
@@ -563,7 +570,8 @@ gc()
 
 ---
 
-**Powered by - Copyright® Intellectual Property Rights of <img src='figure/oda-army2.jpg' width='24'> [Scibrokes®](http://www.scibrokes.com)個人の経営企業**
+[<img src="figure/Scibrokes.png" height="14"/> Sςιβrοκεrs Trαdιηg®](http://www.scibrokes.com)<br>
+<span style='color:RoyalBlue'>**[<img src="figure/Scibrokes.png" height="14"/> 世博量化®](http://www.scibrokes.com)企业知识产权及版权所有，盗版必究。**</span>
 
 # 彩票、轮盘、老虎机与宾果 {#lottery}
 
@@ -585,7 +593,8 @@ gc()
 
 ---
 
-**Powered by - Copyright® Intellectual Property Rights of <img src='figure/oda-army2.jpg' width='24'> [Scibrokes®](http://www.scibrokes.com)個人の経営企業**
+[<img src="figure/Scibrokes.png" height="14"/> Sςιβrοκεrs Trαdιηg®](http://www.scibrokes.com)<br>
+<span style='color:RoyalBlue'>**[<img src="figure/Scibrokes.png" height="14"/> 世博量化®](http://www.scibrokes.com)企业知识产权及版权所有，盗版必究。**</span>
 
 # 高效率编程 {#hft}
 
@@ -633,7 +642,8 @@ microbenchmark(rep(0, 1000))
 
 ---
 
-**Powered by - Copyright® Intellectual Property Rights of <img src='figure/oda-army2.jpg' width='24'> [Scibrokes®](http://www.scibrokes.com)個人の経営企業**
+[<img src="figure/Scibrokes.png" height="14"/> Sςιβrοκεrs Trαdιηg®](http://www.scibrokes.com)<br>
+<span style='color:RoyalBlue'>**[<img src="figure/Scibrokes.png" height="14"/> 世博量化®](http://www.scibrokes.com)企业知识产权及版权所有，盗版必究。**</span>
 
 # 基金与投资者管理模型 {#fund}
 ## 多元化基金管理
@@ -667,7 +677,8 @@ for the rest of the prices we have the following outcome:
 
 ---
 
-**Powered by - Copyright® Intellectual Property Rights of <img src='figure/oda-army2.jpg' width='24'> [Scibrokes®](http://www.scibrokes.com)個人の経営企業**
+[<img src="figure/Scibrokes.png" height="14"/> Sςιβrοκεrs Trαdιηg®](http://www.scibrokes.com)<br>
+<span style='color:RoyalBlue'>**[<img src="figure/Scibrokes.png" height="14"/> 世博量化®](http://www.scibrokes.com)企业知识产权及版权所有，盗版必究。**</span>
 
 # 程序交易 {#algorithm}
 ## 交易自动化
@@ -695,10 +706,12 @@ for the rest of the prices we have the following outcome:
 08. [Financial Engineering Analytics: A Practice Manual Using R](https://bookdown.org/wfoote01/faur/)
 09. [Forecasting: Principles and Practice](https://otexts.org/fpp2/)
 10. [Mastering Software Development in R (web-base)](https://bookdown.org/rdpeng/RProgDA/). (or [Mastering Software Development in R.pdf](https://github.com/englianhu/Coursera-Mastering-Software-Development-in-R/blob/master/reference/Mastering%20Software%20Development%20in%20R.pdf))
+11. [量化投资学习推荐的书籍都有哪些？](https://www.zhihu.com/question/54727745)
 
 ---
 
-**Powered by - Copyright® Intellectual Property Rights of <img src='figure/oda-army2.jpg' width='24'> [Scibrokes®](http://www.scibrokes.com)個人の経営企業**
+[<img src="figure/Scibrokes.png" height="14"/> Sςιβrοκεrs Trαdιηg®](http://www.scibrokes.com)<br>
+<span style='color:RoyalBlue'>**[<img src="figure/Scibrokes.png" height="14"/> 世博量化®](http://www.scibrokes.com)企业知识产权及版权所有，盗版必究。**</span>
 
 <!--chapter:end:index.Rmd-->
 

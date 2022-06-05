@@ -146,5 +146,5 @@
 
 ---
 
-[<img src="figure/Scibrokes.png" width="14"/> Sςιβrοκεrs Trαdιηg®](http://www.scibrokes.com)<br>
-<span style='color:RoyalBlue'>**[<img src="figure/Scibrokes.png" width="14"/> 世博量化®](http://www.scibrokes.com)企业知识产权及版权所有，盗版必究。**</span>
+[<img src="figure/Scibrokes.png" height="14"/> Sςιβrοκεrs Trαdιηg®](http://www.scibrokes.com)<br>
+<span style='color:RoyalBlue'>**[<img src="figure/Scibrokes.png" height="14"/> 世博量化®](http://www.scibrokes.com)企业知识产权及版权所有，盗版必究。**</span>

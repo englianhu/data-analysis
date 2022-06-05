@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 3 数据分析 |  R语言玩转金融与体彩数据分析</title>
+  <meta name="description" content="此书乃个人学习R语言的经验分享与建议。 此文件输出格式为 bookdown::gitbook。" />
+  <meta name="generator" content="bookdown 0.26.3 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 3 数据分析 |  R语言玩转金融与体彩数据分析" />
+  <meta property="og:type" content="book" />
+  <meta property="og:image" content="https://github.com/englianhu/data-analysis/images/cover.jpg" />
+  <meta property="og:description" content="此书乃个人学习R语言的经验分享与建议。 此文件输出格式为 bookdown::gitbook。" />
+  <meta name="github-repo" content="englianhu/data-analysis" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 3 数据分析 |  R语言玩转金融与体彩数据分析" />
+  
+  <meta name="twitter:description" content="此书乃个人学习R语言的经验分享与建议。 此文件输出格式为 bookdown::gitbook。" />
+  <meta name="twitter:image" content="https://github.com/englianhu/data-analysis/images/cover.jpg" />
+
+<meta name="author" content="(®γσ, ξηg）雷欧，黄联富  ®" />
+
+
+<meta name="date" content="2022-06-05" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="touch-icon.png" />
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<link rel="prev" href="intro.html"/>
+<link rel="next" href="stats.html"/>
+<script src="book_assets/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="book_assets/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="book_assets/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="book_assets/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="book_assets/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="book_assets/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="book_assets/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="book_assets/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="book_assets/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="book_assets/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="book_assets/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">R语言玩转金融与体彩数据分析</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> 前言</a></li>
+<li class="chapter" data-level="2" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>2</b> 介绍</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="intro.html"><a href="intro.html#r语言与rstudio"><i class="fa fa-check"></i><b>2.1</b> R语言与RStudio</a></li>
+<li class="chapter" data-level="2.2" data-path="intro.html"><a href="intro.html#shiny应用"><i class="fa fa-check"></i><b>2.2</b> Shiny应用</a></li>
+<li class="chapter" data-level="2.3" data-path="intro.html"><a href="intro.html#调用其它语言程序"><i class="fa fa-check"></i><b>2.3</b> 调用其它语言程序</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="analytics.html"><a href="analytics.html"><i class="fa fa-check"></i><b>3</b> 数据分析</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="analytics.html"><a href="analytics.html#读存数据"><i class="fa fa-check"></i><b>3.1</b> 读存数据</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="analytics.html"><a href="analytics.html#本地文件"><i class="fa fa-check"></i><b>3.1.1</b> 本地文件</a></li>
+<li class="chapter" data-level="3.1.2" data-path="analytics.html"><a href="analytics.html#外来文件"><i class="fa fa-check"></i><b>3.1.2</b> 外来文件</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="analytics.html"><a href="analytics.html#采集网络数据"><i class="fa fa-check"></i><b>3.2</b> 采集网络数据</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="analytics.html"><a href="analytics.html#普通采集"><i class="fa fa-check"></i><b>3.2.1</b> 普通采集</a></li>
+<li class="chapter" data-level="3.2.2" data-path="analytics.html"><a href="analytics.html#api接口"><i class="fa fa-check"></i><b>3.2.2</b> API接口</a></li>
+<li class="chapter" data-level="3.2.3" data-path="analytics.html"><a href="analytics.html#web-driver"><i class="fa fa-check"></i><b>3.2.3</b> Web Driver</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="analytics.html"><a href="analytics.html#数据处理"><i class="fa fa-check"></i><b>3.3</b> 数据处理</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="analytics.html"><a href="analytics.html#文字与数字"><i class="fa fa-check"></i><b>3.3.1</b> 文字与数字</a></li>
+<li class="chapter" data-level="3.3.2" data-path="analytics.html"><a href="analytics.html#数据框与矩阵"><i class="fa fa-check"></i><b>3.3.2</b> 数据框与矩阵</a></li>
+<li class="chapter" data-level="3.3.3" data-path="analytics.html"><a href="analytics.html#列表与嵌套数据"><i class="fa fa-check"></i><b>3.3.3</b> 列表与嵌套数据</a></li>
+<li class="chapter" data-level="3.3.4" data-path="analytics.html"><a href="analytics.html#内存"><i class="fa fa-check"></i><b>3.3.4</b> 内存</a></li>
+<li class="chapter" data-level="3.3.5" data-path="analytics.html"><a href="analytics.html#数据库"><i class="fa fa-check"></i><b>3.3.5</b> 数据库</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="analytics.html"><a href="analytics.html#数据分析程序包"><i class="fa fa-check"></i><b>3.4</b> 数据分析程序包</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="stats.html"><a href="stats.html"><i class="fa fa-check"></i><b>4</b> 统计模式</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="stats.html"><a href="stats.html#基本统计学"><i class="fa fa-check"></i><b>4.1</b> 基本统计学</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="stats.html"><a href="stats.html#线性模型"><i class="fa fa-check"></i><b>4.1.1</b> 线性模型</a></li>
+<li class="chapter" data-level="4.1.2" data-path="stats.html"><a href="stats.html#广义型线性模型"><i class="fa fa-check"></i><b>4.1.2</b> 广义型线性模型</a></li>
+<li class="chapter" data-level="4.1.3" data-path="stats.html"><a href="stats.html#最优模型选择"><i class="fa fa-check"></i><b>4.1.3</b> 最优模型选择</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="stats.html"><a href="stats.html#高级统计学"><i class="fa fa-check"></i><b>4.2</b> 高级统计学</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="stats.html"><a href="stats.html#极大似然估计"><i class="fa fa-check"></i><b>4.2.1</b> 极大似然估计</a></li>
+<li class="chapter" data-level="4.2.2" data-path="stats.html"><a href="stats.html#蒙地卡罗"><i class="fa fa-check"></i><b>4.2.2</b> 蒙地卡罗</a></li>
+<li class="chapter" data-level="4.2.3" data-path="stats.html"><a href="stats.html#马尔可夫链"><i class="fa fa-check"></i><b>4.2.3</b> 马尔可夫链</a></li>
+<li class="chapter" data-level="4.2.4" data-path="stats.html"><a href="stats.html#隐马尔可夫链"><i class="fa fa-check"></i><b>4.2.4</b> 隐马尔可夫链</a></li>
+<li class="chapter" data-level="4.2.5" data-path="stats.html"><a href="stats.html#贝叶斯分析"><i class="fa fa-check"></i><b>4.2.5</b> 贝叶斯分析</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="stats.html"><a href="stats.html#统计学程序包"><i class="fa fa-check"></i><b>4.3</b> 统计学程序包</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="finance.html"><a href="finance.html"><i class="fa fa-check"></i><b>5</b> 金融交易</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="finance.html"><a href="finance.html#金融交易"><i class="fa fa-check"></i><b>5.1</b> 金融交易</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="finance.html"><a href="finance.html#金融交易介绍"><i class="fa fa-check"></i><b>5.1.1</b> 金融交易介绍</a></li>
+<li class="chapter" data-level="5.1.2" data-path="finance.html"><a href="finance.html#金融数据"><i class="fa fa-check"></i><b>5.1.2</b> 金融数据</a></li>
+<li class="chapter" data-level="5.1.3" data-path="finance.html"><a href="finance.html#金融交易统计模型介绍"><i class="fa fa-check"></i><b>5.1.3</b> 金融交易统计模型介绍</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="finance.html"><a href="finance.html#单变量统计模型"><i class="fa fa-check"></i><b>5.2</b> 单变量统计模型</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="finance.html"><a href="finance.html#lassoelasticnetridge模型"><i class="fa fa-check"></i><b>5.2.1</b> LASSO、ElasticNet、RIDGE模型</a></li>
+<li class="chapter" data-level="5.2.2" data-path="finance.html"><a href="finance.html#arima模型"><i class="fa fa-check"></i><b>5.2.2</b> Arima模型</a></li>
+<li class="chapter" data-level="5.2.3" data-path="finance.html"><a href="finance.html#指数平滑法"><i class="fa fa-check"></i><b>5.2.3</b> 指数平滑法</a></li>
+<li class="chapter" data-level="5.2.4" data-path="finance.html"><a href="finance.html#garch模型"><i class="fa fa-check"></i><b>5.2.4</b> GARCH模型</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="finance.html"><a href="finance.html#多变量统计模型"><i class="fa fa-check"></i><b>5.3</b> 多变量统计模型</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="finance.html"><a href="finance.html#garch模型-1"><i class="fa fa-check"></i><b>5.3.1</b> GARCH模型</a></li>
+<li class="chapter" data-level="5.3.2" data-path="finance.html"><a href="finance.html#section"><i class="fa fa-check"></i><b>5.3.2</b> </a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="finance.html"><a href="finance.html#高频率交易模型"><i class="fa fa-check"></i><b>5.4</b> 高频率交易模型</a>
+<ul>
+<li class="chapter" data-level="5.4.1" data-path="finance.html"><a href="finance.html#seasonal-arima"><i class="fa fa-check"></i><b>5.4.1</b> Seasonal ARIMA</a></li>
+<li class="chapter" data-level="5.4.2" data-path="finance.html"><a href="finance.html#midas模型"><i class="fa fa-check"></i><b>5.4.2</b> MIDAS模型</a></li>
+<li class="chapter" data-level="5.4.3" data-path="finance.html"><a href="finance.html#midas-garch"><i class="fa fa-check"></i><b>5.4.3</b> MIDAS-GARCH</a></li>
+<li class="chapter" data-level="5.4.4" data-path="finance.html"><a href="finance.html#garch模型-2"><i class="fa fa-check"></i><b>5.4.4</b> GARCH模型</a></li>
+</ul></li>
+<li class="chapter" data-level="5.5" data-path="finance.html"><a href="finance.html#其它统计模型"><i class="fa fa-check"></i><b>5.5</b> 其它统计模型</a>
+<ul>
+<li class="chapter" data-level="5.5.1" data-path="finance.html"><a href="finance.html#levy-process"><i class="fa fa-check"></i><b>5.5.1</b> Levy Process</a></li>
+<li class="chapter" data-level="5.5.2" data-path="finance.html"><a href="finance.html#wavelet-tranforms"><i class="fa fa-check"></i><b>5.5.2</b> Wavelet Tranforms</a></li>
+</ul></li>
+<li class="chapter" data-level="5.6" data-path="finance.html"><a href="finance.html#投资管理"><i class="fa fa-check"></i><b>5.6</b> 投资管理</a>
+<ul>
+<li class="chapter" data-level="5.6.1" data-path="finance.html"><a href="finance.html#投资风险管理"><i class="fa fa-check"></i><b>5.6.1</b> 投资风险管理</a></li>
+<li class="chapter" data-level="5.6.2" data-path="finance.html"><a href="finance.html#基金管理"><i class="fa fa-check"></i><b>5.6.2</b> 基金管理</a></li>
+<li class="chapter" data-level="5.6.3" data-path="finance.html"><a href="finance.html#多元基金管理"><i class="fa fa-check"></i><b>5.6.3</b> 多元基金管理</a></li>
+<li class="chapter" data-level="5.6.4" data-path="finance.html"><a href="finance.html#基金评估"><i class="fa fa-check"></i><b>5.6.4</b> 基金评估</a></li>
+</ul></li>
+<li class="chapter" data-level="5.7" data-path="finance.html"><a href="finance.html#金融交易程序包"><i class="fa fa-check"></i><b>5.7</b> 金融交易程序包</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="sportsbook.html"><a href="sportsbook.html"><i class="fa fa-check"></i><b>6</b> 体彩交易</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="sportsbook.html"><a href="sportsbook.html#体彩交易"><i class="fa fa-check"></i><b>6.1</b> 体彩交易</a>
+<ul>
+<li class="chapter" data-level="6.1.1" data-path="sportsbook.html"><a href="sportsbook.html#体彩交易介绍"><i class="fa fa-check"></i><b>6.1.1</b> 体彩交易介绍</a></li>
+<li class="chapter" data-level="6.1.2" data-path="sportsbook.html"><a href="sportsbook.html#体彩数据"><i class="fa fa-check"></i><b>6.1.2</b> 体彩数据</a></li>
+<li class="chapter" data-level="6.1.3" data-path="sportsbook.html"><a href="sportsbook.html#体彩交易统计模型介绍"><i class="fa fa-check"></i><b>6.1.3</b> 体彩交易统计模型介绍</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="sportsbook.html"><a href="sportsbook.html#足球赔率建模"><i class="fa fa-check"></i><b>6.2</b> 足球赔率建模</a>
+<ul>
+<li class="chapter" data-level="6.2.1" data-path="sportsbook.html"><a href="sportsbook.html#单变量泊松模型"><i class="fa fa-check"></i><b>6.2.1</b> 单变量泊松模型</a></li>
+<li class="chapter" data-level="6.2.2" data-path="sportsbook.html"><a href="sportsbook.html#多变量泊松模型"><i class="fa fa-check"></i><b>6.2.2</b> 多变量泊松模型</a></li>
+<li class="chapter" data-level="6.2.3" data-path="sportsbook.html"><a href="sportsbook.html#logistic模型"><i class="fa fa-check"></i><b>6.2.3</b> Logistic模型</a></li>
+<li class="chapter" data-level="6.2.4" data-path="sportsbook.html"><a href="sportsbook.html#section-1"><i class="fa fa-check"></i><b>6.2.4</b> </a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="sportsbook.html"><a href="sportsbook.html#足彩投注模型"><i class="fa fa-check"></i><b>6.3</b> 足彩投注模型</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="sportsbook.html"><a href="sportsbook.html#普通投注模型"><i class="fa fa-check"></i><b>6.3.1</b> 普通投注模型</a></li>
+<li class="chapter" data-level="6.3.2" data-path="sportsbook.html"><a href="sportsbook.html#凯利投注模型"><i class="fa fa-check"></i><b>6.3.2</b> 凯利投注模型</a></li>
+<li class="chapter" data-level="6.3.3" data-path="sportsbook.html"><a href="sportsbook.html#ohlc与garch应用"><i class="fa fa-check"></i><b>6.3.3</b> OHLC与GARCH应用</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="sportsbook.html"><a href="sportsbook.html#投资管理-1"><i class="fa fa-check"></i><b>6.4</b> 投资管理</a></li>
+<li class="chapter" data-level="6.5" data-path="sportsbook.html"><a href="sportsbook.html#体彩交易程序包"><i class="fa fa-check"></i><b>6.5</b> 体彩交易程序包</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="lottery.html"><a href="lottery.html"><i class="fa fa-check"></i><b>7</b> 彩票、轮盘、老虎机与宾果</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="lottery.html"><a href="lottery.html#彩票分析与预测"><i class="fa fa-check"></i><b>7.1</b> 彩票分析与预测</a>
+<ul>
+<li class="chapter" data-level="7.1.1" data-path="lottery.html"><a href="lottery.html#数据与统计建模"><i class="fa fa-check"></i><b>7.1.1</b> 数据与统计建模</a></li>
+<li class="chapter" data-level="7.1.2" data-path="lottery.html"><a href="lottery.html#投注模式与回酬"><i class="fa fa-check"></i><b>7.1.2</b> 投注模式与回酬</a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="lottery.html"><a href="lottery.html#轮盘分析与预测"><i class="fa fa-check"></i><b>7.2</b> 轮盘分析与预测</a>
+<ul>
+<li class="chapter" data-level="7.2.1" data-path="lottery.html"><a href="lottery.html#数据与统计建模-1"><i class="fa fa-check"></i><b>7.2.1</b> 数据与统计建模</a></li>
+<li class="chapter" data-level="7.2.2" data-path="lottery.html"><a href="lottery.html#投注模式与回酬-1"><i class="fa fa-check"></i><b>7.2.2</b> 投注模式与回酬</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="lottery.html"><a href="lottery.html#老虎机分析与预测"><i class="fa fa-check"></i><b>7.3</b> 老虎机分析与预测</a>
+<ul>
+<li class="chapter" data-level="7.3.1" data-path="lottery.html"><a href="lottery.html#数据与统计建模-2"><i class="fa fa-check"></i><b>7.3.1</b> 数据与统计建模</a></li>
+<li class="chapter" data-level="7.3.2" data-path="lottery.html"><a href="lottery.html#投注模式与回酬-2"><i class="fa fa-check"></i><b>7.3.2</b> 投注模式与回酬</a></li>
+</ul></li>
+<li class="chapter" data-level="7.4" data-path="lottery.html"><a href="lottery.html#宾果分析与预测"><i class="fa fa-check"></i><b>7.4</b> 宾果分析与预测</a>
+<ul>
+<li class="chapter" data-level="7.4.1" data-path="lottery.html"><a href="lottery.html#数据与统计建模-3"><i class="fa fa-check"></i><b>7.4.1</b> 数据与统计建模</a></li>
+<li class="chapter" data-level="7.4.2" data-path="lottery.html"><a href="lottery.html#投注模式与回酬-3"><i class="fa fa-check"></i><b>7.4.2</b> 投注模式与回酬</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="hft.html"><a href="hft.html"><i class="fa fa-check"></i><b>8</b> 高效率编程</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="hft.html"><a href="hft.html#环境"><i class="fa fa-check"></i><b>8.1</b> 环境</a></li>
+<li class="chapter" data-level="8.2" data-path="hft.html"><a href="hft.html#高效数据处理"><i class="fa fa-check"></i><b>8.2</b> 高效数据处理</a></li>
+<li class="chapter" data-level="8.3" data-path="hft.html"><a href="hft.html#高效统计建模"><i class="fa fa-check"></i><b>8.3</b> 高效统计建模</a></li>
+<li class="chapter" data-level="8.4" data-path="hft.html"><a href="hft.html#高效率与高级r语言参考书"><i class="fa fa-check"></i><b>8.4</b> 高效率与高级R语言参考书</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="fund.html"><a href="fund.html"><i class="fa fa-check"></i><b>9</b> 基金与投资者管理模型</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="fund.html"><a href="fund.html#多元化基金管理"><i class="fa fa-check"></i><b>9.1</b> 多元化基金管理</a>
+<ul>
+<li class="chapter" data-level="9.1.1" data-path="fund.html"><a href="fund.html#多元化基金评估"><i class="fa fa-check"></i><b>9.1.1</b> 多元化基金评估</a></li>
+<li class="chapter" data-level="9.1.2" data-path="fund.html"><a href="fund.html#section-2"><i class="fa fa-check"></i><b>9.1.2</b> </a></li>
+</ul></li>
+<li class="chapter" data-level="9.2" data-path="fund.html"><a href="fund.html#投资者管理"><i class="fa fa-check"></i><b>9.2</b> 投资者管理</a>
+<ul>
+<li class="chapter" data-level="9.2.1" data-path="fund.html"><a href="fund.html#投资者资金流动统计建模"><i class="fa fa-check"></i><b>9.2.1</b> 投资者资金流动统计建模</a></li>
+<li class="chapter" data-level="9.2.2" data-path="fund.html"><a href="fund.html#section-3"><i class="fa fa-check"></i><b>9.2.2</b> </a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="algorithm.html"><a href="algorithm.html"><i class="fa fa-check"></i><b>10</b> 程序交易</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="algorithm.html"><a href="algorithm.html#交易自动化"><i class="fa fa-check"></i><b>10.1</b> 交易自动化</a>
+<ul>
+<li class="chapter" data-level="10.1.1" data-path="algorithm.html"><a href="algorithm.html#数据连接自动化"><i class="fa fa-check"></i><b>10.1.1</b> 数据连接自动化</a></li>
+<li class="chapter" data-level="10.1.2" data-path="algorithm.html"><a href="algorithm.html#统计运算自动化"><i class="fa fa-check"></i><b>10.1.2</b> 统计运算自动化</a></li>
+<li class="chapter" data-level="10.1.3" data-path="algorithm.html"><a href="algorithm.html#基金评估自动化"><i class="fa fa-check"></i><b>10.1.3</b> 基金评估自动化</a></li>
+<li class="chapter" data-level="10.1.4" data-path="algorithm.html"><a href="algorithm.html#客户管理自动化"><i class="fa fa-check"></i><b>10.1.4</b> 客户管理自动化</a></li>
+</ul></li>
+<li class="chapter" data-level="10.2" data-path="algorithm.html"><a href="algorithm.html#多客户管理"><i class="fa fa-check"></i><b>10.2</b> 多客户管理</a>
+<ul>
+<li class="chapter" data-level="10.2.1" data-path="algorithm.html"><a href="algorithm.html#多投资者"><i class="fa fa-check"></i><b>10.2.1</b> 多投资者</a></li>
+<li class="chapter" data-level="10.2.2" data-path="algorithm.html"><a href="algorithm.html#绩效管理"><i class="fa fa-check"></i><b>10.2.2</b> 绩效管理</a></li>
+</ul></li>
+<li class="chapter" data-level="10.3" data-path="algorithm.html"><a href="algorithm.html#section-4"><i class="fa fa-check"></i><b>10.3</b> </a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="reference.html"><a href="reference.html"><i class="fa fa-check"></i><b>11</b> 参考文献</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/englianhu/data-analysis" target="blank">原始代码</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./"><img src='figure/quant-trade.jpg' width='480'><br>R语言玩转金融与体彩数据分析</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="analytics" class="section level1 hasAnchor" number="3">
+<h1><span class="header-section-number">Chapter 3</span> 数据分析<a href="analytics.html#analytics" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="读存数据" class="section level2 hasAnchor" number="3.1">
+<h2><span class="header-section-number">3.1</span> 读存数据<a href="analytics.html#读存数据" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="本地文件" class="section level3 hasAnchor" number="3.1.1">
+<h3><span class="header-section-number">3.1.1</span> 本地文件<a href="analytics.html#本地文件" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+</div>
+<div id="外来文件" class="section level3 hasAnchor" number="3.1.2">
+<h3><span class="header-section-number">3.1.2</span> 外来文件<a href="analytics.html#外来文件" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<table>
+<thead>
+<tr class="header">
+<th align="center">readr function</th>
+<th align="center">Use</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">read_csv</td>
+<td align="center">Reads comma-separated file</td>
+</tr>
+<tr class="even">
+<td align="center">read_csv2</td>
+<td align="center">Reads semicolon-separated file</td>
+</tr>
+<tr class="odd">
+<td align="center">read_tsv</td>
+<td align="center">Reads tab-separated file</td>
+</tr>
+<tr class="even">
+<td align="center">read_delim</td>
+<td align="center">General function for reading delimited files</td>
+</tr>
+<tr class="odd">
+<td align="center">read_fwf</td>
+<td align="center">Reads fixed width files</td>
+</tr>
+<tr class="even">
+<td align="center">read_log</td>
+<td align="center">Reads log files</td>
+</tr>
+</tbody>
+</table>
+<p><a href="https://jeevanyue.github.io/post/2018-01-08-read_data_in_r/">在R中读取数据</a></p>
+</div>
+</div>
+<div id="采集网络数据" class="section level2 hasAnchor" number="3.2">
+<h2><span class="header-section-number">3.2</span> 采集网络数据<a href="analytics.html#采集网络数据" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="普通采集" class="section level3 hasAnchor" number="3.2.1">
+<h3><span class="header-section-number">3.2.1</span> 普通采集<a href="analytics.html#普通采集" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+</div>
+<div id="api接口" class="section level3 hasAnchor" number="3.2.2">
+<h3><span class="header-section-number">3.2.2</span> API接口<a href="analytics.html#api接口" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+</div>
+<div id="web-driver" class="section level3 hasAnchor" number="3.2.3">
+<h3><span class="header-section-number">3.2.3</span> Web Driver<a href="analytics.html#web-driver" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+</div>
+</div>
+<div id="数据处理" class="section level2 hasAnchor" number="3.3">
+<h2><span class="header-section-number">3.3</span> 数据处理<a href="analytics.html#数据处理" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="文字与数字" class="section level3 hasAnchor" number="3.3.1">
+<h3><span class="header-section-number">3.3.1</span> 文字与数字<a href="analytics.html#文字与数字" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><a href="https://appsilon.com/an-example-of-how-to-use-the-new-r-promises-package/">An example of how to use the new R <code>promises</code> package</a></li>
+<li><a href="https://cran.r-project.org/web/packages/future/vignettes/future-1-overview.html">A Future for R: A Comprehensive Overview</a></li>
+</ul>
+<table>
+<thead>
+<tr class="header">
+<th align="center">Metacharacter</th>
+<th align="center">Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">.</td>
+<td align="center">Any Character</td>
+</tr>
+<tr class="even">
+<td align="center"></td>
+<td align="center">A Word</td>
+</tr>
+<tr class="odd">
+<td align="center"></td>
+<td align="center">Not a Word</td>
+</tr>
+<tr class="even">
+<td align="center"> A Digit</td>
+<td align="center"></td>
+</tr>
+<tr class="odd">
+<td align="center"></td>
+<td align="center">Not a Digit</td>
+</tr>
+<tr class="even">
+<td align="center"></td>
+<td align="center">Whitespace</td>
+</tr>
+<tr class="odd">
+<td align="center"></td>
+<td align="center">Not Whitespace</td>
+</tr>
+<tr class="even">
+<td align="center">[xyz]</td>
+<td align="center">A Set of Characters</td>
+</tr>
+<tr class="odd">
+<td align="center">[^xyz]</td>
+<td align="center">Negation of Set</td>
+</tr>
+<tr class="even">
+<td align="center">[a-z]</td>
+<td align="center">A Range of Characters</td>
+</tr>
+<tr class="odd">
+<td align="center">^</td>
+<td align="center">Beginning of String</td>
+</tr>
+<tr class="even">
+<td align="center">$</td>
+<td align="center">End of String</td>
+</tr>
+<tr class="odd">
+<td align="center"></td>
+<td align="center">Newline</td>
+</tr>
+<tr class="even">
+<td align="center">+</td>
+<td align="center">One or More of Previous</td>
+</tr>
+<tr class="odd">
+<td align="center">*</td>
+<td align="center">Zero or More of Previous</td>
+</tr>
+<tr class="even">
+<td align="center">?</td>
+<td align="center">Zero or One of Previous</td>
+</tr>
+<tr class="odd">
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr class="even">
+<td align="center">{5}</td>
+<td align="center">Exactly 5 of Previous</td>
+</tr>
+<tr class="odd">
+<td align="center">{2, 5}</td>
+<td align="center">Between 2 and 5 or Previous</td>
+</tr>
+<tr class="even">
+<td align="center">{2, }</td>
+<td align="center">More than 2 of Previous</td>
+</tr>
+</tbody>
+</table>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="analytics.html#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str_extract_all</span>(<span class="st">&quot;Mississippi&quot;</span>, <span class="st">&quot;(i.{2}){3}&quot;</span>)[[<span class="dv">1</span>]]</span>
+<span id="cb3-2"><a href="analytics.html#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co">#[1] &quot;ississipp&quot;</span></span>
+<span id="cb3-3"><a href="analytics.html#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="analytics.html#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="fu">str_extract_all</span>(<span class="st">&quot;Mississippi&quot;</span>, <span class="st">&quot;(i.{2})&quot;</span>)[[<span class="dv">1</span>]]</span>
+<span id="cb3-5"><a href="analytics.html#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co">#[1] &quot;iss&quot; &quot;iss&quot; &quot;ipp&quot;</span></span>
+<span id="cb3-6"><a href="analytics.html#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="analytics.html#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="fu">str_extract_all</span>(<span class="st">&quot;abcdefghijklmnopqrstuvwxyz0123456789&quot;</span>, <span class="st">&quot;</span><span class="sc">\\</span><span class="st">w&quot;</span>)[[<span class="dv">1</span>]]</span>
+<span id="cb3-8"><a href="analytics.html#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="co"># [1] &quot;a&quot; &quot;b&quot; &quot;c&quot; &quot;d&quot; &quot;e&quot; &quot;f&quot; &quot;g&quot; &quot;h&quot; &quot;i&quot; &quot;j&quot; &quot;k&quot; &quot;l&quot; &quot;m&quot; &quot;n&quot; &quot;o&quot; &quot;p&quot; &quot;q&quot; &quot;r&quot;</span></span>
+<span id="cb3-9"><a href="analytics.html#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="co">#[19] &quot;s&quot; &quot;t&quot; &quot;u&quot; &quot;v&quot; &quot;w&quot; &quot;x&quot; &quot;y&quot; &quot;z&quot; &quot;0&quot; &quot;1&quot; &quot;2&quot; &quot;3&quot; &quot;4&quot; &quot;5&quot; &quot;6&quot; &quot;7&quot; &quot;8&quot; &quot;9&quot;</span></span>
+<span id="cb3-10"><a href="analytics.html#cb3-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-11"><a href="analytics.html#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="fu">str_extract_all</span>(<span class="st">&#39;0123456789&#39;</span>, <span class="st">&#39;</span><span class="sc">\\</span><span class="st">d&#39;</span>)[[<span class="dv">1</span>]]</span>
+<span id="cb3-12"><a href="analytics.html#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="co"># [1] &quot;0&quot; &quot;1&quot; &quot;2&quot; &quot;3&quot; &quot;4&quot; &quot;5&quot; &quot;6&quot; &quot;7&quot; &quot;8&quot; &quot;9&quot;</span></span>
+<span id="cb3-13"><a href="analytics.html#cb3-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-14"><a href="analytics.html#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="fu">str_extract_all</span>(<span class="st">&quot;</span><span class="sc">\n\t</span><span class="st">   &quot;</span>, <span class="st">&quot;</span><span class="sc">\\</span><span class="st">s&quot;</span>)[[<span class="dv">1</span>]]</span>
+<span id="cb3-15"><a href="analytics.html#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="co">#[1] &quot;\n&quot; &quot;\t&quot; &quot; &quot;  &quot; &quot;  &quot; &quot;</span></span>
+<span id="cb3-16"><a href="analytics.html#cb3-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-17"><a href="analytics.html#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="fu">str_extract_all</span>(<span class="st">&quot;</span><span class="sc">\n\t</span><span class="st">   &quot;</span>, <span class="st">&quot;</span><span class="sc">\\</span><span class="st">d&quot;</span>)[[<span class="dv">1</span>]]</span>
+<span id="cb3-18"><a href="analytics.html#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="co">#character(0)</span></span>
+<span id="cb3-19"><a href="analytics.html#cb3-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-20"><a href="analytics.html#cb3-20" aria-hidden="true" tabindex="-1"></a><span class="fu">str_extract_all</span>(<span class="st">&quot;</span><span class="sc">\n\t</span><span class="st">   &quot;</span>, <span class="st">&quot;</span><span class="sc">\\</span><span class="st">w&quot;</span>)[[<span class="dv">1</span>]]</span>
+<span id="cb3-21"><a href="analytics.html#cb3-21" aria-hidden="true" tabindex="-1"></a><span class="co">#character(0)</span></span>
+<span id="cb3-22"><a href="analytics.html#cb3-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-23"><a href="analytics.html#cb3-23" aria-hidden="true" tabindex="-1"></a><span class="fu">str_extract_all</span>(<span class="st">&quot;abcdefghijklmnopqrstuvwxyz0123456789&quot;</span>, <span class="st">&quot;</span><span class="sc">\\</span><span class="st">d&quot;</span>)[[<span class="dv">1</span>]]</span>
+<span id="cb3-24"><a href="analytics.html#cb3-24" aria-hidden="true" tabindex="-1"></a><span class="co"># [1] &quot;0&quot; &quot;1&quot; &quot;2&quot; &quot;3&quot; &quot;4&quot; &quot;5&quot; &quot;6&quot; &quot;7&quot; &quot;8&quot; &quot;9&quot;</span></span>
+<span id="cb3-25"><a href="analytics.html#cb3-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-26"><a href="analytics.html#cb3-26" aria-hidden="true" tabindex="-1"></a><span class="fu">str_extract_all</span>(<span class="st">&quot;abcdefghijklmnopqrstuvwxyz0123456789&quot;</span>, <span class="st">&quot;</span><span class="sc">\\</span><span class="st">D&quot;</span>)[[<span class="dv">1</span>]]</span>
+<span id="cb3-27"><a href="analytics.html#cb3-27" aria-hidden="true" tabindex="-1"></a><span class="co"># [1] &quot;a&quot; &quot;b&quot; &quot;c&quot; &quot;d&quot; &quot;e&quot; &quot;f&quot; &quot;g&quot; &quot;h&quot; &quot;i&quot; &quot;j&quot; &quot;k&quot; &quot;l&quot; &quot;m&quot; &quot;n&quot; &quot;o&quot; &quot;p&quot; &quot;q&quot; &quot;r&quot;</span></span>
+<span id="cb3-28"><a href="analytics.html#cb3-28" aria-hidden="true" tabindex="-1"></a><span class="co">#[19] &quot;s&quot; &quot;t&quot; &quot;u&quot; &quot;v&quot; &quot;w&quot; &quot;x&quot; &quot;y&quot; &quot;z&quot;</span></span>
+<span id="cb3-29"><a href="analytics.html#cb3-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-30"><a href="analytics.html#cb3-30" aria-hidden="true" tabindex="-1"></a><span class="fu">str_extract_all</span>(<span class="st">&quot;rhythms&quot;</span>, <span class="st">&quot;[aeiou]&quot;</span>)[[<span class="dv">1</span>]]</span>
+<span id="cb3-31"><a href="analytics.html#cb3-31" aria-hidden="true" tabindex="-1"></a><span class="co">#character(0)</span></span>
+<span id="cb3-32"><a href="analytics.html#cb3-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-33"><a href="analytics.html#cb3-33" aria-hidden="true" tabindex="-1"></a><span class="fu">str_extract_all</span>(<span class="st">&quot;rhythms&quot;</span>, <span class="st">&quot;[^aeiou]&quot;</span>)[[<span class="dv">1</span>]]</span>
+<span id="cb3-34"><a href="analytics.html#cb3-34" aria-hidden="true" tabindex="-1"></a><span class="co">#[1] &quot;r&quot; &quot;h&quot; &quot;y&quot; &quot;t&quot; &quot;h&quot; &quot;m&quot; &quot;s&quot;</span></span>
+<span id="cb3-35"><a href="analytics.html#cb3-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-36"><a href="analytics.html#cb3-36" aria-hidden="true" tabindex="-1"></a><span class="fu">grepl</span>(<span class="st">&quot;[aeiou]&quot;</span>, <span class="st">&quot;rhythms&quot;</span>)[[<span class="dv">1</span>]]</span>
+<span id="cb3-37"><a href="analytics.html#cb3-37" aria-hidden="true" tabindex="-1"></a><span class="co">#[1] FALSE</span></span>
+<span id="cb3-38"><a href="analytics.html#cb3-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-39"><a href="analytics.html#cb3-39" aria-hidden="true" tabindex="-1"></a><span class="fu">grepl</span>(<span class="st">&quot;[^aeiou]&quot;</span>, <span class="st">&quot;rhythms&quot;</span>)[[<span class="dv">1</span>]]</span>
+<span id="cb3-40"><a href="analytics.html#cb3-40" aria-hidden="true" tabindex="-1"></a><span class="co">#[1] TRUE</span></span>
+<span id="cb3-41"><a href="analytics.html#cb3-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-42"><a href="analytics.html#cb3-42" aria-hidden="true" tabindex="-1"></a><span class="fu">grepl</span>(<span class="st">&quot;a|b&quot;</span>, <span class="fu">c</span>(<span class="st">&quot;abc&quot;</span>, <span class="st">&quot;bcd&quot;</span>, <span class="st">&quot;cde&quot;</span>))</span>
+<span id="cb3-43"><a href="analytics.html#cb3-43" aria-hidden="true" tabindex="-1"></a><span class="co">#[1]  TRUE  TRUE FALSE</span></span>
+<span id="cb3-44"><a href="analytics.html#cb3-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-45"><a href="analytics.html#cb3-45" aria-hidden="true" tabindex="-1"></a><span class="fu">grepl</span>(<span class="st">&quot;^[ab]+$&quot;</span>, <span class="fu">c</span>(<span class="st">&quot;bab&quot;</span>, <span class="st">&quot;aab&quot;</span>, <span class="st">&quot;abc&quot;</span>))</span>
+<span id="cb3-46"><a href="analytics.html#cb3-46" aria-hidden="true" tabindex="-1"></a><span class="co">#[1]  TRUE  TRUE FALSE</span></span>
+<span id="cb3-47"><a href="analytics.html#cb3-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-48"><a href="analytics.html#cb3-48" aria-hidden="true" tabindex="-1"></a><span class="fu">str_extract_all</span>(<span class="fu">c</span>(<span class="st">&quot;bab&quot;</span>, <span class="st">&quot;aab&quot;</span>, <span class="st">&quot;abc&quot;</span>), <span class="st">&quot;^[ab]+$&quot;</span>)</span>
+<span id="cb3-49"><a href="analytics.html#cb3-49" aria-hidden="true" tabindex="-1"></a><span class="co">#[[1]]</span></span>
+<span id="cb3-50"><a href="analytics.html#cb3-50" aria-hidden="true" tabindex="-1"></a><span class="co">#[1] &quot;bab&quot;</span></span>
+<span id="cb3-51"><a href="analytics.html#cb3-51" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb3-52"><a href="analytics.html#cb3-52" aria-hidden="true" tabindex="-1"></a><span class="co">#[[2]]</span></span>
+<span id="cb3-53"><a href="analytics.html#cb3-53" aria-hidden="true" tabindex="-1"></a><span class="co">#[1] &quot;aab&quot;</span></span>
+<span id="cb3-54"><a href="analytics.html#cb3-54" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb3-55"><a href="analytics.html#cb3-55" aria-hidden="true" tabindex="-1"></a><span class="co">#[[3]]</span></span>
+<span id="cb3-56"><a href="analytics.html#cb3-56" aria-hidden="true" tabindex="-1"></a><span class="co">#character(0)</span></span>
+<span id="cb3-57"><a href="analytics.html#cb3-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-58"><a href="analytics.html#cb3-58" aria-hidden="true" tabindex="-1"></a><span class="fu">str_extract_all</span>(<span class="fu">c</span>(<span class="st">&quot;bab&quot;</span>, <span class="st">&quot;aab&quot;</span>, <span class="st">&quot;abc&quot;</span>), <span class="st">&quot;a|b&quot;</span>)</span>
+<span id="cb3-59"><a href="analytics.html#cb3-59" aria-hidden="true" tabindex="-1"></a><span class="co">#[[1]]</span></span>
+<span id="cb3-60"><a href="analytics.html#cb3-60" aria-hidden="true" tabindex="-1"></a><span class="co">#[1] &quot;b&quot; &quot;a&quot; &quot;b&quot;</span></span>
+<span id="cb3-61"><a href="analytics.html#cb3-61" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb3-62"><a href="analytics.html#cb3-62" aria-hidden="true" tabindex="-1"></a><span class="co">#[[2]]</span></span>
+<span id="cb3-63"><a href="analytics.html#cb3-63" aria-hidden="true" tabindex="-1"></a><span class="co">#[1] &quot;a&quot; &quot;a&quot; &quot;b&quot;</span></span>
+<span id="cb3-64"><a href="analytics.html#cb3-64" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb3-65"><a href="analytics.html#cb3-65" aria-hidden="true" tabindex="-1"></a><span class="co">#[[3]]</span></span>
+<span id="cb3-66"><a href="analytics.html#cb3-66" aria-hidden="true" tabindex="-1"></a><span class="co">#[1] &quot;a&quot; &quot;b&quot;</span></span>
+<span id="cb3-67"><a href="analytics.html#cb3-67" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-68"><a href="analytics.html#cb3-68" aria-hidden="true" tabindex="-1"></a><span class="fu">grepl</span>(<span class="st">&quot;North|South&quot;</span>, <span class="fu">c</span>(<span class="st">&quot;South Dakota&quot;</span>, <span class="st">&quot;North Carolina&quot;</span>, <span class="st">&quot;West Virginia&quot;</span>))</span>
+<span id="cb3-69"><a href="analytics.html#cb3-69" aria-hidden="true" tabindex="-1"></a><span class="co">#[1]  TRUE  TRUE FALSE</span></span>
+<span id="cb3-70"><a href="analytics.html#cb3-70" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-71"><a href="analytics.html#cb3-71" aria-hidden="true" tabindex="-1"></a>start_end_vowel <span class="ot">&lt;-</span> <span class="st">&quot;^[AEIOU]{1}.+[aeiou]{1}$&quot;</span></span>
+<span id="cb3-72"><a href="analytics.html#cb3-72" aria-hidden="true" tabindex="-1"></a>vowel_state_lgl <span class="ot">&lt;-</span> <span class="fu">grepl</span>(start_end_vowel, state.name)</span>
+<span id="cb3-73"><a href="analytics.html#cb3-73" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(vowel_state_lgl)</span>
+<span id="cb3-74"><a href="analytics.html#cb3-74" aria-hidden="true" tabindex="-1"></a><span class="co">#[1]  TRUE  TRUE  TRUE FALSE FALSE FALSE</span></span>
+<span id="cb3-75"><a href="analytics.html#cb3-75" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-76"><a href="analytics.html#cb3-76" aria-hidden="true" tabindex="-1"></a>state.name[vowel_state_lgl]</span>
+<span id="cb3-77"><a href="analytics.html#cb3-77" aria-hidden="true" tabindex="-1"></a><span class="co">#[1] &quot;Alabama&quot;  &quot;Alaska&quot;   &quot;Arizona&quot;  &quot;Idaho&quot;    &quot;Indiana&quot;  &quot;Iowa&quot;    </span></span>
+<span id="cb3-78"><a href="analytics.html#cb3-78" aria-hidden="true" tabindex="-1"></a><span class="co">#[7] &quot;Ohio&quot;     &quot;Oklahoma&quot;</span></span>
+<span id="cb3-79"><a href="analytics.html#cb3-79" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-80"><a href="analytics.html#cb3-80" aria-hidden="true" tabindex="-1"></a><span class="fu">grepl</span>(<span class="st">&quot;[Ii]&quot;</span>, <span class="fu">c</span>(<span class="st">&quot;Hawaii&quot;</span>, <span class="st">&quot;Illinois&quot;</span>, <span class="st">&quot;Kentucky&quot;</span>))</span>
+<span id="cb3-81"><a href="analytics.html#cb3-81" aria-hidden="true" tabindex="-1"></a><span class="co">#[1]  TRUE  TRUE FALSE</span></span>
+<span id="cb3-82"><a href="analytics.html#cb3-82" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-83"><a href="analytics.html#cb3-83" aria-hidden="true" tabindex="-1"></a><span class="fu">str_extract_all</span>(<span class="fu">c</span>(<span class="st">&quot;Hawaii&quot;</span>, <span class="st">&quot;Illinois&quot;</span>, <span class="st">&quot;Kentucky&quot;</span>), <span class="st">&quot;[Ii]&quot;</span>)</span>
+<span id="cb3-84"><a href="analytics.html#cb3-84" aria-hidden="true" tabindex="-1"></a><span class="co">#[[1]]</span></span>
+<span id="cb3-85"><a href="analytics.html#cb3-85" aria-hidden="true" tabindex="-1"></a><span class="co">#[1] &quot;i&quot; &quot;i&quot;</span></span>
+<span id="cb3-86"><a href="analytics.html#cb3-86" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb3-87"><a href="analytics.html#cb3-87" aria-hidden="true" tabindex="-1"></a><span class="co">#[[2]]</span></span>
+<span id="cb3-88"><a href="analytics.html#cb3-88" aria-hidden="true" tabindex="-1"></a><span class="co">#[1] &quot;I&quot; &quot;i&quot; &quot;i&quot;</span></span>
+<span id="cb3-89"><a href="analytics.html#cb3-89" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb3-90"><a href="analytics.html#cb3-90" aria-hidden="true" tabindex="-1"></a><span class="co">#[[3]]</span></span>
+<span id="cb3-91"><a href="analytics.html#cb3-91" aria-hidden="true" tabindex="-1"></a><span class="co">#character(0)</span></span>
+<span id="cb3-92"><a href="analytics.html#cb3-92" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-93"><a href="analytics.html#cb3-93" aria-hidden="true" tabindex="-1"></a><span class="fu">str_detect</span>(<span class="fu">c</span>(<span class="st">&quot;Hawaii&quot;</span>, <span class="st">&quot;Illinois&quot;</span>, <span class="st">&quot;Kentucky&quot;</span>), <span class="st">&quot;[Ii]&quot;</span>)</span>
+<span id="cb3-94"><a href="analytics.html#cb3-94" aria-hidden="true" tabindex="-1"></a><span class="co">#[1]  TRUE  TRUE FALSE</span></span>
+<span id="cb3-95"><a href="analytics.html#cb3-95" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-96"><a href="analytics.html#cb3-96" aria-hidden="true" tabindex="-1"></a><span class="do">## The sub() function takes as arguments a regex, a “replacement,” and a vector of strings. This function will replace the first instance of that regex found in each string.</span></span>
+<span id="cb3-97"><a href="analytics.html#cb3-97" aria-hidden="true" tabindex="-1"></a><span class="fu">sub</span>(<span class="st">&quot;[Ii]&quot;</span>, <span class="st">&quot;1&quot;</span>, <span class="fu">c</span>(<span class="st">&quot;Hawaii&quot;</span>, <span class="st">&quot;Illinois&quot;</span>, <span class="st">&quot;Kentucky&quot;</span>))</span>
+<span id="cb3-98"><a href="analytics.html#cb3-98" aria-hidden="true" tabindex="-1"></a><span class="co">#[1] &quot;Hawa1i&quot;   &quot;1llinois&quot; &quot;Kentucky&quot;</span></span>
+<span id="cb3-99"><a href="analytics.html#cb3-99" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-100"><a href="analytics.html#cb3-100" aria-hidden="true" tabindex="-1"></a><span class="do">## The gsub() function is nearly the same as sub() except it will replace every instance of the regex that is matched in each string.</span></span>
+<span id="cb3-101"><a href="analytics.html#cb3-101" aria-hidden="true" tabindex="-1"></a><span class="fu">gsub</span>(<span class="st">&quot;[Ii]&quot;</span>, <span class="st">&quot;1&quot;</span>, <span class="fu">c</span>(<span class="st">&quot;Hawaii&quot;</span>, <span class="st">&quot;Illinois&quot;</span>, <span class="st">&quot;Kentucky&quot;</span>))</span>
+<span id="cb3-102"><a href="analytics.html#cb3-102" aria-hidden="true" tabindex="-1"></a><span class="co">#[1] &quot;Hawa11&quot;   &quot;1ll1no1s&quot; &quot;Kentucky&quot;</span></span>
+<span id="cb3-103"><a href="analytics.html#cb3-103" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-104"><a href="analytics.html#cb3-104" aria-hidden="true" tabindex="-1"></a><span class="fu">str_replace_all</span>(<span class="fu">c</span>(<span class="st">&quot;Hawaii&quot;</span>, <span class="st">&quot;Illinois&quot;</span>, <span class="st">&quot;Kentucky&quot;</span>), <span class="st">&quot;[Ii]&quot;</span>, <span class="st">&quot;1&quot;</span>)</span>
+<span id="cb3-105"><a href="analytics.html#cb3-105" aria-hidden="true" tabindex="-1"></a><span class="co">#[1] &quot;Hawa11&quot;   &quot;1ll1no1s&quot; &quot;Kentucky&quot;</span></span>
+<span id="cb3-106"><a href="analytics.html#cb3-106" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-107"><a href="analytics.html#cb3-107" aria-hidden="true" tabindex="-1"></a><span class="co">#The strsplit() function will split up strings according to the provided regex. If strsplit() is provided with a vector of strings it will return a list of string vectors.</span></span>
+<span id="cb3-108"><a href="analytics.html#cb3-108" aria-hidden="true" tabindex="-1"></a>two_s <span class="ot">&lt;-</span> state.name[<span class="fu">grep</span>(<span class="st">&quot;ss&quot;</span>, state.name)]</span>
+<span id="cb3-109"><a href="analytics.html#cb3-109" aria-hidden="true" tabindex="-1"></a>two_s</span>
+<span id="cb3-110"><a href="analytics.html#cb3-110" aria-hidden="true" tabindex="-1"></a><span class="co">#[1] &quot;Massachusetts&quot; &quot;Mississippi&quot;   &quot;Missouri&quot;      &quot;Tennessee&quot;    </span></span>
+<span id="cb3-111"><a href="analytics.html#cb3-111" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-112"><a href="analytics.html#cb3-112" aria-hidden="true" tabindex="-1"></a><span class="fu">strsplit</span>(two_s, <span class="st">&quot;ss&quot;</span>)</span>
+<span id="cb3-113"><a href="analytics.html#cb3-113" aria-hidden="true" tabindex="-1"></a><span class="co">#[[1]]</span></span>
+<span id="cb3-114"><a href="analytics.html#cb3-114" aria-hidden="true" tabindex="-1"></a><span class="co">#[1] &quot;Ma&quot;        &quot;achusetts&quot;</span></span>
+<span id="cb3-115"><a href="analytics.html#cb3-115" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb3-116"><a href="analytics.html#cb3-116" aria-hidden="true" tabindex="-1"></a><span class="co">#[[2]]</span></span>
+<span id="cb3-117"><a href="analytics.html#cb3-117" aria-hidden="true" tabindex="-1"></a><span class="co">#[1] &quot;Mi&quot;   &quot;i&quot;    &quot;ippi&quot;</span></span>
+<span id="cb3-118"><a href="analytics.html#cb3-118" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb3-119"><a href="analytics.html#cb3-119" aria-hidden="true" tabindex="-1"></a><span class="co">#[[3]]</span></span>
+<span id="cb3-120"><a href="analytics.html#cb3-120" aria-hidden="true" tabindex="-1"></a><span class="co">#[1] &quot;Mi&quot;   &quot;ouri&quot;</span></span>
+<span id="cb3-121"><a href="analytics.html#cb3-121" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb3-122"><a href="analytics.html#cb3-122" aria-hidden="true" tabindex="-1"></a><span class="co">#[[4]]</span></span>
+<span id="cb3-123"><a href="analytics.html#cb3-123" aria-hidden="true" tabindex="-1"></a><span class="co">#[1] &quot;Tenne&quot; &quot;ee&quot;</span></span>
+<span id="cb3-124"><a href="analytics.html#cb3-124" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-125"><a href="analytics.html#cb3-125" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(stringr)</span>
+<span id="cb3-126"><a href="analytics.html#cb3-126" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-127"><a href="analytics.html#cb3-127" aria-hidden="true" tabindex="-1"></a>state_tbl <span class="ot">&lt;-</span> <span class="fu">paste</span>(state.name, state.area, state.abb)</span>
+<span id="cb3-128"><a href="analytics.html#cb3-128" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(state_tbl)</span>
+<span id="cb3-129"><a href="analytics.html#cb3-129" aria-hidden="true" tabindex="-1"></a><span class="co">#[1] &quot;Alabama 51609 AL&quot;     &quot;Alaska 589757 AK&quot;     &quot;Arizona 113909 AZ&quot;   </span></span>
+<span id="cb3-130"><a href="analytics.html#cb3-130" aria-hidden="true" tabindex="-1"></a><span class="co">#[4] &quot;Arkansas 53104 AR&quot;    &quot;California 158693 CA&quot; &quot;Colorado 104247 CO&quot;  </span></span>
+<span id="cb3-131"><a href="analytics.html#cb3-131" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-132"><a href="analytics.html#cb3-132" aria-hidden="true" tabindex="-1"></a><span class="fu">str_extract</span>(state_tbl, <span class="st">&quot;[0-9]+&quot;</span>)</span>
+<span id="cb3-133"><a href="analytics.html#cb3-133" aria-hidden="true" tabindex="-1"></a><span class="co"># [1] &quot;51609&quot;  &quot;589757&quot; &quot;113909&quot; &quot;53104&quot;  &quot;158693&quot; &quot;104247&quot; &quot;5009&quot;  </span></span>
+<span id="cb3-134"><a href="analytics.html#cb3-134" aria-hidden="true" tabindex="-1"></a><span class="co"># [8] &quot;2057&quot;   &quot;58560&quot;  &quot;58876&quot;  &quot;6450&quot;   &quot;83557&quot;  &quot;56400&quot;  &quot;36291&quot; </span></span>
+<span id="cb3-135"><a href="analytics.html#cb3-135" aria-hidden="true" tabindex="-1"></a><span class="co">#[15] &quot;56290&quot;  &quot;82264&quot;  &quot;40395&quot;  &quot;48523&quot;  &quot;33215&quot;  &quot;10577&quot;  &quot;8257&quot;  </span></span>
+<span id="cb3-136"><a href="analytics.html#cb3-136" aria-hidden="true" tabindex="-1"></a><span class="co">#[22] &quot;58216&quot;  &quot;84068&quot;  &quot;47716&quot;  &quot;69686&quot;  &quot;147138&quot; &quot;77227&quot;  &quot;110540&quot;</span></span>
+<span id="cb3-137"><a href="analytics.html#cb3-137" aria-hidden="true" tabindex="-1"></a><span class="co">#[29] &quot;9304&quot;   &quot;7836&quot;   &quot;121666&quot; &quot;49576&quot;  &quot;52586&quot;  &quot;70665&quot;  &quot;41222&quot; </span></span>
+<span id="cb3-138"><a href="analytics.html#cb3-138" aria-hidden="true" tabindex="-1"></a><span class="co">#[36] &quot;69919&quot;  &quot;96981&quot;  &quot;45333&quot;  &quot;1214&quot;   &quot;31055&quot;  &quot;77047&quot;  &quot;42244&quot; </span></span>
+<span id="cb3-139"><a href="analytics.html#cb3-139" aria-hidden="true" tabindex="-1"></a><span class="co">#[43] &quot;267339&quot; &quot;84916&quot;  &quot;9609&quot;   &quot;40815&quot;  &quot;68192&quot;  &quot;24181&quot;  &quot;56154&quot; </span></span>
+<span id="cb3-140"><a href="analytics.html#cb3-140" aria-hidden="true" tabindex="-1"></a><span class="co">#[50] &quot;97914&quot;</span></span>
+<span id="cb3-141"><a href="analytics.html#cb3-141" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-142"><a href="analytics.html#cb3-142" aria-hidden="true" tabindex="-1"></a><span class="do">## The str_order() function returns a numeric vector that corresponds to the alphabetical order of the strings in the provided vector.</span></span>
+<span id="cb3-143"><a href="analytics.html#cb3-143" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(state.abb)</span>
+<span id="cb3-144"><a href="analytics.html#cb3-144" aria-hidden="true" tabindex="-1"></a><span class="co">#[1] &quot;AL&quot; &quot;AK&quot; &quot;AZ&quot; &quot;AR&quot; &quot;CA&quot; &quot;CO&quot;</span></span>
+<span id="cb3-145"><a href="analytics.html#cb3-145" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-146"><a href="analytics.html#cb3-146" aria-hidden="true" tabindex="-1"></a><span class="fu">str_order</span>(state.name)</span>
+<span id="cb3-147"><a href="analytics.html#cb3-147" aria-hidden="true" tabindex="-1"></a><span class="co"># [1]  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24</span></span>
+<span id="cb3-148"><a href="analytics.html#cb3-148" aria-hidden="true" tabindex="-1"></a><span class="co">#[25] 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48</span></span>
+<span id="cb3-149"><a href="analytics.html#cb3-149" aria-hidden="true" tabindex="-1"></a><span class="co">#[49] 49 50</span></span>
+<span id="cb3-150"><a href="analytics.html#cb3-150" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-151"><a href="analytics.html#cb3-151" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(state.name)</span>
+<span id="cb3-152"><a href="analytics.html#cb3-152" aria-hidden="true" tabindex="-1"></a><span class="co">#[1] &quot;Alabama&quot;    &quot;Alaska&quot;     &quot;Arizona&quot;    &quot;Arkansas&quot;   &quot;California&quot;</span></span>
+<span id="cb3-153"><a href="analytics.html#cb3-153" aria-hidden="true" tabindex="-1"></a><span class="co">#[6] &quot;Colorado&quot;</span></span>
+<span id="cb3-154"><a href="analytics.html#cb3-154" aria-hidden="true" tabindex="-1"></a><span class="fu">str_order</span>(state.abb)</span>
+<span id="cb3-155"><a href="analytics.html#cb3-155" aria-hidden="true" tabindex="-1"></a><span class="co"># [1]  2  1  4  3  5  6  7  8  9 10 11 15 12 13 14 16 17 18 21 20 19 22 23 25</span></span>
+<span id="cb3-156"><a href="analytics.html#cb3-156" aria-hidden="true" tabindex="-1"></a><span class="co">#[25] 24 26 33 34 27 29 30 31 28 32 35 36 37 38 39 40 41 42 43 44 46 45 47 49</span></span>
+<span id="cb3-157"><a href="analytics.html#cb3-157" aria-hidden="true" tabindex="-1"></a><span class="co">#[49] 48 50</span></span>
+<span id="cb3-158"><a href="analytics.html#cb3-158" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-159"><a href="analytics.html#cb3-159" aria-hidden="true" tabindex="-1"></a><span class="do">## The str_pad() function pads strings with other characters which is often useful when the string is going to be eventually printed for a person to read.</span></span>
+<span id="cb3-160"><a href="analytics.html#cb3-160" aria-hidden="true" tabindex="-1"></a><span class="fu">str_pad</span>(<span class="st">&quot;Thai&quot;</span>, <span class="at">width =</span> <span class="dv">8</span>, <span class="at">side =</span> <span class="st">&quot;left&quot;</span>, <span class="at">pad =</span> <span class="st">&quot;-&quot;</span>)</span>
+<span id="cb3-161"><a href="analytics.html#cb3-161" aria-hidden="true" tabindex="-1"></a><span class="co">#[1] &quot;----Thai&quot;</span></span>
+<span id="cb3-162"><a href="analytics.html#cb3-162" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-163"><a href="analytics.html#cb3-163" aria-hidden="true" tabindex="-1"></a><span class="fu">str_pad</span>(<span class="st">&quot;Thai&quot;</span>, <span class="at">width =</span> <span class="dv">8</span>, <span class="at">side =</span> <span class="st">&quot;right&quot;</span>, <span class="at">pad =</span> <span class="st">&quot;-&quot;</span>)</span>
+<span id="cb3-164"><a href="analytics.html#cb3-164" aria-hidden="true" tabindex="-1"></a><span class="co">#[1] &quot;Thai----&quot;</span></span>
+<span id="cb3-165"><a href="analytics.html#cb3-165" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-166"><a href="analytics.html#cb3-166" aria-hidden="true" tabindex="-1"></a><span class="fu">str_pad</span>(<span class="st">&quot;Thai&quot;</span>, <span class="at">width =</span> <span class="dv">8</span>, <span class="at">side =</span> <span class="st">&quot;both&quot;</span>, <span class="at">pad =</span> <span class="st">&quot;-&quot;</span>)</span>
+<span id="cb3-167"><a href="analytics.html#cb3-167" aria-hidden="true" tabindex="-1"></a><span class="co">#[1] &quot;--Thai--&quot;</span></span>
+<span id="cb3-168"><a href="analytics.html#cb3-168" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-169"><a href="analytics.html#cb3-169" aria-hidden="true" tabindex="-1"></a><span class="do">## The str_to_title() function acts just like tolower() andtoupper() except it puts strings into Title Case.</span></span>
+<span id="cb3-170"><a href="analytics.html#cb3-170" aria-hidden="true" tabindex="-1"></a>cases <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;CAPS&quot;</span>, <span class="st">&quot;low&quot;</span>, <span class="st">&quot;Title&quot;</span>)</span>
+<span id="cb3-171"><a href="analytics.html#cb3-171" aria-hidden="true" tabindex="-1"></a><span class="fu">str_to_title</span>(cases)</span>
+<span id="cb3-172"><a href="analytics.html#cb3-172" aria-hidden="true" tabindex="-1"></a><span class="co">#[1] &quot;Caps&quot;  &quot;Low&quot;   &quot;Title&quot;</span></span>
+<span id="cb3-173"><a href="analytics.html#cb3-173" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-174"><a href="analytics.html#cb3-174" aria-hidden="true" tabindex="-1"></a><span class="do">## The str_trim() function deletes whitespace from both sides of a string.</span></span>
+<span id="cb3-175"><a href="analytics.html#cb3-175" aria-hidden="true" tabindex="-1"></a>to_trim <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;   space&quot;</span>, <span class="st">&quot;the    &quot;</span>, <span class="st">&quot;    final frontier  &quot;</span>)</span>
+<span id="cb3-176"><a href="analytics.html#cb3-176" aria-hidden="true" tabindex="-1"></a><span class="fu">str_trim</span>(to_trim)</span>
+<span id="cb3-177"><a href="analytics.html#cb3-177" aria-hidden="true" tabindex="-1"></a><span class="co">#[1] &quot;space&quot;          &quot;the&quot;            &quot;final frontier&quot;</span></span>
+<span id="cb3-178"><a href="analytics.html#cb3-178" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-179"><a href="analytics.html#cb3-179" aria-hidden="true" tabindex="-1"></a><span class="do">## The str_wrap() function inserts newlines in strings so that when the string is printed each line’s length is limited.</span></span>
+<span id="cb3-180"><a href="analytics.html#cb3-180" aria-hidden="true" tabindex="-1"></a>pasted_states <span class="ot">&lt;-</span> <span class="fu">paste</span>(state.name[<span class="dv">1</span><span class="sc">:</span><span class="dv">20</span>], <span class="at">collapse =</span> <span class="st">&quot; &quot;</span>)</span>
+<span id="cb3-181"><a href="analytics.html#cb3-181" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="fu">str_wrap</span>(pasted_states, <span class="at">width =</span> <span class="dv">80</span>))</span>
+<span id="cb3-182"><a href="analytics.html#cb3-182" aria-hidden="true" tabindex="-1"></a><span class="co">#Alabama Alaska Arizona Arkansas California Colorado Connecticut Delaware Florida</span></span>
+<span id="cb3-183"><a href="analytics.html#cb3-183" aria-hidden="true" tabindex="-1"></a><span class="co">#Georgia Hawaii Idaho Illinois Indiana Iowa Kansas Kentucky Louisiana Maine</span></span>
+<span id="cb3-184"><a href="analytics.html#cb3-184" aria-hidden="true" tabindex="-1"></a><span class="co">#Maryland</span></span>
+<span id="cb3-185"><a href="analytics.html#cb3-185" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-186"><a href="analytics.html#cb3-186" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="fu">str_wrap</span>(pasted_states, <span class="at">width =</span> <span class="dv">30</span>))</span>
+<span id="cb3-187"><a href="analytics.html#cb3-187" aria-hidden="true" tabindex="-1"></a><span class="co">#Alabama Alaska Arizona</span></span>
+<span id="cb3-188"><a href="analytics.html#cb3-188" aria-hidden="true" tabindex="-1"></a><span class="co">#Arkansas California Colorado</span></span>
+<span id="cb3-189"><a href="analytics.html#cb3-189" aria-hidden="true" tabindex="-1"></a><span class="co">#Connecticut Delaware Florida</span></span>
+<span id="cb3-190"><a href="analytics.html#cb3-190" aria-hidden="true" tabindex="-1"></a><span class="co">#Georgia Hawaii Idaho Illinois</span></span>
+<span id="cb3-191"><a href="analytics.html#cb3-191" aria-hidden="true" tabindex="-1"></a><span class="co">#Indiana Iowa Kansas Kentucky</span></span>
+<span id="cb3-192"><a href="analytics.html#cb3-192" aria-hidden="true" tabindex="-1"></a><span class="co">#Louisiana Maine Maryland</span></span>
+<span id="cb3-193"><a href="analytics.html#cb3-193" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-194"><a href="analytics.html#cb3-194" aria-hidden="true" tabindex="-1"></a><span class="do">## The word() function allows you to index each word in a string as if it were a vector.</span></span>
+<span id="cb3-195"><a href="analytics.html#cb3-195" aria-hidden="true" tabindex="-1"></a>a_tale <span class="ot">&lt;-</span> <span class="st">&quot;It was the best of times it was the worst of times it was the age of wisdom it was the age of foolishness&quot;</span></span>
+<span id="cb3-196"><a href="analytics.html#cb3-196" aria-hidden="true" tabindex="-1"></a><span class="fu">word</span>(a_tale, <span class="dv">2</span>)</span>
+<span id="cb3-197"><a href="analytics.html#cb3-197" aria-hidden="true" tabindex="-1"></a><span class="co">#[1] &quot;was&quot;</span></span>
+<span id="cb3-198"><a href="analytics.html#cb3-198" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-199"><a href="analytics.html#cb3-199" aria-hidden="true" tabindex="-1"></a><span class="fu">word</span>(a_tale, <span class="at">end =</span> <span class="dv">3</span>)</span>
+<span id="cb3-200"><a href="analytics.html#cb3-200" aria-hidden="true" tabindex="-1"></a><span class="co">#[1] &quot;It was the&quot;</span></span>
+<span id="cb3-201"><a href="analytics.html#cb3-201" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-202"><a href="analytics.html#cb3-202" aria-hidden="true" tabindex="-1"></a><span class="fu">word</span>(a_tale, <span class="at">start =</span> <span class="dv">11</span>, <span class="at">end =</span> <span class="dv">15</span>)</span>
+<span id="cb3-203"><a href="analytics.html#cb3-203" aria-hidden="true" tabindex="-1"></a><span class="co">#[1] &quot;of times it was the&quot;</span></span></code></pre></div>
+<table>
+<thead>
+<tr class="header">
+<th align="center">Metacharacter</th>
+<th align="center">Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">.</td>
+<td align="center">Any Character</td>
+</tr>
+<tr class="even">
+<td align="center"></td>
+<td align="center">A Word</td>
+</tr>
+<tr class="odd">
+<td align="center"></td>
+<td align="center">Not a Word</td>
+</tr>
+<tr class="even">
+<td align="center"> A Digit</td>
+<td align="center"></td>
+</tr>
+<tr class="odd">
+<td align="center"></td>
+<td align="center">Not a Digit</td>
+</tr>
+<tr class="even">
+<td align="center"></td>
+<td align="center">Whitespace</td>
+</tr>
+<tr class="odd">
+<td align="center"></td>
+<td align="center">Not Whitespace</td>
+</tr>
+<tr class="even">
+<td align="center">[xyz]</td>
+<td align="center">A Set of Characters</td>
+</tr>
+<tr class="odd">
+<td align="center">[^xyz]</td>
+<td align="center">Negation of Set</td>
+</tr>
+<tr class="even">
+<td align="center">[a-z]</td>
+<td align="center">A Range of Characters</td>
+</tr>
+<tr class="odd">
+<td align="center">^</td>
+<td align="center">Beginning of String</td>
+</tr>
+<tr class="even">
+<td align="center">$</td>
+<td align="center">End of String</td>
+</tr>
+<tr class="odd">
+<td align="center"></td>
+<td align="center">Newline</td>
+</tr>
+<tr class="even">
+<td align="center">+</td>
+<td align="center">One or More of Previous</td>
+</tr>
+<tr class="odd">
+<td align="center">*</td>
+<td align="center">Zero or More of Previous</td>
+</tr>
+<tr class="even">
+<td align="center">?</td>
+<td align="center">Zero or One of Previous</td>
+</tr>
+<tr class="odd">
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr class="even">
+<td align="center">{5}</td>
+<td align="center">Exactly 5 of Previous</td>
+</tr>
+<tr class="odd">
+<td align="center">{2, 5}</td>
+<td align="center">Between 2 and 5 or Previous</td>
+</tr>
+<tr class="even">
+<td align="center">{2, }</td>
+<td align="center">More than 2 of Previous</td>
+</tr>
+</tbody>
+</table>
+<table>
+<colgroup>
+<col width="13%" />
+<col width="35%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">Operator</th>
+<th align="center">Meaning</th>
+<th align="center">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">==</td>
+<td align="center">Equals</td>
+<td align="center">storm_name == KATRINA</td>
+</tr>
+<tr class="even">
+<td align="center">!=</td>
+<td align="center">Does not equal</td>
+<td align="center">min_pressure != 0</td>
+</tr>
+<tr class="odd">
+<td align="center">&gt;</td>
+<td align="center">Greater than</td>
+<td align="center">latitude &gt; 25</td>
+</tr>
+<tr class="even">
+<td align="center">&gt;=</td>
+<td align="center">Greater than or equal to</td>
+<td align="center">max_wind &gt;= 160</td>
+</tr>
+<tr class="odd">
+<td align="center">&lt;</td>
+<td align="center">Less than</td>
+<td align="center">min_pressure &lt; 900</td>
+</tr>
+<tr class="even">
+<td align="center">&lt;=</td>
+<td align="center">Less than or equal to</td>
+<td align="center">distance_to_land &lt;= 0</td>
+</tr>
+<tr class="odd">
+<td align="center">%in%</td>
+<td align="center">Included in</td>
+<td align="center">storm_name %in% c(“KATRINA”, “ANDREW”)</td>
+</tr>
+<tr class="even">
+<td align="center">is.na()</td>
+<td align="center">Is a missing value</td>
+<td align="center">is.na(radius_34_ne)</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>String manipulation in R is useful for data cleaning, plus it can be fun! For prototyping your first regular expressions I highly recommend checking out <a href="http://regexr.com/" class="uri">http://regexr.com/</a>. If you’re interested in what some people call a more “humane” way of constructing regular expressions you should check out the <a href="https://github.com/kevinushey/rex">rex</a> package by <a href="https://github.com/kevinushey">Kevin Ushey</a> and <a href="http://www.jimhester.com/">Jim Hester</a>. If you’d like to find out more about text analysis I highly recommend reading <a href="http://tidytextmining.com/">Tidy Text Mining in R</a> by <a href="http://juliasilge.com/">Julia Silge</a> and <a href="http://varianceexplained.org/">David Robinson</a>.</p>
+</blockquote>
+</div>
+<div id="数据框与矩阵" class="section level3 hasAnchor" number="3.3.2">
+<h3><span class="header-section-number">3.3.2</span> 数据框与矩阵<a href="analytics.html#数据框与矩阵" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><a href="https://stackoverflow.com/questions/43212308/na-locf-using-group-by-from-dplyr"><code>na.locf</code> using group by from <code>dplyr</code></a></li>
+<li><a href="https://stackoverflow.com/questions/23340150/replace-missing-values-na-with-most-recent-non-na-by-group">Replace Missing Values NA with Most Recent Non-NA by Group</a></li>
+<li><a href="https://stackoverflow.com/questions/40040834/replace-na-with-previous-or-next-value-by-group-using-dplyr/40041172">Replace NA with Previous or Next Value by Group using <code>dplyr</code></a></li>
+<li><a href="https://stackoverflow.com/questions/47242643/na-at-the-end-of-column-using-na-locf-function">NA at the End of Column using <code>na.locf</code> Function</a></li>
+<li><a href="https://stackoverflow.com/questions/49578085/na-locf-function-is-changing-data-frame-values-from-int-to-char-in-r"><code>na.locf</code> Function is Changing <code>data.frame</code> Values from <code>int</code> to <code>char</code> in R</a></li>
+<li><a href="https://stackoverflow.com/questions/13616965/how-to-fill-nas-with-locf-by-factors-in-data-frame-split-by-country">How to Fill NAs with locf by Factors in <code>data. frame</code> split by Country</a></li>
+<li><a href="https://stackoverflow.com/questions/23340150/replace-missing-values-na-with-most-recent-non-na-by-group">Replace Missing Values <code>NA</code> with Most Recent non-NA by Group</a></li>
+</ul>
+</div>
+<div id="列表与嵌套数据" class="section level3 hasAnchor" number="3.3.3">
+<h3><span class="header-section-number">3.3.3</span> 列表与嵌套数据<a href="analytics.html#列表与嵌套数据" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="analytics.html#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dir.create</span>(<span class="fu">file.path</span>(<span class="st">&#39;testdir2&#39;</span>, <span class="st">&#39;testdir3&#39;</span>), <span class="at">recursive =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
+<p>以上代码可新建一个文件夹和子文件夹。</p>
+</div>
+<div id="内存" class="section level3 hasAnchor" number="3.3.4">
+<h3><span class="header-section-number">3.3.4</span> 内存<a href="analytics.html#内存" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="analytics.html#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(pryr)</span>
+<span id="cb5-2"><a href="analytics.html#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mem_used</span>()</span>
+<span id="cb5-3"><a href="analytics.html#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co">#108 MB</span></span>
+<span id="cb5-4"><a href="analytics.html#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="analytics.html#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="fu">sapply</span>(<span class="fu">ls</span>(), <span class="cf">function</span>(x) <span class="fu">object_size</span>(<span class="fu">get</span>(x))) <span class="sc">%&gt;%</span> sort</span>
+<span id="cb5-6"><a href="analytics.html#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-7"><a href="analytics.html#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="fu">mem_change</span>(<span class="fu">rm</span>(<span class="at">list =</span> <span class="fu">ls</span>()))</span>
+<span id="cb5-8"><a href="analytics.html#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="co">#-1.22 kB</span></span>
+<span id="cb5-9"><a href="analytics.html#cb5-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-10"><a href="analytics.html#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="do">## The .Machine object in R (found in the base package) can give you specific details about how your computer/operation system stores different types of data.</span></span>
+<span id="cb5-11"><a href="analytics.html#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(.Machine) <span class="co">#or tibble::glimpse(.Machince)</span></span>
+<span id="cb5-12"><a href="analytics.html#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="co">#List of 18</span></span>
+<span id="cb5-13"><a href="analytics.html#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="co"># $ double.eps           : num 2.22e-16</span></span>
+<span id="cb5-14"><a href="analytics.html#cb5-14" aria-hidden="true" tabindex="-1"></a><span class="co"># $ double.neg.eps       : num 1.11e-16</span></span>
+<span id="cb5-15"><a href="analytics.html#cb5-15" aria-hidden="true" tabindex="-1"></a><span class="co"># $ double.xmin          : num 2.23e-308</span></span>
+<span id="cb5-16"><a href="analytics.html#cb5-16" aria-hidden="true" tabindex="-1"></a><span class="co"># $ double.xmax          : num 1.8e+308</span></span>
+<span id="cb5-17"><a href="analytics.html#cb5-17" aria-hidden="true" tabindex="-1"></a><span class="co"># $ double.base          : int 2</span></span>
+<span id="cb5-18"><a href="analytics.html#cb5-18" aria-hidden="true" tabindex="-1"></a><span class="co"># $ double.digits        : int 53</span></span>
+<span id="cb5-19"><a href="analytics.html#cb5-19" aria-hidden="true" tabindex="-1"></a><span class="co"># $ double.rounding      : int 5</span></span>
+<span id="cb5-20"><a href="analytics.html#cb5-20" aria-hidden="true" tabindex="-1"></a><span class="co"># $ double.guard         : int 0</span></span>
+<span id="cb5-21"><a href="analytics.html#cb5-21" aria-hidden="true" tabindex="-1"></a><span class="co"># $ double.ulp.digits    : int -52</span></span>
+<span id="cb5-22"><a href="analytics.html#cb5-22" aria-hidden="true" tabindex="-1"></a><span class="co"># $ double.neg.ulp.digits: int -53</span></span>
+<span id="cb5-23"><a href="analytics.html#cb5-23" aria-hidden="true" tabindex="-1"></a><span class="co"># $ double.exponent      : int 11</span></span>
+<span id="cb5-24"><a href="analytics.html#cb5-24" aria-hidden="true" tabindex="-1"></a><span class="co"># $ double.min.exp       : int -1022</span></span>
+<span id="cb5-25"><a href="analytics.html#cb5-25" aria-hidden="true" tabindex="-1"></a><span class="co"># $ double.max.exp       : int 1024</span></span>
+<span id="cb5-26"><a href="analytics.html#cb5-26" aria-hidden="true" tabindex="-1"></a><span class="co"># $ integer.max          : int 2147483647</span></span>
+<span id="cb5-27"><a href="analytics.html#cb5-27" aria-hidden="true" tabindex="-1"></a><span class="co"># $ sizeof.long          : int 8</span></span>
+<span id="cb5-28"><a href="analytics.html#cb5-28" aria-hidden="true" tabindex="-1"></a><span class="co"># $ sizeof.longlong      : int 8</span></span>
+<span id="cb5-29"><a href="analytics.html#cb5-29" aria-hidden="true" tabindex="-1"></a><span class="co"># $ sizeof.longdouble    : int 16</span></span>
+<span id="cb5-30"><a href="analytics.html#cb5-30" aria-hidden="true" tabindex="-1"></a><span class="co"># $ sizeof.pointer       : int 8</span></span>
+<span id="cb5-31"><a href="analytics.html#cb5-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-32"><a href="analytics.html#cb5-32" aria-hidden="true" tabindex="-1"></a><span class="do">## The gc() function in the base package can be used to explicitly trigger a garbage collection in R. Calling gc() explicitly is never actually needed, but it does produce some output that is worth understanding.</span></span>
+<span id="cb5-33"><a href="analytics.html#cb5-33" aria-hidden="true" tabindex="-1"></a><span class="fu">gc</span>()</span>
+<span id="cb5-34"><a href="analytics.html#cb5-34" aria-hidden="true" tabindex="-1"></a><span class="co">#          used  (Mb) gc trigger  (Mb) max used  (Mb)</span></span>
+<span id="cb5-35"><a href="analytics.html#cb5-35" aria-hidden="true" tabindex="-1"></a><span class="co">#Ncells 3124234 166.9    5938641 317.2  4136665 221.0</span></span>
+<span id="cb5-36"><a href="analytics.html#cb5-36" aria-hidden="true" tabindex="-1"></a><span class="co">#Vcells 6906107  52.7   12255594  93.6 10145775  77.5</span></span></code></pre></div>
+</div>
+<div id="数据库" class="section level3 hasAnchor" number="3.3.5">
+<h3><span class="header-section-number">3.3.5</span> 数据库<a href="analytics.html#数据库" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><img src="figure/database_management.jpg" /></p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">Database Management System</th>
+<th align="center">R packages</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">Oracle</td>
+<td align="center">ROracle</td>
+</tr>
+<tr class="even">
+<td align="center">MySQL</td>
+<td align="center">RMySQL</td>
+</tr>
+<tr class="odd">
+<td align="center">Microsoft SQL Server</td>
+<td align="center">RSQLServer</td>
+</tr>
+<tr class="even">
+<td align="center">PostgreSQL</td>
+<td align="center">RPostgres</td>
+</tr>
+<tr class="odd">
+<td align="center">SQLite</td>
+<td align="center">RSQLite</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>For more on the DBI package, including its history, see <a href="https://github.com/rstats-db/DBI">the package’s GitHub README page</a>.</p>
+</blockquote>
+</div>
+</div>
+<div id="数据分析程序包" class="section level2 hasAnchor" number="3.4">
+<h2><span class="header-section-number">3.4</span> 数据分析程序包<a href="analytics.html#数据分析程序包" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<hr />
+<p><a href="http://www.scibrokes.com"><img src="figure/Scibrokes.png" width="14"/> Sςιβrοκεrs Trαdιηg®</a><br>
+<span style="color:RoyalBlue"><strong><a href="http://www.scibrokes.com"><img src="figure/Scibrokes.png" width="14"/> 世博量化®</a>企业知识产权及版权所有，盗版必究。</strong></span></p>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="intro.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="stats.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="book_assets/gitbook-2.6.7/js/app.min.js"></script>
+<script src="book_assets/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="book_assets/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="book_assets/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="book_assets/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="book_assets/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="book_assets/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="book_assets/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "google", "twitter", "weibo", "instapaper"],
+"google": false,
+"instapper": false
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": null,
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": false,
+"toc": {
+"collapse": "subsection",
+"scroll_highlight": true
+},
+"toolbar": {
+"position": "fixed"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
