@@ -706,7 +706,7 @@ for the rest of the prices we have the following outcome:
 08. [Financial Engineering Analytics: A Practice Manual Using R](https://bookdown.org/wfoote01/faur/)
 09. [Forecasting: Principles and Practice](https://otexts.org/fpp2/)
 10. [Mastering Software Development in R (web-base)](https://bookdown.org/rdpeng/RProgDA/). (or [Mastering Software Development in R.pdf](https://github.com/englianhu/Coursera-Mastering-Software-Development-in-R/blob/master/reference/Mastering%20Software%20Development%20in%20R.pdf))
-11. [量化投资学习推荐的书籍都有哪些？](https://www.zhihu.com/question/54727745)
+11. [知乎：量化投资学习推荐的书籍都有哪些？](https://www.zhihu.com/question/54727745)
 
 ---
 
