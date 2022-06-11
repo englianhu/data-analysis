@@ -144,6 +144,15 @@
   - 第10.3章：
 - 第11章：参考文献
 
+## 投稿著书网站
+
+- [Bookdown](https://bookdown.org)
+- [Hans汉斯](https://www.hanspub.org)
+- [RPubs](https://www.rpubs.com)
+- [书栈网]https://www.bookstack.cn)
+- [知乎](http://zhihu.com)
+- []()
+
 ---
 
 [<img src="figure/Scibrokes.png" height="14"/> Sςιβrοκεrs Trαdιηg®](http://www.scibrokes.com)<br>
