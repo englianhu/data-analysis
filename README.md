@@ -149,7 +149,7 @@
 - [Bookdown](https://bookdown.org)
 - [Hans汉斯](https://www.hanspub.org)
 - [RPubs](https://www.rpubs.com)
-- [书栈网]https://www.bookstack.cn)
+- [书栈网](https://www.bookstack.cn)
 - [知乎](http://zhihu.com)
 - []()
 
