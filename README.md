@@ -151,7 +151,7 @@
 - [RPubs](https://www.rpubs.com)
 - [书栈网](https://www.bookstack.cn)
 - [知乎](http://zhihu.com)
-- []()
+- [Gitbook](https://www.gitbook.com)
 
 ---
 
