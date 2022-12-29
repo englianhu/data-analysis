@@ -1,4 +1,7 @@
-# R语言玩转金融与体彩数据分析
+
+<img src='figure/大秦赋 - 北京大学.png' width='100'> <img src='figure/coursera.jpg' width='100'>
+
+# <span style='color:RoyalBlue'>R语言玩转金融与体彩数据分析</span>
 
 ## 前言
 
@@ -152,8 +155,9 @@
 - [书栈网](https://www.bookstack.cn)
 - [知乎](http://zhihu.com)
 - [Gitbook](https://www.gitbook.com)
+- [「猫城」The Journal of Open Source Software](https://github.com/englianhu/joss)
 
 ---
 
-[<img src="figure/Scibrokes.png" height="14"/> Sςιβrοκεrs Trαdιηg®](http://www.scibrokes.com)<br>
-<span style='color:RoyalBlue'>**[<img src="figure/Scibrokes.png" height="14"/> 世博量化®](http://www.scibrokes.com)企业知识产权及版权所有，盗版必究。**</span>
+[<img src="文艺坊图库/Scibrokes.png" height="14"/> Sςιβrοκεrs Trαdιηg®](http://www.scibrokes.com)<br>
+<span style='color:RoyalBlue'>**[<img src="文艺坊图库/Scibrokes.png" height="14"/> 世博量化®](http://www.scibrokes.com)企业知识产权及版权所有，盗版必究。**</span>
