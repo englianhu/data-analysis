@@ -1,0 +1,80 @@
+/* 
+  Rmarkdown font type
+  https://forum.posit.co/t/rmarkdown-font-type/123403
+  
+  How to import fonts in CSS?
+  https://stackoverflow.com/a/45886787/3806250
+  
+  R Markdown與TeX
+  https://hackmd.io/@yueswater/TeX_with_R_Markdown 
+  
+  Chapter 10 Make it fancier
+  https://rstudio4edu.github.io/rstudio4edu-book/doc-fancy.html
+  
+  How to include @font-face within style tag of RMarkdown?
+  https://stackoverflow.com/a/61537209/3806250
+  
+  🎨 Step right into the colorful realm of R Markdown Themes! 🌸 😄
+  https://rpubs.com/ranydc/rmarkdown_themes
+  
+  CSS in R Markdown
+  https://geomoer.github.io/moer-base-r/unit99/sl03_css.html
+  
+  Markdown 设置字体大小颜色和背景色
+  https://xujinzh.github.io/2021/04/27/markdown-font-size-color/index.html
+*/
+<style type="text/css">
+@font-face {
+    src: url('subset-FZXZTFW--GB1-0.eot'); 
+    font-style: normal, italic, oblique; 
+    font-variant: normal, small-caps; 
+    font-weight: 300, normal, bold, extrabold, black, lighter; 
+    font-stretch: ultra-condensed, extra-condensed, condensed, semi-condensed, normal, semi-expanded, expanded, extra-expanded, ultra-expanded; 
+    font-display: auto, block, swap, fallback, optional; 
+    font-family: 'FZXiaoZhuanTi-S13T', cursive; 
+}
+@font-face {
+    src: url('data:font/woff2;charset=utf-8;base64,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') format('woff2'),
+        url('data:font/woff;charset=utf-8;base64,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') format('woff'),
+        url('subset-FZXZTFW--GB1-0.ttf') format('truetype'),
+        url('subset-FZXZTFW--GB1-0.svg#FZXZTFW--GB1-0') format('svg');
+        
+    /* 
+      網頁樣式表CSS提示与窍门
+      https://www.w3.org/Style/Examples/007/fonts.zh_CN.html 
+    
+      基本文本和字体样式
+      https://developer.mozilla.org/zh-CN/docs/Learn/CSS/Styling_text/Fundamentals 
+    */
+    font-style: normal, italic, oblique; 
+    font-variant: normal, small-caps; 
+    font-weight: 300, normal, bold, extrabold, black, lighter; 
+    font-stretch: ultra-condensed, extra-condensed, condensed, semi-condensed, normal, semi-expanded, expanded, extra-expanded, ultra-expanded; 
+    font-display: auto, block, swap, fallback, optional; 
+    font-family: 'FZXiaoZhuanTi-S13T', cursive; 
+}
+
+body {
+  /*
+  礼逆袭中科红旗操作系统
+  background-image: url('/home/englianhu/文档/猫城/zhongkehongqi/诸子百家考工记/数术家.png'); 
+  
+  font：[[font-style||font-variant||font-weight||font-stretch]?font-size[ /line-height]?font-family] | caption | icon | menu | message-box | small-caption | status-bar
+  */
+  margin: 0; 
+  background-image: url('/home/englianhu/zhuzibaijia.png'); 
+  background-repeat: no-repeat; 
+  /*background-size: 100%;*/
+  background-size: cover; 
+  background-position: center center;
+  background-attachment: fixed; 
+  color: brown; 
+  font-family: 'FZXiaoZhuanTi-S13T', cursive; 
+}
+
+div {
+  background-color: rgba(255, 255, 255, 0.35)   /* 35% opaque white */;
+  padding: 0.25em; 
+  font-family: 'FZXiaoZhuanTi-S13T', cursive; 
+}
+</style>
